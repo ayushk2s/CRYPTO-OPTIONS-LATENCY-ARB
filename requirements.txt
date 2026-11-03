@@ -1,0 +1,6 @@
+websockets>=13
+requests>=2.31
+numpy>=2.0
+pandas>=2.2
+statsmodels>=0.14
+rich>=13

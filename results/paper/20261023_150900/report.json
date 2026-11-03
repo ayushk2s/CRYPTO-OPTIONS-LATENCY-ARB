@@ -1,0 +1,965 @@
+{
+ "run": "20261023_150900",
+ "hours": 3.0,
+ "binance_coverage": 0.7821229050279329,
+ "p_usdt_end": 0.998775330357111,
+ "instruments": 56,
+ "variants": {
+  "S1|binance|h1000|real|null": {
+   "n": 41434,
+   "gross": -236190.9196559058,
+   "fees": 1025398.4785087067,
+   "slip": 188301.4650721894,
+   "net": -1449890.863236802,
+   "mean_gross": -5.700413178932901,
+   "mean_fees": 24.747754947837684,
+   "mean_net": -34.992780403456145,
+   "ci95_mean_net": [
+    -35.65885259878074,
+    -34.343357693810894
+   ],
+   "win_rate": 0.0,
+   "net_per_day": -11599126.905894415,
+   "by_coin": {
+    "BTC": {
+     "n": 35753,
+     "mean_gross": -6.17026511929361,
+     "mean_net": -37.557467342685854
+    },
+    "ETH": {
+     "n": 5681,
+     "mean_gross": -2.74343088290818,
+     "mean_net": -18.852091767955365
+    }
+   }
+  },
+  "S1|binance|h1000|real|signal": {
+   "n": 41443,
+   "gross": -235426.43243973056,
+   "fees": 1024569.8650719272,
+   "slip": 188107.98614463487,
+   "net": -1448104.2836562926,
+   "mean_gross": -5.6807285292988094,
+   "mean_fees": 24.72238653263343,
+   "mean_net": -34.94207184943881,
+   "ci95_mean_net": [
+    -35.58999836738805,
+    -34.30903747592252
+   ],
+   "win_rate": 0.0,
+   "net_per_day": -11584834.26925034,
+   "by_coin": {
+    "BTC": {
+     "n": 35741,
+     "mean_gross": -6.149096896738945,
+     "mean_net": -37.50528094551008
+    },
+    "ETH": {
+     "n": 5702,
+     "mean_gross": -2.744924632301633,
+     "mean_net": -18.875488843005407
+    }
+   }
+  },
+  "S1|binance|h1000|zero|null": {
+   "n": 63903,
+   "gross": -381524.87848396134,
+   "fees": 1583183.7496904698,
+   "slip": 293602.9070966456,
+   "net": -2258311.5352710765,
+   "mean_gross": -5.970375076036514,
+   "mean_fees": 24.774795388173793,
+   "mean_net": -35.339679440262216,
+   "ci95_mean_net": [
+    -35.95756462037383,
+    -34.73231102826361
+   ],
+   "win_rate": 0.0,
+   "net_per_day": -18066492.282168612,
+   "by_coin": {
+    "BTC": {
+     "n": 55472,
+     "mean_gross": -6.443567307796263,
+     "mean_net": -37.799523227706786
+    },
+    "ETH": {
+     "n": 8431,
+     "mean_gross": -2.8569935696699154,
+     "mean_net": -19.15506853086539
+    }
+   }
+  },
+  "S1|binance|h1000|zero|signal": {
+   "n": 63903,
+   "gross": -383031.62430522696,
+   "fees": 1583377.2558645795,
+   "slip": 293632.0654365635,
+   "net": -2260040.94560637,
+   "mean_gross": -5.993953715869786,
+   "mean_fees": 24.777823511643888,
+   "mean_net": -35.366742494192295,
+   "ci95_mean_net": [
+    -35.96191655257358,
+    -34.75964885274908
+   ],
+   "win_rate": 0.0,
+   "net_per_day": -18080327.56485096,
+   "by_coin": {
+    "BTC": {
+     "n": 55472,
+     "mean_gross": -6.463749183557328,
+     "mean_net": -37.8230876034545
+    },
+    "ETH": {
+     "n": 8431,
+     "mean_gross": -2.9029213135968273,
+     "mean_net": -19.205151235623493
+    }
+   }
+  },
+  "S1|binance|h30000|real|null": {
+   "n": 4416,
+   "gross": -27286.886427126952,
+   "fees": 111226.65145413358,
+   "slip": 19723.482603448985,
+   "net": -158237.0204847095,
+   "mean_gross": -6.1790956583167915,
+   "mean_fees": 25.187194622765755,
+   "mean_net": -35.83265862425487,
+   "ci95_mean_net": [
+    -36.557419039573496,
+    -35.099201950771935
+   ],
+   "win_rate": 0.00022644927536231884,
+   "net_per_day": -1265896.163877676,
+   "by_coin": {
+    "BTC": {
+     "n": 3711,
+     "mean_gross": -6.71264542610263,
+     "mean_net": -38.94561514852572
+    },
+    "ETH": {
+     "n": 705,
+     "mean_gross": -3.3705804976738905,
+     "mean_net": -19.446585345433466
+    }
+   }
+  },
+  "S1|binance|h30000|real|signal": {
+   "n": 4423,
+   "gross": -27886.059984319352,
+   "fees": 111498.74294971689,
+   "slip": 19782.807251082766,
+   "net": -159167.61018511903,
+   "mean_gross": -6.304784079656195,
+   "mean_fees": 25.208849864281458,
+   "mean_net": -35.986346413094964,
+   "ci95_mean_net": [
+    -36.71203233368781,
+    -35.29723849143124
+   ],
+   "win_rate": 0.0,
+   "net_per_day": -1273340.8814809523,
+   "by_coin": {
+    "BTC": {
+     "n": 3715,
+     "mean_gross": -6.848258027308723,
+     "mean_net": -39.104268448058654
+    },
+    "ETH": {
+     "n": 708,
+     "mean_gross": -3.453081091620688,
+     "mean_net": -19.626063418899882
+    }
+   }
+  },
+  "S1|binance|h30000|zero|null": {
+   "n": 4697,
+   "gross": -30778.375909109112,
+   "fees": 119603.66609115954,
+   "slip": 21173.901102369415,
+   "net": -171555.94310263806,
+   "mean_gross": -6.55277324017652,
+   "mean_fees": 25.46384204623367,
+   "mean_net": -36.52457805038068,
+   "ci95_mean_net": [
+    -37.183512049979896,
+    -35.877268851200505
+   ],
+   "win_rate": 0.0,
+   "net_per_day": -1372447.5448211045,
+   "by_coin": {
+    "BTC": {
+     "n": 3943,
+     "mean_gross": -7.102511740774079,
+     "mean_net": -39.686918430236325
+    },
+    "ETH": {
+     "n": 754,
+     "mean_gross": -3.6779471024362285,
+     "mean_net": -19.987299379597154
+    }
+   }
+  },
+  "S1|binance|h30000|zero|signal": {
+   "n": 4697,
+   "gross": -32346.12067495379,
+   "fees": 119631.1529105893,
+   "slip": 21183.788099352212,
+   "net": -173161.0616848953,
+   "mean_gross": -6.886549004674002,
+   "mean_fees": 25.46969404100262,
+   "mean_net": -36.866310769617904,
+   "ci95_mean_net": [
+    -37.6009656804612,
+    -36.1643933773901
+   ],
+   "win_rate": 0.0,
+   "net_per_day": -1385288.4934791625,
+   "by_coin": {
+    "BTC": {
+     "n": 3943,
+     "mean_gross": -7.484907498042396,
+     "mean_net": -40.07440779186639
+    },
+    "ETH": {
+     "n": 754,
+     "mean_gross": -3.7574673874968436,
+     "mean_net": -20.089750346904676
+    }
+   }
+  },
+  "S1|binance|h5000|real|null": {
+   "n": 18601,
+   "gross": -108506.53814916559,
+   "fees": 462944.4787535526,
+   "slip": 84037.85090673855,
+   "net": -655488.8678094568,
+   "mean_gross": -5.833371224620482,
+   "mean_fees": 24.88815003244732,
+   "mean_net": -35.23944238532642,
+   "ci95_mean_net": [
+    -35.920169628411394,
+    -34.66165638495318
+   ],
+   "win_rate": 0.0,
+   "net_per_day": -5243910.942475654,
+   "by_coin": {
+    "BTC": {
+     "n": 15906,
+     "mean_gross": -6.310168090173909,
+     "mean_net": -37.96386061121334
+    },
+    "ETH": {
+     "n": 2695,
+     "mean_gross": -3.0192966630276037,
+     "mean_net": -19.159814815397894
+    }
+   }
+  },
+  "S1|binance|h5000|real|signal": {
+   "n": 18597,
+   "gross": -109144.54741179504,
+   "fees": 462277.8732567718,
+   "slip": 83966.9228204737,
+   "net": -655389.3434890406,
+   "mean_gross": -5.868933022089317,
+   "mean_fees": 24.857658399568308,
+   "mean_net": -35.24167034946715,
+   "ci95_mean_net": [
+    -35.882474405195694,
+    -34.59817938666625
+   ],
+   "win_rate": 0.0,
+   "net_per_day": -5243114.747912325,
+   "by_coin": {
+    "BTC": {
+     "n": 15901,
+     "mean_gross": -6.344671476852744,
+     "mean_net": -37.96277960199844
+    },
+    "ETH": {
+     "n": 2696,
+     "mean_gross": -3.06302902758144,
+     "mean_net": -19.1925760525458
+    }
+   }
+  },
+  "S1|binance|h5000|zero|null": {
+   "n": 23208,
+   "gross": -142380.54201771534,
+   "fees": 583368.2654588339,
+   "slip": 105679.85198235542,
+   "net": -831428.6594589048,
+   "mean_gross": -6.1349768191018335,
+   "mean_fees": 25.136516091814627,
+   "mean_net": -35.82508873918066,
+   "ci95_mean_net": [
+    -36.408197386278964,
+    -35.24451145452969
+   ],
+   "win_rate": 0.0,
+   "net_per_day": -6651429.275671238,
+   "by_coin": {
+    "BTC": {
+     "n": 19829,
+     "mean_gross": -6.6330126541259595,
+     "mean_net": -38.60033118440577
+    },
+    "ETH": {
+     "n": 3379,
+     "mean_gross": -3.2123510207314854,
+     "mean_net": -19.53912175298097
+    }
+   }
+  },
+  "S1|binance|h5000|zero|signal": {
+   "n": 23208,
+   "gross": -143546.2156031303,
+   "fees": 583485.5709102192,
+   "slip": 105690.93657267839,
+   "net": -832722.7230860279,
+   "mean_gross": -6.185204050462353,
+   "mean_fees": 25.141570618330714,
+   "mean_net": -35.88084811642657,
+   "ci95_mean_net": [
+    -36.47217110729957,
+    -35.31065661249357
+   ],
+   "win_rate": 0.0,
+   "net_per_day": -6661781.784688223,
+   "by_coin": {
+    "BTC": {
+     "n": 19829,
+     "mean_gross": -6.68723971017688,
+     "mean_net": -38.66151756075592
+    },
+    "ETH": {
+     "n": 3379,
+     "mean_gross": -3.2391060639339955,
+     "mean_net": -19.563033848416374
+    }
+   }
+  },
+  "S1|bybit|h1000|real|null": {
+   "n": 92532,
+   "gross": -356805.2931343001,
+   "fees": 1300012.4746135122,
+   "slip": 277875.27395241783,
+   "net": -1934693.04170023,
+   "mean_gross": -3.8560205456955443,
+   "mean_fees": 14.049328606466002,
+   "mean_net": -20.908367285914387,
+   "ci95_mean_net": [
+    -21.339513620740814,
+    -20.48687764406421
+   ],
+   "win_rate": 0.0,
+   "net_per_day": -15477544.33360184,
+   "by_coin": {
+    "BTC": {
+     "n": 49330,
+     "mean_gross": -6.178255176761207,
+     "mean_net": -31.466290520841294
+    },
+    "ETH": {
+     "n": 43202,
+     "mean_gross": -1.204387881687648,
+     "mean_net": -8.852852421349219
+    }
+   }
+  },
+  "S1|bybit|h1000|real|signal": {
+   "n": 92348,
+   "gross": -352269.3938154815,
+   "fees": 1289118.704957382,
+   "slip": 276113.9881940244,
+   "net": -1917502.086966888,
+   "mean_gross": -3.814586063753211,
+   "mean_fees": 13.95935705112598,
+   "mean_net": -20.763872384533375,
+   "ci95_mean_net": [
+    -21.19180420715211,
+    -20.340171683196107
+   ],
+   "win_rate": 0.0,
+   "net_per_day": -15340016.695735104,
+   "by_coin": {
+    "BTC": {
+     "n": 49200,
+     "mean_gross": -6.1134236028397995,
+     "mean_net": -31.280528016708246
+    },
+    "ETH": {
+     "n": 43148,
+     "mean_gross": -1.1933102937740645,
+     "mean_net": -8.772135638844027
+    }
+   }
+  },
+  "S1|bybit|h1000|zero|null": {
+   "n": 143362,
+   "gross": -618943.348278697,
+   "fees": 2155888.4225084744,
+   "slip": 453976.43297710386,
+   "net": -3228808.203764275,
+   "mean_gross": -4.317345937408079,
+   "mean_fees": 15.03807440262046,
+   "mean_net": -22.52206445058157,
+   "ci95_mean_net": [
+    -23.006431314858443,
+    -22.042385236933306
+   ],
+   "win_rate": 0.0,
+   "net_per_day": -25830465.630114205,
+   "by_coin": {
+    "BTC": {
+     "n": 77790,
+     "mean_gross": -6.791220066723178,
+     "mean_net": -33.29875902358208
+    },
+    "ETH": {
+     "n": 65572,
+     "mean_gross": -1.3825160020786444,
+     "mean_net": -9.737353433170025
+    }
+   }
+  },
+  "S1|bybit|h1000|zero|signal": {
+   "n": 143362,
+   "gross": -623873.914482415,
+   "fees": 2155877.706748792,
+   "slip": 453974.9351588318,
+   "net": -3233726.5563900387,
+   "mean_gross": -4.351738358019663,
+   "mean_fees": 15.03799965645563,
+   "mean_net": -22.556371677222966,
+   "ci95_mean_net": [
+    -23.031774791819284,
+    -22.092588581921735
+   ],
+   "win_rate": 0.0,
+   "net_per_day": -25869812.45112031,
+   "by_coin": {
+    "BTC": {
+     "n": 77790,
+     "mean_gross": -6.829923968104011,
+     "mean_net": -33.33731064724084
+    },
+    "ETH": {
+     "n": 65572,
+     "mean_gross": -1.411793585731774,
+     "mean_net": -9.766625406288876
+    }
+   }
+  },
+  "S1|bybit|h30000|real|null": {
+   "n": 9973,
+   "gross": -42192.84339827147,
+   "fees": 144391.63543614149,
+   "slip": 29362.025356945953,
+   "net": -215946.5041913589,
+   "mean_gross": -4.2307072494005284,
+   "mean_fees": 14.47825483165963,
+   "mean_net": -21.65311382646735,
+   "ci95_mean_net": [
+    -22.10777455393869,
+    -21.194037734327832
+   ],
+   "win_rate": 0.0006016243858417727,
+   "net_per_day": -1727572.0335308714,
+   "by_coin": {
+    "BTC": {
+     "n": 5201,
+     "mean_gross": -6.861019973378849,
+     "mean_net": -33.004570813821715
+    },
+    "ETH": {
+     "n": 4772,
+     "mean_gross": -1.3639309548885319,
+     "mean_net": -9.281167516486198
+    }
+   }
+  },
+  "S1|bybit|h30000|real|signal": {
+   "n": 9980,
+   "gross": -41585.792196623865,
+   "fees": 141997.83759084303,
+   "slip": 29037.291079199793,
+   "net": -212620.9208666667,
+   "mean_gross": -4.166913045753894,
+   "mean_fees": 14.22824023956343,
+   "mean_net": -21.304701489645964,
+   "ci95_mean_net": [
+    -21.796202813958562,
+    -20.835371843312537
+   ],
+   "win_rate": 0.0004008016032064128,
+   "net_per_day": -1700967.3669333337,
+   "by_coin": {
+    "BTC": {
+     "n": 5205,
+     "mean_gross": -6.753973073943239,
+     "mean_net": -32.47863920752465
+    },
+    "ETH": {
+     "n": 4775,
+     "mean_gross": -1.3468821668584905,
+     "mean_net": -9.124524354241021
+    }
+   }
+  },
+  "S1|bybit|h30000|zero|null": {
+   "n": 10909,
+   "gross": -51712.0727626136,
+   "fees": 171923.5525877067,
+   "slip": 33704.52775097014,
+   "net": -257340.15310129046,
+   "mean_gross": -4.740312839179906,
+   "mean_fees": 15.759790318792438,
+   "mean_net": -23.58971061520675,
+   "ci95_mean_net": [
+    -24.119615066383602,
+    -23.0689304389106
+   ],
+   "win_rate": 0.0003666697222476854,
+   "net_per_day": -2058721.2248103237,
+   "by_coin": {
+    "BTC": {
+     "n": 5709,
+     "mean_gross": -7.597348163197187,
+     "mean_net": -35.51774574858466
+    },
+    "ETH": {
+     "n": 5200,
+     "mean_gross": -1.6036177113309342,
+     "mean_net": -10.494104350503973
+    }
+   }
+  },
+  "S1|bybit|h30000|zero|signal": {
+   "n": 10909,
+   "gross": -54422.679547563195,
+   "fees": 171922.94983947917,
+   "slip": 33704.028344373124,
+   "net": -260049.65773141553,
+   "mean_gross": -4.9887871984199466,
+   "mean_fees": 15.759735066411144,
+   "mean_net": -23.838083942745946,
+   "ci95_mean_net": [
+    -24.363949358817962,
+    -23.294158174555665
+   ],
+   "win_rate": 0.000275002291685764,
+   "net_per_day": -2080397.2618513242,
+   "by_coin": {
+    "BTC": {
+     "n": 5709,
+     "mean_gross": -7.958634897912047,
+     "mean_net": -35.87879415869903
+    },
+    "ETH": {
+     "n": 5200,
+     "mean_gross": -1.728237099112177,
+     "mean_net": -10.618773438346679
+    }
+   }
+  },
+  "S1|bybit|h5000|real|null": {
+   "n": 41934,
+   "gross": -165313.38672676162,
+   "fees": 592594.9685864667,
+   "slip": 124498.96391163072,
+   "net": -882407.3192248591,
+   "mean_gross": -3.9422279469347457,
+   "mean_fees": 14.131610830983611,
+   "mean_net": -21.042765279364218,
+   "ci95_mean_net": [
+    -21.484445448837118,
+    -20.61205082174012
+   ],
+   "win_rate": 0.0,
+   "net_per_day": -7059258.553798873,
+   "by_coin": {
+    "BTC": {
+     "n": 22061,
+     "mean_gross": -6.34965501835709,
+     "mean_net": -31.874609344682877
+    },
+    "ETH": {
+     "n": 19873,
+     "mean_gross": -1.2697452506811169,
+     "mean_net": -9.018344611875916
+    }
+   }
+  },
+  "S1|bybit|h5000|real|signal": {
+   "n": 41897,
+   "gross": -164269.53520531763,
+   "fees": 588845.214677871,
+   "slip": 123859.82700214989,
+   "net": -876974.5768853386,
+   "mean_gross": -3.9207946918709604,
+   "mean_fees": 14.054591371169082,
+   "mean_net": -20.931679520856832,
+   "ci95_mean_net": [
+    -21.344385131130434,
+    -20.504632470308852
+   ],
+   "win_rate": 0.0,
+   "net_per_day": -7015796.615082709,
+   "by_coin": {
+    "BTC": {
+     "n": 22028,
+     "mean_gross": -6.322601950501876,
+     "mean_net": -31.72362092452779
+    },
+    "ETH": {
+     "n": 19869,
+     "mean_gross": -1.2580028909186318,
+     "mean_net": -8.967067047150861
+    }
+   }
+  },
+  "S1|bybit|h5000|zero|null": {
+   "n": 53188,
+   "gross": -232734.03334790608,
+   "fees": 811556.6455818182,
+   "slip": 165536.6198326185,
+   "net": -1209827.298762343,
+   "mean_gross": -4.375686871999437,
+   "mean_fees": 15.258265879179856,
+   "mean_net": -22.746245370428348,
+   "ci95_mean_net": [
+    -23.22097701974934,
+    -22.300982071828074
+   ],
+   "win_rate": 0.0,
+   "net_per_day": -9678618.390098743,
+   "by_coin": {
+    "BTC": {
+     "n": 28137,
+     "mean_gross": -6.961643542075596,
+     "mean_net": -34.02685235088831
+    },
+    "ETH": {
+     "n": 25051,
+     "mean_gross": -1.4711695742495325,
+     "mean_net": -10.075995136537406
+    }
+   }
+  },
+  "S1|bybit|h5000|zero|signal": {
+   "n": 53188,
+   "gross": -235993.01726367086,
+   "fees": 811561.3560420629,
+   "slip": 165536.6198541451,
+   "net": -1213090.993159879,
+   "mean_gross": -4.436959789119179,
+   "mean_fees": 15.258354441642153,
+   "mean_net": -22.807606850415112,
+   "ci95_mean_net": [
+    -23.28405752638818,
+    -22.348955107680602
+   ],
+   "win_rate": 0.0,
+   "net_per_day": -9704727.945279032,
+   "by_coin": {
+    "BTC": {
+     "n": 28137,
+     "mean_gross": -7.031410959165531,
+     "mean_net": -34.09692071038663
+    },
+    "ETH": {
+     "n": 25051,
+     "mean_gross": -1.5229015650325448,
+     "mean_net": -10.127577147887523
+    }
+   }
+  }
+ },
+ "s1_signal_vs_null": {
+  "S1|binance|h1000|real|signal": {
+   "mean_gross_signal": -5.6807285292988094,
+   "mean_gross_null": -5.700413178932901,
+   "diff": 0.019684649634091222,
+   "perm_p_one_sided": 0.236
+  },
+  "S1|binance|h1000|zero|signal": {
+   "mean_gross_signal": -5.993953715869786,
+   "mean_gross_null": -5.970375076036514,
+   "diff": -0.02357863983327224,
+   "perm_p_one_sided": 0.801
+  },
+  "S1|binance|h30000|real|signal": {
+   "mean_gross_signal": -6.304784079656195,
+   "mean_gross_null": -6.1790956583167915,
+   "diff": -0.1256884213394036,
+   "perm_p_one_sided": 0.761
+  },
+  "S1|binance|h30000|zero|signal": {
+   "mean_gross_signal": -6.886549004674002,
+   "mean_gross_null": -6.55277324017652,
+   "diff": -0.33377576449748236,
+   "perm_p_one_sided": 0.942
+  },
+  "S1|binance|h5000|real|signal": {
+   "mean_gross_signal": -5.868933022089317,
+   "mean_gross_null": -5.833371224620482,
+   "diff": -0.035561797468835366,
+   "perm_p_one_sided": 0.763
+  },
+  "S1|binance|h5000|zero|signal": {
+   "mean_gross_signal": -6.185204050462353,
+   "mean_gross_null": -6.1349768191018335,
+   "diff": -0.05022723136051965,
+   "perm_p_one_sided": 0.822
+  },
+  "S1|bybit|h1000|real|signal": {
+   "mean_gross_signal": -3.814586063753211,
+   "mean_gross_null": -3.8560205456955443,
+   "diff": 0.041434481942333345,
+   "perm_p_one_sided": 0.002
+  },
+  "S1|bybit|h1000|zero|signal": {
+   "mean_gross_signal": -4.351738358019663,
+   "mean_gross_null": -4.317345937408079,
+   "diff": -0.03439242061158421,
+   "perm_p_one_sided": 0.98
+  },
+  "S1|bybit|h30000|real|signal": {
+   "mean_gross_signal": -4.166913045753894,
+   "mean_gross_null": -4.2307072494005284,
+   "diff": 0.06379420364663435,
+   "perm_p_one_sided": 0.281
+  },
+  "S1|bybit|h30000|zero|signal": {
+   "mean_gross_signal": -4.9887871984199466,
+   "mean_gross_null": -4.740312839179906,
+   "diff": -0.24847435924004024,
+   "perm_p_one_sided": 0.988
+  },
+  "S1|bybit|h5000|real|signal": {
+   "mean_gross_signal": -3.9207946918709604,
+   "mean_gross_null": -3.9422279469347457,
+   "diff": 0.02143325506378524,
+   "perm_p_one_sided": 0.235
+  },
+  "S1|bybit|h5000|zero|signal": {
+   "mean_gross_signal": -4.436959789119179,
+   "mean_gross_null": -4.375686871999437,
+   "diff": -0.0612729171197417,
+   "perm_p_one_sided": 0.986
+  }
+ },
+ "s2": {
+  "deribit->bybit": {
+   "quote_updates_crossed_after_basis": 0,
+   "crossed_but_killed_by_costs": 0,
+   "signals": 0,
+   "nofill": 0
+  },
+  "bybit->deribit": {
+   "quote_updates_crossed_after_basis": 0,
+   "crossed_but_killed_by_costs": 0,
+   "signals": 0,
+   "nofill": 0
+  },
+  "deribit->binance": {
+   "quote_updates_crossed_after_basis": 9,
+   "crossed_but_killed_by_costs": 9,
+   "signals": 0,
+   "nofill": 0
+  },
+  "binance->deribit": {
+   "quote_updates_crossed_after_basis": 0,
+   "crossed_but_killed_by_costs": 0,
+   "signals": 0,
+   "nofill": 0
+  },
+  "binance->bybit": {
+   "quote_updates_crossed_after_basis": 79001,
+   "crossed_but_killed_by_costs": 79001,
+   "signals": 0,
+   "nofill": 0
+  },
+  "bybit->binance": {
+   "quote_updates_crossed_after_basis": 92123,
+   "crossed_but_killed_by_costs": 92123,
+   "signals": 0,
+   "nofill": 0
+  },
+  "best_gross_per_10s_window": {
+   "BTC|binance->bybit": {
+    "windows": 822,
+    "median": 0.0,
+    "p99": 23.912539526730075,
+    "max": 39.92834731355339,
+    "share_windows_crossed": 0.3284671532846715
+   },
+   "BTC|binance->deribit": {
+    "windows": 827,
+    "median": -11.808650289335379,
+    "p99": -5.528344323036674,
+    "max": -5.514482523179272,
+    "share_windows_crossed": 0.0
+   },
+   "BTC|bybit->binance": {
+    "windows": 822,
+    "median": 4.99426619337919,
+    "p99": 19.976855559079166,
+    "max": 29.981447862128164,
+    "share_windows_crossed": 0.8333333333333334
+   },
+   "BTC|bybit->deribit": {
+    "windows": 997,
+    "median": -10.454392185194504,
+    "p99": -0.5268678491281834,
+    "max": -0.505528421124946,
+    "share_windows_crossed": 0.0
+   },
+   "BTC|deribit->binance": {
+    "windows": 827,
+    "median": -8.956140984200694,
+    "p99": -2.7038566365469343,
+    "max": 0.9289354633565801,
+    "share_windows_crossed": 0.0024183796856106408
+   },
+   "BTC|deribit->bybit": {
+    "windows": 997,
+    "median": -13.956870330312626,
+    "p99": -5.8386116219146285,
+    "max": -4.452335015834794,
+    "share_windows_crossed": 0.0
+   },
+   "ETH|binance->bybit": {
+    "windows": 813,
+    "median": 0.199765291115054,
+    "p99": 0.686986417587633,
+    "max": 1.097884987973774,
+    "share_windows_crossed": 0.8831488314883149
+   },
+   "ETH|binance->deribit": {
+    "windows": 825,
+    "median": -2.9370913326489863,
+    "p99": -1.992893387101331,
+    "max": -1.911413249522883,
+    "share_windows_crossed": 0.0
+   },
+   "ETH|bybit->binance": {
+    "windows": 813,
+    "median": -0.099882496709218,
+    "p99": 0.49922430239094484,
+    "max": 0.6995657717428011,
+    "share_windows_crossed": 0.14760147601476015
+   },
+   "ETH|bybit->deribit": {
+    "windows": 993,
+    "median": -0.436874984101467,
+    "p99": -0.27315497751582113,
+    "max": -0.21762967070226702,
+    "share_windows_crossed": 0.0
+   },
+   "ETH|deribit->binance": {
+    "windows": 825,
+    "median": -1.817423443842296,
+    "p99": -1.1464115276626496,
+    "max": -0.943941358395552,
+    "share_windows_crossed": 0.0
+   },
+   "ETH|deribit->bybit": {
+    "windows": 993,
+    "median": -0.42522821381969206,
+    "p99": -0.22945532188439344,
+    "max": -0.031099714809391003,
+    "share_windows_crossed": 0.0
+   }
+  }
+ },
+ "stats": {
+  "conn:bybit": 13,
+  "q:bybit": 2253738,
+  "conn:deribit": 11,
+  "q:deribit": 621619,
+  "s1_deribit_moves": 541210,
+  "s1_wide_book:bybit": 201431,
+  "s1_signal:bybit": 284482,
+  "s1_not_stale:bybit": 47305,
+  "S1|bybit|h1000|real|null:nofill": 2820,
+  "S1|bybit|h5000|real|null:nofill": 1546,
+  "S1|bybit|h30000|real|null:nofill": 457,
+  "S1|bybit|h1000|real|signal:nofill": 3071,
+  "S1|bybit|h5000|real|signal:nofill": 1730,
+  "disconnect:binance": 111,
+  "S1|bybit|h30000|real|signal:nofill": 512,
+  "S1|bybit|h1000|zero|signal:forced_exit": 37,
+  "S1|bybit|h1000|zero|null:forced_exit": 38,
+  "S1|bybit|h1000|real|null:forced_exit": 62,
+  "S1|bybit|h1000|real|signal:forced_exit": 61,
+  "S1|bybit|h5000|zero|signal:forced_exit": 87,
+  "S1|bybit|h5000|real|signal:forced_exit": 81,
+  "S1|bybit|h5000|zero|null:forced_exit": 86,
+  "S1|bybit|h5000|real|null:forced_exit": 79,
+  "disconnect:bybit": 30,
+  "S1|bybit|h1000|zero|signal:nodata": 317,
+  "S1|bybit|h1000|zero|null:nodata": 317,
+  "S1|bybit|h5000|zero|signal:nodata": 266,
+  "S1|bybit|h5000|zero|null:nodata": 266,
+  "S1|bybit|h30000|zero|signal:nodata": 257,
+  "S1|bybit|h30000|zero|null:nodata": 257,
+  "disconnect:deribit": 24,
+  "S1|bybit|h30000|zero|signal:forced_exit": 79,
+  "S1|bybit|h30000|zero|null:forced_exit": 79,
+  "S1|bybit|h30000|real|null:forced_exit": 59,
+  "S1|bybit|h30000|real|signal:forced_exit": 57,
+  "conn:binance": 13,
+  "q:binance": 268857,
+  "s1_not_stale:binance": 9061,
+  "s1_signal:binance": 128804,
+  "s1_wide_book:binance": 83892,
+  "S1|binance|h1000|zero|signal:nodata": 636,
+  "S1|binance|h1000|zero|null:nodata": 636,
+  "S1|binance|h5000|zero|signal:nodata": 469,
+  "S1|binance|h5000|zero|null:nodata": 469,
+  "S1|binance|h30000|zero|signal:nodata": 375,
+  "S1|binance|h30000|zero|null:nodata": 375,
+  "s2_crossed:bybit->binance": 92123,
+  "s2_crossed_but_costs:bybit->binance": 92123,
+  "s2_crossed:binance->bybit": 79001,
+  "s2_crossed_but_costs:binance->bybit": 79001,
+  "S1|binance|h1000|real|signal:nofill": 405,
+  "S1|binance|h1000|real|signal:forced_exit": 80,
+  "S1|binance|h5000|real|null:nofill": 202,
+  "S1|binance|h1000|real|null:nofill": 413,
+  "S1|binance|h5000|real|signal:nofill": 216,
+  "S1|binance|h1000|zero|null:forced_exit": 104,
+  "S1|binance|h5000|zero|null:forced_exit": 46,
+  "S1|binance|h5000|real|null:forced_exit": 72,
+  "S1|binance|h30000|real|signal:nofill": 61,
+  "S1|binance|h1000|real|signal:nodata": 225,
+  "S1|binance|h1000|real|null:nodata": 227,
+  "S1|binance|h30000|real|null:nofill": 63,
+  "S1|binance|h5000|real|signal:nodata": 97,
+  "S1|binance|h5000|real|null:nodata": 88,
+  "S1|binance|h1000|zero|signal:forced_exit": 112,
+  "S1|binance|h30000|real|signal:nodata": 27,
+  "S1|binance|h30000|real|null:nodata": 23,
+  "S1|binance|h5000|zero|signal:forced_exit": 47,
+  "S1|binance|h5000|real|signal:forced_exit": 70,
+  "S1|binance|h1000|real|null:forced_exit": 74,
+  "S1|bybit|h1000|real|signal:nodata": 34,
+  "S1|bybit|h1000|real|null:nodata": 34,
+  "S1|bybit|h5000|real|null:nodata": 21,
+  "S1|bybit|h5000|real|signal:nodata": 19,
+  "S1|binance|h30000|zero|signal:forced_exit": 44,
+  "S1|binance|h30000|real|null:forced_exit": 30,
+  "S1|binance|h30000|zero|null:forced_exit": 35,
+  "S1|binance|h30000|real|signal:forced_exit": 32,
+  "S1|bybit|h30000|real|signal:nodata": 5,
+  "S1|bybit|h30000|real|null:nodata": 7,
+  "s2_crossed:deribit->binance": 9,
+  "s2_crossed_but_costs:deribit->binance": 9,
+  "S1|binance|h1000|zero|signal:nofill": 1,
+  "S1|binance|h5000|zero|signal:nofill": 1
+ }
+}

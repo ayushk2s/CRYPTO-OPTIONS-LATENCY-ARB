@@ -1,0 +1,1195 @@
+{
+ "binance_at_start": false,
+ "meta": {
+  "BTC": {
+   "spot": 81499.99,
+   "expiries": [
+    {
+     "expiry": "2026-10-24 08:00:00",
+     "strikes": [
+      80000.0,
+      80500.0,
+      81000.0,
+      81500.0,
+      82000.0,
+      82500.0,
+      83000.0
+     ]
+    },
+    {
+     "expiry": "2026-10-25 08:00:00",
+     "strikes": [
+      80000.0,
+      80500.0,
+      81000.0,
+      81500.0,
+      82000.0,
+      82500.0,
+      83000.0
+     ]
+    }
+   ]
+  },
+  "ETH": {
+   "spot": 2400.12,
+   "expiries": [
+    {
+     "expiry": "2026-10-24 08:00:00",
+     "strikes": [
+      2340.0,
+      2360.0,
+      2380.0,
+      2400.0,
+      2420.0,
+      2440.0,
+      2460.0
+     ]
+    },
+    {
+     "expiry": "2026-10-25 08:00:00",
+     "strikes": [
+      2340.0,
+      2360.0,
+      2380.0,
+      2400.0,
+      2420.0,
+      2440.0,
+      2460.0
+     ]
+    }
+   ]
+  }
+ },
+ "rtt_ms": {
+  "bybit": 138.0,
+  "binance": 211.0,
+  "deribit": 255.0
+ },
+ "feed_p95_ms": {
+  "bybit": 150.0,
+  "binance": 220.0,
+  "deribit": 1300.0
+ },
+ "instruments": {
+  "BTC-20261024-81500-C": {
+   "coin": "BTC",
+   "expiry_ms": 1792828800000,
+   "deribit": {
+    "sym": "BTC-24OCT26-81500-C",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "BTC-24OCT26-81500-C-USDT",
+    "tick": 5.0
+   },
+   "binance": {
+    "sym": "BTC-261024-81500-C",
+    "tick": 5.0
+   }
+  },
+  "BTC-20261024-81500-P": {
+   "coin": "BTC",
+   "expiry_ms": 1792828800000,
+   "deribit": {
+    "sym": "BTC-24OCT26-81500-P",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "BTC-24OCT26-81500-P-USDT",
+    "tick": 5.0
+   },
+   "binance": {
+    "sym": "BTC-261024-81500-P",
+    "tick": 5.0
+   }
+  },
+  "BTC-20261024-81000-C": {
+   "coin": "BTC",
+   "expiry_ms": 1792828800000,
+   "deribit": {
+    "sym": "BTC-24OCT26-81000-C",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "BTC-24OCT26-81000-C-USDT",
+    "tick": 5.0
+   },
+   "binance": {
+    "sym": "BTC-261024-81000-C",
+    "tick": 5.0
+   }
+  },
+  "BTC-20261024-81000-P": {
+   "coin": "BTC",
+   "expiry_ms": 1792828800000,
+   "deribit": {
+    "sym": "BTC-24OCT26-81000-P",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "BTC-24OCT26-81000-P-USDT",
+    "tick": 5.0
+   },
+   "binance": {
+    "sym": "BTC-261024-81000-P",
+    "tick": 5.0
+   }
+  },
+  "BTC-20261024-82000-C": {
+   "coin": "BTC",
+   "expiry_ms": 1792828800000,
+   "deribit": {
+    "sym": "BTC-24OCT26-82000-C",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "BTC-24OCT26-82000-C-USDT",
+    "tick": 5.0
+   },
+   "binance": {
+    "sym": "BTC-261024-82000-C",
+    "tick": 5.0
+   }
+  },
+  "BTC-20261024-82000-P": {
+   "coin": "BTC",
+   "expiry_ms": 1792828800000,
+   "deribit": {
+    "sym": "BTC-24OCT26-82000-P",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "BTC-24OCT26-82000-P-USDT",
+    "tick": 5.0
+   },
+   "binance": {
+    "sym": "BTC-261024-82000-P",
+    "tick": 5.0
+   }
+  },
+  "BTC-20261024-80500-C": {
+   "coin": "BTC",
+   "expiry_ms": 1792828800000,
+   "deribit": {
+    "sym": "BTC-24OCT26-80500-C",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "BTC-24OCT26-80500-C-USDT",
+    "tick": 5.0
+   },
+   "binance": {
+    "sym": "BTC-261024-80500-C",
+    "tick": 5.0
+   }
+  },
+  "BTC-20261024-80500-P": {
+   "coin": "BTC",
+   "expiry_ms": 1792828800000,
+   "deribit": {
+    "sym": "BTC-24OCT26-80500-P",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "BTC-24OCT26-80500-P-USDT",
+    "tick": 5.0
+   },
+   "binance": {
+    "sym": "BTC-261024-80500-P",
+    "tick": 5.0
+   }
+  },
+  "BTC-20261024-82500-C": {
+   "coin": "BTC",
+   "expiry_ms": 1792828800000,
+   "deribit": {
+    "sym": "BTC-24OCT26-82500-C",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "BTC-24OCT26-82500-C-USDT",
+    "tick": 5.0
+   },
+   "binance": {
+    "sym": "BTC-261024-82500-C",
+    "tick": 5.0
+   }
+  },
+  "BTC-20261024-82500-P": {
+   "coin": "BTC",
+   "expiry_ms": 1792828800000,
+   "deribit": {
+    "sym": "BTC-24OCT26-82500-P",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "BTC-24OCT26-82500-P-USDT",
+    "tick": 5.0
+   },
+   "binance": {
+    "sym": "BTC-261024-82500-P",
+    "tick": 5.0
+   }
+  },
+  "BTC-20261024-80000-C": {
+   "coin": "BTC",
+   "expiry_ms": 1792828800000,
+   "deribit": {
+    "sym": "BTC-24OCT26-80000-C",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "BTC-24OCT26-80000-C-USDT",
+    "tick": 5.0
+   },
+   "binance": {
+    "sym": "BTC-261024-80000-C",
+    "tick": 5.0
+   }
+  },
+  "BTC-20261024-80000-P": {
+   "coin": "BTC",
+   "expiry_ms": 1792828800000,
+   "deribit": {
+    "sym": "BTC-24OCT26-80000-P",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "BTC-24OCT26-80000-P-USDT",
+    "tick": 5.0
+   },
+   "binance": {
+    "sym": "BTC-261024-80000-P",
+    "tick": 5.0
+   }
+  },
+  "BTC-20261024-83000-C": {
+   "coin": "BTC",
+   "expiry_ms": 1792828800000,
+   "deribit": {
+    "sym": "BTC-24OCT26-83000-C",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "BTC-24OCT26-83000-C-USDT",
+    "tick": 5.0
+   },
+   "binance": {
+    "sym": "BTC-261024-83000-C",
+    "tick": 5.0
+   }
+  },
+  "BTC-20261024-83000-P": {
+   "coin": "BTC",
+   "expiry_ms": 1792828800000,
+   "deribit": {
+    "sym": "BTC-24OCT26-83000-P",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "BTC-24OCT26-83000-P-USDT",
+    "tick": 5.0
+   },
+   "binance": {
+    "sym": "BTC-261024-83000-P",
+    "tick": 5.0
+   }
+  },
+  "BTC-20261025-81500-C": {
+   "coin": "BTC",
+   "expiry_ms": 1792915200000,
+   "deribit": {
+    "sym": "BTC-25OCT26-81500-C",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "BTC-25OCT26-81500-C-USDT",
+    "tick": 5.0
+   },
+   "binance": {
+    "sym": "BTC-261025-81500-C",
+    "tick": 5.0
+   }
+  },
+  "BTC-20261025-81500-P": {
+   "coin": "BTC",
+   "expiry_ms": 1792915200000,
+   "deribit": {
+    "sym": "BTC-25OCT26-81500-P",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "BTC-25OCT26-81500-P-USDT",
+    "tick": 5.0
+   },
+   "binance": {
+    "sym": "BTC-261025-81500-P",
+    "tick": 5.0
+   }
+  },
+  "BTC-20261025-81000-C": {
+   "coin": "BTC",
+   "expiry_ms": 1792915200000,
+   "deribit": {
+    "sym": "BTC-25OCT26-81000-C",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "BTC-25OCT26-81000-C-USDT",
+    "tick": 5.0
+   },
+   "binance": {
+    "sym": "BTC-261025-81000-C",
+    "tick": 5.0
+   }
+  },
+  "BTC-20261025-81000-P": {
+   "coin": "BTC",
+   "expiry_ms": 1792915200000,
+   "deribit": {
+    "sym": "BTC-25OCT26-81000-P",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "BTC-25OCT26-81000-P-USDT",
+    "tick": 5.0
+   },
+   "binance": {
+    "sym": "BTC-261025-81000-P",
+    "tick": 5.0
+   }
+  },
+  "BTC-20261025-82000-C": {
+   "coin": "BTC",
+   "expiry_ms": 1792915200000,
+   "deribit": {
+    "sym": "BTC-25OCT26-82000-C",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "BTC-25OCT26-82000-C-USDT",
+    "tick": 5.0
+   },
+   "binance": {
+    "sym": "BTC-261025-82000-C",
+    "tick": 5.0
+   }
+  },
+  "BTC-20261025-82000-P": {
+   "coin": "BTC",
+   "expiry_ms": 1792915200000,
+   "deribit": {
+    "sym": "BTC-25OCT26-82000-P",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "BTC-25OCT26-82000-P-USDT",
+    "tick": 5.0
+   },
+   "binance": {
+    "sym": "BTC-261025-82000-P",
+    "tick": 5.0
+   }
+  },
+  "BTC-20261025-80500-C": {
+   "coin": "BTC",
+   "expiry_ms": 1792915200000,
+   "deribit": {
+    "sym": "BTC-25OCT26-80500-C",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "BTC-25OCT26-80500-C-USDT",
+    "tick": 5.0
+   }
+  },
+  "BTC-20261025-80500-P": {
+   "coin": "BTC",
+   "expiry_ms": 1792915200000,
+   "deribit": {
+    "sym": "BTC-25OCT26-80500-P",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "BTC-25OCT26-80500-P-USDT",
+    "tick": 5.0
+   }
+  },
+  "BTC-20261025-82500-C": {
+   "coin": "BTC",
+   "expiry_ms": 1792915200000,
+   "deribit": {
+    "sym": "BTC-25OCT26-82500-C",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "BTC-25OCT26-82500-C-USDT",
+    "tick": 5.0
+   }
+  },
+  "BTC-20261025-82500-P": {
+   "coin": "BTC",
+   "expiry_ms": 1792915200000,
+   "deribit": {
+    "sym": "BTC-25OCT26-82500-P",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "BTC-25OCT26-82500-P-USDT",
+    "tick": 5.0
+   }
+  },
+  "BTC-20261025-80000-C": {
+   "coin": "BTC",
+   "expiry_ms": 1792915200000,
+   "deribit": {
+    "sym": "BTC-25OCT26-80000-C",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "BTC-25OCT26-80000-C-USDT",
+    "tick": 5.0
+   },
+   "binance": {
+    "sym": "BTC-261025-80000-C",
+    "tick": 5.0
+   }
+  },
+  "BTC-20261025-80000-P": {
+   "coin": "BTC",
+   "expiry_ms": 1792915200000,
+   "deribit": {
+    "sym": "BTC-25OCT26-80000-P",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "BTC-25OCT26-80000-P-USDT",
+    "tick": 5.0
+   },
+   "binance": {
+    "sym": "BTC-261025-80000-P",
+    "tick": 5.0
+   }
+  },
+  "BTC-20261025-83000-C": {
+   "coin": "BTC",
+   "expiry_ms": 1792915200000,
+   "deribit": {
+    "sym": "BTC-25OCT26-83000-C",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "BTC-25OCT26-83000-C-USDT",
+    "tick": 5.0
+   },
+   "binance": {
+    "sym": "BTC-261025-83000-C",
+    "tick": 5.0
+   }
+  },
+  "BTC-20261025-83000-P": {
+   "coin": "BTC",
+   "expiry_ms": 1792915200000,
+   "deribit": {
+    "sym": "BTC-25OCT26-83000-P",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "BTC-25OCT26-83000-P-USDT",
+    "tick": 5.0
+   },
+   "binance": {
+    "sym": "BTC-261025-83000-P",
+    "tick": 5.0
+   }
+  },
+  "ETH-20261024-2400-C": {
+   "coin": "ETH",
+   "expiry_ms": 1792828800000,
+   "deribit": {
+    "sym": "ETH-24OCT26-2400-C",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "ETH-24OCT26-2400-C-USDT",
+    "tick": 0.1
+   },
+   "binance": {
+    "sym": "ETH-261024-2400-C",
+    "tick": 0.2
+   }
+  },
+  "ETH-20261024-2400-P": {
+   "coin": "ETH",
+   "expiry_ms": 1792828800000,
+   "deribit": {
+    "sym": "ETH-24OCT26-2400-P",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "ETH-24OCT26-2400-P-USDT",
+    "tick": 0.1
+   },
+   "binance": {
+    "sym": "ETH-261024-2400-P",
+    "tick": 0.2
+   }
+  },
+  "ETH-20261024-2420-C": {
+   "coin": "ETH",
+   "expiry_ms": 1792828800000,
+   "deribit": {
+    "sym": "ETH-24OCT26-2420-C",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "ETH-24OCT26-2420-C-USDT",
+    "tick": 0.1
+   }
+  },
+  "ETH-20261024-2420-P": {
+   "coin": "ETH",
+   "expiry_ms": 1792828800000,
+   "deribit": {
+    "sym": "ETH-24OCT26-2420-P",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "ETH-24OCT26-2420-P-USDT",
+    "tick": 0.1
+   }
+  },
+  "ETH-20261024-2380-C": {
+   "coin": "ETH",
+   "expiry_ms": 1792828800000,
+   "deribit": {
+    "sym": "ETH-24OCT26-2380-C",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "ETH-24OCT26-2380-C-USDT",
+    "tick": 0.1
+   }
+  },
+  "ETH-20261024-2380-P": {
+   "coin": "ETH",
+   "expiry_ms": 1792828800000,
+   "deribit": {
+    "sym": "ETH-24OCT26-2380-P",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "ETH-24OCT26-2380-P-USDT",
+    "tick": 0.1
+   }
+  },
+  "ETH-20261024-2440-C": {
+   "coin": "ETH",
+   "expiry_ms": 1792828800000,
+   "deribit": {
+    "sym": "ETH-24OCT26-2440-C",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "ETH-24OCT26-2440-C-USDT",
+    "tick": 0.1
+   }
+  },
+  "ETH-20261024-2440-P": {
+   "coin": "ETH",
+   "expiry_ms": 1792828800000,
+   "deribit": {
+    "sym": "ETH-24OCT26-2440-P",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "ETH-24OCT26-2440-P-USDT",
+    "tick": 0.1
+   }
+  },
+  "ETH-20261024-2360-C": {
+   "coin": "ETH",
+   "expiry_ms": 1792828800000,
+   "deribit": {
+    "sym": "ETH-24OCT26-2360-C",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "ETH-24OCT26-2360-C-USDT",
+    "tick": 0.1
+   }
+  },
+  "ETH-20261024-2360-P": {
+   "coin": "ETH",
+   "expiry_ms": 1792828800000,
+   "deribit": {
+    "sym": "ETH-24OCT26-2360-P",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "ETH-24OCT26-2360-P-USDT",
+    "tick": 0.1
+   }
+  },
+  "ETH-20261024-2460-C": {
+   "coin": "ETH",
+   "expiry_ms": 1792828800000,
+   "deribit": {
+    "sym": "ETH-24OCT26-2460-C",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "ETH-24OCT26-2460-C-USDT",
+    "tick": 0.1
+   }
+  },
+  "ETH-20261024-2460-P": {
+   "coin": "ETH",
+   "expiry_ms": 1792828800000,
+   "deribit": {
+    "sym": "ETH-24OCT26-2460-P",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "ETH-24OCT26-2460-P-USDT",
+    "tick": 0.1
+   }
+  },
+  "ETH-20261024-2340-C": {
+   "coin": "ETH",
+   "expiry_ms": 1792828800000,
+   "deribit": {
+    "sym": "ETH-24OCT26-2340-C",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "ETH-24OCT26-2340-C-USDT",
+    "tick": 0.1
+   }
+  },
+  "ETH-20261024-2340-P": {
+   "coin": "ETH",
+   "expiry_ms": 1792828800000,
+   "deribit": {
+    "sym": "ETH-24OCT26-2340-P",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "ETH-24OCT26-2340-P-USDT",
+    "tick": 0.1
+   }
+  },
+  "ETH-20261025-2400-C": {
+   "coin": "ETH",
+   "expiry_ms": 1792915200000,
+   "deribit": {
+    "sym": "ETH-25OCT26-2400-C",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "ETH-25OCT26-2400-C-USDT",
+    "tick": 0.1
+   },
+   "binance": {
+    "sym": "ETH-261025-2400-C",
+    "tick": 0.2
+   }
+  },
+  "ETH-20261025-2400-P": {
+   "coin": "ETH",
+   "expiry_ms": 1792915200000,
+   "deribit": {
+    "sym": "ETH-25OCT26-2400-P",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "ETH-25OCT26-2400-P-USDT",
+    "tick": 0.1
+   },
+   "binance": {
+    "sym": "ETH-261025-2400-P",
+    "tick": 0.2
+   }
+  },
+  "ETH-20261025-2420-C": {
+   "coin": "ETH",
+   "expiry_ms": 1792915200000,
+   "deribit": {
+    "sym": "ETH-25OCT26-2420-C",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "ETH-25OCT26-2420-C-USDT",
+    "tick": 0.1
+   }
+  },
+  "ETH-20261025-2420-P": {
+   "coin": "ETH",
+   "expiry_ms": 1792915200000,
+   "deribit": {
+    "sym": "ETH-25OCT26-2420-P",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "ETH-25OCT26-2420-P-USDT",
+    "tick": 0.1
+   }
+  },
+  "ETH-20261025-2380-C": {
+   "coin": "ETH",
+   "expiry_ms": 1792915200000,
+   "deribit": {
+    "sym": "ETH-25OCT26-2380-C",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "ETH-25OCT26-2380-C-USDT",
+    "tick": 0.1
+   }
+  },
+  "ETH-20261025-2380-P": {
+   "coin": "ETH",
+   "expiry_ms": 1792915200000,
+   "deribit": {
+    "sym": "ETH-25OCT26-2380-P",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "ETH-25OCT26-2380-P-USDT",
+    "tick": 0.1
+   }
+  },
+  "ETH-20261025-2440-C": {
+   "coin": "ETH",
+   "expiry_ms": 1792915200000,
+   "deribit": {
+    "sym": "ETH-25OCT26-2440-C",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "ETH-25OCT26-2440-C-USDT",
+    "tick": 0.1
+   }
+  },
+  "ETH-20261025-2440-P": {
+   "coin": "ETH",
+   "expiry_ms": 1792915200000,
+   "deribit": {
+    "sym": "ETH-25OCT26-2440-P",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "ETH-25OCT26-2440-P-USDT",
+    "tick": 0.1
+   }
+  },
+  "ETH-20261025-2360-C": {
+   "coin": "ETH",
+   "expiry_ms": 1792915200000,
+   "deribit": {
+    "sym": "ETH-25OCT26-2360-C",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "ETH-25OCT26-2360-C-USDT",
+    "tick": 0.1
+   }
+  },
+  "ETH-20261025-2360-P": {
+   "coin": "ETH",
+   "expiry_ms": 1792915200000,
+   "deribit": {
+    "sym": "ETH-25OCT26-2360-P",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "ETH-25OCT26-2360-P-USDT",
+    "tick": 0.1
+   }
+  },
+  "ETH-20261025-2460-C": {
+   "coin": "ETH",
+   "expiry_ms": 1792915200000,
+   "deribit": {
+    "sym": "ETH-25OCT26-2460-C",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "ETH-25OCT26-2460-C-USDT",
+    "tick": 0.1
+   }
+  },
+  "ETH-20261025-2460-P": {
+   "coin": "ETH",
+   "expiry_ms": 1792915200000,
+   "deribit": {
+    "sym": "ETH-25OCT26-2460-P",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "ETH-25OCT26-2460-P-USDT",
+    "tick": 0.1
+   }
+  },
+  "ETH-20261025-2340-C": {
+   "coin": "ETH",
+   "expiry_ms": 1792915200000,
+   "deribit": {
+    "sym": "ETH-25OCT26-2340-C",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "ETH-25OCT26-2340-C-USDT",
+    "tick": 0.1
+   }
+  },
+  "ETH-20261025-2340-P": {
+   "coin": "ETH",
+   "expiry_ms": 1792915200000,
+   "deribit": {
+    "sym": "ETH-25OCT26-2340-P",
+    "tick": 0.0001,
+    "tick_steps": [
+     {
+      "tick_size": 0.0005,
+      "above_price": 0.005
+     }
+    ]
+   },
+   "bybit": {
+    "sym": "ETH-25OCT26-2340-P-USDT",
+    "tick": 0.1
+   }
+  }
+ }
+}

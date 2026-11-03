@@ -1,0 +1,15 @@
+# raw recordings and per-trade logs (~1 GB); regenerate with scripts/02_record.py and scripts/05_paper_trade.py
+data_cache/
+*.log
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

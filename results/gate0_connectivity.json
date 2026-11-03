@@ -1,0 +1,178 @@
+{
+ "ts": 1792759791.6339762,
+ "rest": {
+  "deribit.time": {
+   "url": "https://www.deribit.com/api/v2/public/get_time",
+   "status": 200,
+   "ms": 545.9,
+   "bytes": 118,
+   "head": "{\"jsonrpc\":\"2.0\",\"result\":1792759792702,\"usIn\":1792759792702316,\"usOut\":1792759792702421,\"usDiff\":105,\"testnet\":false}"
+  },
+  "deribit.index_BTC": {
+   "url": "https://www.deribit.com/api/v2/public/get_index_price?index_name=btc_usd",
+   "status": 200,
+   "ms": 260.7,
+   "bytes": 165,
+   "head": "{\"jsonrpc\":\"2.0\",\"result\":{\"estimated_delivery_price\":81635.72,\"index_price\":81635.72},\"usIn\":1792759793013692,\"usOut\":1792759793013956,\"usDiff\":264,\"testnet\":false}"
+  },
+  "deribit.summary_BTC": {
+   "url": "https://www.deribit.com/api/v2/public/get_book_summary_by_currency?currency=BTC&kind=option",
+   "status": 200,
+   "ms": 254.7,
+   "bytes": 414833,
+   "head": "{\"jsonrpc\":\"2.0\",\"result\":[{\"high\":0.013,\"low\":0.01,\"last\":0.011,\"instrument_name\":\"BTC-27NOV26-73000-P\",\"bid_price\":0.01,\"ask_price\":0.011,\"open_interest\":266.9,\"mark_price\":0.0105535,\"interest_rate\":0.0,\"creation_timestamp\":1792759792027,\"estimated_delivery_price\":81635.83,\"price_change\":-12.0,\"vo"
+  },
+  "deribit.index_ETH": {
+   "url": "https://www.deribit.com/api/v2/public/get_index_price?index_name=eth_usd",
+   "status": 200,
+   "ms": 275.2,
+   "bytes": 163,
+   "head": "{\"jsonrpc\":\"2.0\",\"result\":{\"estimated_delivery_price\":2397.02,\"index_price\":2397.02},\"usIn\":1792759793529702,\"usOut\":1792759793529967,\"usDiff\":265,\"testnet\":false}"
+  },
+  "deribit.summary_ETH": {
+   "url": "https://www.deribit.com/api/v2/public/get_book_summary_by_currency?currency=ETH&kind=option",
+   "status": 200,
+   "ms": 268.4,
+   "bytes": 346172,
+   "head": "{\"jsonrpc\":\"2.0\",\"result\":[{\"high\":0.0085,\"low\":0.0029,\"last\":0.0029,\"instrument_name\":\"ETH-25OCT26-2340-P\",\"bid_price\":0.0029,\"ask_price\":0.0032,\"open_interest\":96.0,\"mark_price\":0.00313,\"interest_rate\":0.0,\"creation_timestamp\":1792759792733,\"estimated_delivery_price\":2397.02,\"price_change\":-47.272"
+  },
+  "binance.time": {
+   "url": "https://eapi.binance.com/eapi/v1/time",
+   "status": 200,
+   "ms": 360.5,
+   "bytes": 28,
+   "head": "{\"serverTime\":1792759794234}"
+  },
+  "binance.exchangeInfo": {
+   "url": "https://eapi.binance.com/eapi/v1/exchangeInfo",
+   "status": 200,
+   "ms": 287.6,
+   "bytes": 963080,
+   "head": "{\"timezone\":\"UTC\",\"serverTime\":1792759794440,\"optionContracts\":[{\"baseAsset\":\"XAG\",\"quoteAsset\":\"USDT\",\"underlying\":\"XAGUSDT\",\"settleAsset\":\"USDT\",\"nakedSell\":false},{\"baseAsset\":\"BTC\",\"quoteAsset\":\"USDT\",\"underlying\":\"BTCUSDT\",\"settleAsset\":\"USDT\",\"nakedSell\":true},{\"baseAsset\":\"CL\",\"quoteAsset\":\"U"
+  },
+  "binance.ticker": {
+   "url": "https://eapi.binance.com/eapi/v1/ticker",
+   "status": 200,
+   "ms": 543.2,
+   "bytes": 518317,
+   "head": "[{\"symbol\":\"BTC-261225-85000-C\",\"priceChange\":\"120\",\"priceChangePercent\":\"0.033\",\"lastPrice\":\"3770\",\"lastQty\":\"0.1\",\"open\":\"3650\",\"high\":\"3935\",\"low\":\"3650\",\"volume\":\"1.26\",\"amount\":\"4756\",\"bidPrice\":\"3825\",\"askPrice\":\"3835\",\"openTime\":1792687800000,\"closeTime\":1792754427889,\"firstTradeId\":268,\"trad"
+  },
+  "binance.mark": {
+   "url": "https://eapi.binance.com/eapi/v1/mark",
+   "status": 200,
+   "ms": 383.5,
+   "bytes": 411694,
+   "head": "[{\"symbol\":\"BTC-261225-85000-C\",\"markPrice\":\"3791.279\",\"bidIV\":\"0.36251307\",\"askIV\":\"0.36325812\",\"markIV\":\"0.36\",\"delta\":\"0.44961814\",\"theta\":\"-38.76602612\",\"gamma\":\"0.00003217\",\"vega\":\"134.17208032\",\"highPriceLimit\":\"6820\",\"lowPriceLimit\":\"760\",\"riskFreeInterest\":\"0.053\"},{\"symbol\":\"BTC-261225-8500"
+  },
+  "binance.index_BTC": {
+   "url": "https://eapi.binance.com/eapi/v1/index?underlying=BTCUSDT",
+   "status": 200,
+   "ms": 208.5,
+   "bytes": 52,
+   "head": "{\"indexPrice\":\"81734.42608696\",\"time\":1792759795000}"
+  },
+  "binance.index_ETH": {
+   "url": "https://eapi.binance.com/eapi/v1/index?underlying=ETHUSDT",
+   "status": 200,
+   "ms": 205.8,
+   "bytes": 51,
+   "head": "{\"indexPrice\":\"2399.94953488\",\"time\":1792759794999}"
+  },
+  "bybit.time": {
+   "url": "https://api.bybit.com/v5/market/time",
+   "status": 200,
+   "ms": 306.3,
+   "bytes": 134,
+   "head": "{\"retCode\":0,\"retMsg\":\"OK\",\"result\":{\"timeSecond\":\"1792759796\",\"timeNano\":\"1792759796215760666\"},\"retExtInfo\":{},\"time\":1792759796215}"
+  },
+  "bybit.tickers_BTC": {
+   "url": "https://api.bybit.com/v5/market/tickers?category=option&baseCoin=BTC",
+   "status": 200,
+   "ms": 304.1,
+   "bytes": 379371,
+   "head": "{\"retCode\":0,\"retMsg\":\"SUCCESS\",\"result\":{\"category\":\"option\",\"list\":[{\"symbol\":\"BTC-27NOV26-76000-P-USDT\",\"bid1Price\":\"1385\",\"bid1Size\":\"37.16\",\"bid1Iv\":\"0.3773\",\"ask1Price\":\"1390\",\"ask1Size\":\"7.88\",\"ask1Iv\":\"0.378\",\"lastPrice\":\"1380\",\"highPrice24h\":\"1675\",\"lowPrice24h\":\"1340\",\"markPrice\":\"1397.481"
+  },
+  "bybit.instruments_BTC": {
+   "url": "https://api.bybit.com/v5/market/instruments-info?category=option&baseCoin=BTC&limit=1000",
+   "status": 200,
+   "ms": 294.9,
+   "bytes": 290040,
+   "head": "{\"retCode\":0,\"retMsg\":\"success\",\"result\":{\"category\":\"option\",\"nextPageCursor\":\"\",\"list\":[{\"symbolId\":408165,\"symbol\":\"BTC-24SEP27-170000-P-USDT\",\"status\":\"Trading\",\"baseCoin\":\"BTC\",\"quoteCoin\":\"USDT\",\"settleCoin\":\"USDT\",\"optionsType\":\"Put\",\"launchTime\":\"1791446400000\",\"deliveryTime\":\"1821772800000\""
+  },
+  "bybit.tickers_ETH": {
+   "url": "https://api.bybit.com/v5/market/tickers?category=option&baseCoin=ETH",
+   "status": 200,
+   "ms": 348.9,
+   "bytes": 312428,
+   "head": "{\"retCode\":0,\"retMsg\":\"SUCCESS\",\"result\":{\"category\":\"option\",\"list\":[{\"symbol\":\"ETH-26MAR27-1200-P-USDT\",\"bid1Price\":\"16.7\",\"bid1Size\":\"40\",\"bid1Iv\":\"0.6795\",\"ask1Price\":\"17.6\",\"ask1Size\":\"89.2\",\"ask1Iv\":\"0.6871\",\"lastPrice\":\"17.4\",\"highPrice24h\":\"17.4\",\"lowPrice24h\":\"16.9\",\"markPrice\":\"14.89988968"
+  },
+  "bybit.instruments_ETH": {
+   "url": "https://api.bybit.com/v5/market/instruments-info?category=option&baseCoin=ETH&limit=1000",
+   "status": 200,
+   "ms": 455.3,
+   "bytes": 239469,
+   "head": "{\"retCode\":0,\"retMsg\":\"success\",\"result\":{\"category\":\"option\",\"nextPageCursor\":\"\",\"list\":[{\"symbolId\":408249,\"symbol\":\"ETH-24SEP27-7000-P-USDT\",\"status\":\"Trading\",\"baseCoin\":\"ETH\",\"quoteCoin\":\"USDT\",\"settleCoin\":\"USDT\",\"optionsType\":\"Put\",\"launchTime\":\"1791446400000\",\"deliveryTime\":\"1821772800000\",\""
+  }
+ },
+ "ws": {
+  "binance:wss://nbstream.binance.com/eoptions/ws/BTC-261025-79000-P@ticker": {
+   "url": "wss://nbstream.binance.com/eoptions/ws/BTC-261025-79000-P@ticker",
+   "error": "InvalidStatus(Response(status_code=404, reason_phrase='Not Found', headers=Headers([('Server', 'awselb/2.0'), ('Date', 'Fri, 23 Oct 2026 12:49:58 GMT'), ('Content-Type', 'text/plain; charset=utf-8'), ('Content-Length', '4'), ('Connection', 'keep-alive')]), body=bytearray(b'null'), _exception=InvalidStatus(...)))",
+   "n_msgs": 0,
+   "samples": []
+  },
+  "binance:wss://nbstream.binance.com/eoptions/stream?streams=BTC-261025-79000-P@ticker": {
+   "url": "wss://nbstream.binance.com/eoptions/stream?streams=BTC-261025-79000-P@ticker",
+   "error": "InvalidStatus(Response(status_code=404, reason_phrase='Not Found', headers=Headers([('Server', 'awselb/2.0'), ('Date', 'Fri, 23 Oct 2026 12:49:58 GMT'), ('Content-Type', 'text/plain; charset=utf-8'), ('Content-Length', '4'), ('Connection', 'keep-alive')]), body=bytearray(b'null'), _exception=InvalidStatus(...)))",
+   "n_msgs": 0,
+   "samples": []
+  },
+  "binance:wss://nbstream.binance.com/eoptions/ws": {
+   "url": "wss://nbstream.binance.com/eoptions/ws",
+   "error": "InvalidStatus(Response(status_code=404, reason_phrase='Not Found', headers=Headers([('Server', 'awselb/2.0'), ('Date', 'Fri, 23 Oct 2026 12:49:58 GMT'), ('Content-Type', 'text/plain; charset=utf-8'), ('Content-Length', '4'), ('Connection', 'keep-alive')]), body=bytearray(b'null'), _exception=InvalidStatus(...)))",
+   "n_msgs": 0,
+   "samples": []
+  },
+  "bybit:wss://stream.bybit.com/v5/public/option": {
+   "url": "wss://stream.bybit.com/v5/public/option",
+   "connect_ms": 518.7,
+   "n_msgs": 10,
+   "samples": [
+    "{\"topic\":\"tickers.BTC-24OCT26-83000-C-USDT\",\"ts\":1792759798106,\"type\":\"snapshot\",\"id\":\"tickers.BTC-24OCT26-83000-C-USDT-78722323489-1792759798106\",\"data\":{\"symbol\":\"BTC-24OCT26-83000-C-USDT\",\"bidPrice\":\"80\",\"bidSize\":\"1.45\",\"bidIv\":\"0.2978\",\"askPrice\":\"85\",\"askSize\":\"28.48\",\"askIv\":\"0.3037\",\"lastPrice\":\"90\",\"highPrice24h\":\"320\",\"lowPrice24h\":\"65\",\"markPrice\":\"80.85081747\",\"indexPrice\":\"81735.28209",
+    "{\"topic\":\"orderbook.25.BTC-24OCT26-83000-C-USDT\",\"ts\":1792759797321,\"type\":\"snapshot\",\"id\":\"orderbook.25.BTC-24OCT26-83000-C-USDT-78722323363-1792759797320\",\"data\":{\"s\":\"BTC-24OCT26-83000-C-USDT\",\"b\":[[\"80\",\"1.45\"],[\"75\",\"54.98\"],[\"70\",\"20.26\"],[\"65\",\"24.08\"],[\"60\",\"14.98\"],[\"55\",\"5.03\"],[\"50\",\"11.86\"],[\"45\",\"0.39\"],[\"40\",\"0.13\"],[\"30\",\"5.18\"],[\"25\",\"7.67\"],[\"20\",\"80.03\"],[\"15\",\"51.26\"],[\"5\",\"4.1\"",
+    "{\"success\":true,\"conn_id\":\"db6t9ebu7gev06oiju1g-1kzpt\",\"data\":{\"failTopics\":[],\"successTopics\":[\"tickers.BTC-24OCT26-83000-C-USDT\",\"orderbook.25.BTC-24OCT26-83000-C-USDT\"]},\"type\":\"COMMAND_RESP\"}",
+    "{\"topic\":\"orderbook.25.BTC-24OCT26-83000-C-USDT\",\"ts\":1792759798579,\"type\":\"delta\",\"id\":\"orderbook.25.BTC-24OCT26-83000-C-USDT-78722323623-1792759798579\",\"data\":{\"s\":\"BTC-24OCT26-83000-C-USDT\",\"b\":[],\"a\":[[\"85\",\"58.48\"],[\"90\",\"32.91\"]],\"u\":565882,\"seq\":78722323623},\"cts\":1792759798573}",
+    "{\"topic\":\"tickers.BTC-24OCT26-83000-C-USDT\",\"ts\":1792759798787,\"type\":\"snapshot\",\"id\":\"tickers.BTC-24OCT26-83000-C-USDT-78722323489-1792759798787\",\"data\":{\"symbol\":\"BTC-24OCT26-83000-C-USDT\",\"bidPrice\":\"80\",\"bidSize\":\"1.45\",\"bidIv\":\"0.2978\",\"askPrice\":\"85\",\"askSize\":\"58.48\",\"askIv\":\"0.3037\",\"lastPrice\":\"90\",\"highPrice24h\":\"320\",\"lowPrice24h\":\"65\",\"markPrice\":\"80.85081747\",\"indexPrice\":\"81735.28209"
+   ]
+  },
+  "deribit:wss://www.deribit.com/ws/api/v2": {
+   "url": "wss://www.deribit.com/ws/api/v2",
+   "connect_ms": 874.6,
+   "n_msgs": 10,
+   "samples": [
+    "{\"jsonrpc\":\"2.0\",\"id\":1,\"result\":[\"ticker.BTC-27NOV26-98000-C.100ms\",\"book.BTC-27NOV26-98000-C.100ms\"],\"usIn\":1792759798688846,\"usOut\":1792759798689162,\"usDiff\":316,\"testnet\":false}",
+    "{\"jsonrpc\":\"2.0\",\"method\":\"subscription\",\"params\":{\"channel\":\"ticker.BTC-27NOV26-98000-C.100ms\",\"data\":{\"timestamp\":1792759797508,\"state\":\"open\",\"stats\":{\"high\":0.0037,\"low\":0.003,\"price_change\":2.8571,\"volume\":1168.0,\"volume_usd\":312141.13},\"greeks\":{\"delta\":0.06906,\"gamma\":1.0e-5,\"vega\":33.67117,\"theta\":-18.0507,\"rho\":5.14069},\"index_price\":81638.07,\"instrument_name\":\"BTC-27NOV26-98000-C\",\"last_",
+    "{\"jsonrpc\":\"2.0\",\"method\":\"subscription\",\"params\":{\"channel\":\"book.BTC-27NOV26-98000-C.100ms\",\"data\":{\"timestamp\":1792759797508,\"type\":\"snapshot\",\"change_id\":179618884163,\"instrument_name\":\"BTC-27NOV26-98000-C\",\"bids\":[[\"new\",0.0032,64.1],[\"new\",0.0031,88.8],[\"new\",0.003,87.9],[\"new\",0.0029,84.1],[\"new\",0.0028,42.4],[\"new\",0.0027,30.9],[\"new\",0.0026,30.0],[\"new\",0.0025,30.0],[\"new\",0.0023,71.8],[\"",
+    "{\"jsonrpc\":\"2.0\",\"method\":\"subscription\",\"params\":{\"channel\":\"ticker.BTC-27NOV26-98000-C.100ms\",\"data\":{\"timestamp\":1792759798516,\"state\":\"open\",\"stats\":{\"high\":0.0037,\"low\":0.003,\"price_change\":2.8571,\"volume\":1168.0,\"volume_usd\":312141.13},\"greeks\":{\"delta\":0.06907,\"gamma\":1.0e-5,\"vega\":33.67248,\"theta\":-18.05138,\"rho\":5.14095},\"index_price\":81638.62,\"instrument_name\":\"BTC-27NOV26-98000-C\",\"last",
+    "{\"jsonrpc\":\"2.0\",\"method\":\"subscription\",\"params\":{\"channel\":\"ticker.BTC-27NOV26-98000-C.100ms\",\"data\":{\"timestamp\":1792759799522,\"state\":\"open\",\"stats\":{\"high\":0.0037,\"low\":0.003,\"price_change\":2.8571,\"volume\":1168.0,\"volume_usd\":312141.13},\"greeks\":{\"delta\":0.06908,\"gamma\":1.0e-5,\"vega\":33.67601,\"theta\":-18.05324,\"rho\":5.14163},\"index_price\":81638.72,\"instrument_name\":\"BTC-27NOV26-98000-C\",\"last"
+   ]
+  },
+  "binance:wss://fstream.binance.com/market/ws/BTC-261025-79000-P@optionTicker": {
+   "url": "wss://fstream.binance.com/market/ws/BTC-261025-79000-P@optionTicker",
+   "connect_ms": 789.5,
+   "n_msgs": 0,
+   "samples": []
+  },
+  "binance:wss://fstream.binance.com/public/ws/BTC-261025-79000-P@optionTicker": {
+   "url": "wss://fstream.binance.com/public/ws/BTC-261025-79000-P@optionTicker",
+   "connect_ms": 839.1,
+   "n_msgs": 0,
+   "samples": []
+  }
+ },
+ "ws_symbols": {
+  "deribit": "BTC-27NOV26-98000-C",
+  "binance": "BTC-261025-79000-P",
+  "bybit": "BTC-24OCT26-83000-C-USDT"
+ }
+}

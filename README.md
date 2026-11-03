@@ -13,7 +13,7 @@
 > against **~$54** in retail fees and spread to trade it. Two live paper-trading runs: **236,146 trades, 4 winners.**
 > The cross-exchange arbitrage version saw **197,866 price crosses and took 0 trades** — every one was smaller than its costs.
 
-![Live paper-trading terminal](linkedin/post3_terminal.png)
+![Live paper-trading terminal](docs/terminal.png)
 <sub>Live terminal (`scripts/05_paper_trade.py --dash`) from run 2: every row 0 wins, every price cross killed by costs.</sub>
 
 ---
@@ -23,8 +23,8 @@
 | Part | Topic | Link |
 |---|---|---|
 | 1 | The question and the four-gate plan | [Post 1](https://lnkd.in/p/g9vDqNhR) |
-| 2 | Gates 0–2: who moves first, and what the lag is worth | [Post 2](PART2_LINK) |
-| 3 | Gate 3: live paper trading and the final verdict | [Post 3](PART3_LINK) |
+| 2 | Gates 0–2: who moves first, and what the lag is worth | [Post 2](https://lnkd.in/p/eRx6PpWe) |
+| 3 | Gate 3: live paper trading and the final verdict | [Post 3](https://lnkd.in/p/eCNGqyC7) |
 
 The full dated research log is in [`STRATEGY_CARD.md`](STRATEGY_CARD.md).
 
@@ -354,7 +354,7 @@ an 08:00 UTC TWAP). Intra-Polymarket monotonicity arbitrage: 0. Capacity ~$10–
 │       ├── engine.py         latency-aware fill engine, fee/slippage model, S1 + S2
 │       └── dash.py           live terminal dashboard (rich)
 ├── results/                  gate outputs, interim report, paper-trade reports
-└── linkedin/                 post images and slide sources
+└── docs/                     images used in this README
 ```
 
 `data_cache/` (~1 GB of raw recordings and per-trade logs) is not committed; the scripts regenerate it.

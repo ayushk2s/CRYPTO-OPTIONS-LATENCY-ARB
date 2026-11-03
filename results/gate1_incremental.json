@@ -1,0 +1,294 @@
+{
+ "rec": "rec_20261023_125702",
+ "hours": 3.9792402492947048,
+ "binance_shift_null": {
+  "target": "y_150_5000",
+  "obs_b_der": 0.0317,
+  "null_mean": 0.00031759494559035817,
+  "null_sd": 0.006601884312736566,
+  "p_two_sided": 0.0
+ },
+ "bybit_shift_null": {
+  "target": "y_150_5000",
+  "obs_b_der": 0.0489,
+  "null_mean": -0.0003025364616737082,
+  "null_sd": 0.00892301770801661,
+  "p_two_sided": 0.0
+ },
+ "regressions": [
+  {
+   "follower": "binance",
+   "target": "y_0_1000",
+   "n": 70854,
+   "b_der_alone": 0.0458,
+   "t_der_alone": 8.48,
+   "b_der": 0.0257,
+   "t_der": 3.7,
+   "b_perp": 0.219,
+   "t_perp": 4.77,
+   "b_own": -0.1494,
+   "t_own": -3.81,
+   "R2": 0.0578
+  },
+  {
+   "follower": "binance",
+   "target": "y_0_5000",
+   "n": 70854,
+   "b_der_alone": 0.0546,
+   "t_der_alone": 10.27,
+   "b_der": 0.0322,
+   "t_der": 4.32,
+   "b_perp": 0.2509,
+   "t_perp": 5.85,
+   "b_own": -0.179,
+   "t_own": -4.56,
+   "R2": 0.078
+  },
+  {
+   "follower": "binance",
+   "target": "y_150_1000",
+   "n": 70854,
+   "b_der_alone": 0.0439,
+   "t_der_alone": 8.89,
+   "b_der": 0.03,
+   "t_der": 5.17,
+   "b_perp": 0.1366,
+   "t_perp": 4.09,
+   "b_own": -0.0756,
+   "t_own": -3.13,
+   "R2": 0.0216
+  },
+  {
+   "follower": "binance",
+   "target": "y_150_5000",
+   "n": 70854,
+   "b_der_alone": 0.0519,
+   "t_der_alone": 9.81,
+   "b_der": 0.0317,
+   "t_der": 4.62,
+   "b_perp": 0.2024,
+   "t_perp": 5.63,
+   "b_own": -0.1183,
+   "t_own": -3.56,
+   "R2": 0.0469
+  },
+  {
+   "follower": "binance",
+   "target": "y_250_1000",
+   "n": 70854,
+   "b_der_alone": 0.0419,
+   "t_der_alone": 8.35,
+   "b_der": 0.03,
+   "t_der": 5.2,
+   "b_perp": 0.1186,
+   "t_perp": 3.51,
+   "b_own": -0.069,
+   "t_own": -2.84,
+   "R2": 0.0169
+  },
+  {
+   "follower": "binance",
+   "target": "y_250_5000",
+   "n": 70854,
+   "b_der_alone": 0.0496,
+   "t_der_alone": 9.34,
+   "b_der": 0.0307,
+   "t_der": 4.39,
+   "b_perp": 0.1927,
+   "t_perp": 5.13,
+   "b_own": -0.117,
+   "t_own": -3.51,
+   "R2": 0.0431
+  },
+  {
+   "follower": "bybit",
+   "target": "y_0_1000",
+   "n": 70962,
+   "b_der_alone": 0.0535,
+   "t_der_alone": 7.74,
+   "b_der": 0.0387,
+   "t_der": 4.14,
+   "b_perp": 0.148,
+   "t_perp": 3.58,
+   "b_own": -0.0401,
+   "t_own": -0.83,
+   "R2": 0.0221
+  },
+  {
+   "follower": "bybit",
+   "target": "y_0_5000",
+   "n": 70962,
+   "b_der_alone": 0.0641,
+   "t_der_alone": 9.86,
+   "b_der": 0.053,
+   "t_der": 6.23,
+   "b_perp": 0.1381,
+   "t_perp": 3.46,
+   "b_own": -0.0538,
+   "t_own": -1.28,
+   "R2": 0.0208
+  },
+  {
+   "follower": "bybit",
+   "target": "y_150_1000",
+   "n": 70962,
+   "b_der_alone": 0.0499,
+   "t_der_alone": 6.97,
+   "b_der": 0.0329,
+   "t_der": 4.54,
+   "b_perp": 0.1163,
+   "t_perp": 4.05,
+   "b_own": -0.0003,
+   "t_own": -0.03,
+   "R2": 0.0157
+  },
+  {
+   "follower": "bybit",
+   "target": "y_150_5000",
+   "n": 70962,
+   "b_der_alone": 0.0636,
+   "t_der_alone": 8.82,
+   "b_der": 0.0489,
+   "t_der": 6.58,
+   "b_perp": 0.1208,
+   "t_perp": 3.65,
+   "b_own": -0.0172,
+   "t_own": -1.38,
+   "R2": 0.0173
+  },
+  {
+   "follower": "bybit",
+   "target": "y_250_1000",
+   "n": 70962,
+   "b_der_alone": 0.0427,
+   "t_der_alone": 6.43,
+   "b_der": 0.0285,
+   "t_der": 4.24,
+   "b_perp": 0.093,
+   "t_perp": 3.82,
+   "b_own": 0.0035,
+   "t_own": 0.33,
+   "R2": 0.0105
+  },
+  {
+   "follower": "bybit",
+   "target": "y_250_5000",
+   "n": 70962,
+   "b_der_alone": 0.0578,
+   "t_der_alone": 8.81,
+   "b_der": 0.0447,
+   "t_der": 6.7,
+   "b_perp": 0.1054,
+   "t_perp": 3.56,
+   "b_own": -0.0141,
+   "t_own": -1.23,
+   "R2": 0.0135
+  }
+ ],
+ "pure_deribit_move_magnitude": [
+  {
+   "follower": "binance",
+   "coin": "BTC",
+   "target": "y_150_1000",
+   "n_events": 2356,
+   "mean_signed_move_usd": 0.368,
+   "ci95": [
+    0.203,
+    0.532
+   ],
+   "median_spread_usd": 5.0,
+   "taker_fee_per_side_usd": 24.509
+  },
+  {
+   "follower": "binance",
+   "coin": "BTC",
+   "target": "y_150_5000",
+   "n_events": 2356,
+   "mean_signed_move_usd": 1.047,
+   "ci95": [
+    0.672,
+    1.443
+   ],
+   "median_spread_usd": 5.0,
+   "taker_fee_per_side_usd": 24.509
+  },
+  {
+   "follower": "binance",
+   "coin": "ETH",
+   "target": "y_150_1000",
+   "n_events": 446,
+   "mean_signed_move_usd": 0.093,
+   "ci95": [
+    -0.065,
+    0.274
+   ],
+   "median_spread_usd": 1.8,
+   "taker_fee_per_side_usd": 0.722
+  },
+  {
+   "follower": "binance",
+   "coin": "ETH",
+   "target": "y_150_5000",
+   "n_events": 446,
+   "mean_signed_move_usd": 0.185,
+   "ci95": [
+    0.011,
+    0.386
+   ],
+   "median_spread_usd": 1.8,
+   "taker_fee_per_side_usd": 0.722
+  },
+  {
+   "follower": "bybit",
+   "coin": "BTC",
+   "target": "y_150_1000",
+   "n_events": 2356,
+   "mean_signed_move_usd": 0.326,
+   "ci95": [
+    0.201,
+    0.454
+   ],
+   "median_spread_usd": 5.0,
+   "taker_fee_per_side_usd": 24.509
+  },
+  {
+   "follower": "bybit",
+   "coin": "BTC",
+   "target": "y_150_5000",
+   "n_events": 2356,
+   "mean_signed_move_usd": 0.962,
+   "ci95": [
+    0.654,
+    1.265
+   ],
+   "median_spread_usd": 5.0,
+   "taker_fee_per_side_usd": 24.509
+  },
+  {
+   "follower": "bybit",
+   "coin": "ETH",
+   "target": "y_150_1000",
+   "n_events": 446,
+   "mean_signed_move_usd": 0.021,
+   "ci95": [
+    0.009,
+    0.035
+   ],
+   "median_spread_usd": 0.8,
+   "taker_fee_per_side_usd": 0.722
+  },
+  {
+   "follower": "bybit",
+   "coin": "ETH",
+   "target": "y_150_5000",
+   "n_events": 446,
+   "mean_signed_move_usd": 0.09,
+   "ci95": [
+    0.053,
+    0.127
+   ],
+   "median_spread_usd": 0.8,
+   "taker_fee_per_side_usd": 0.722
+  }
+ ]
+}
