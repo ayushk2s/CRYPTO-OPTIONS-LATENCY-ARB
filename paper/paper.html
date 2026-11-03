@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Does Deribit Lead? Cross-Exchange Price Discovery and Retail Latency Arbitrage in Crypto Options</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  @page { size: Letter; margin: 0.95in 0.95in 0.9in 0.95in;
+          @bottom-center { content: counter(page); font: 9pt 'Source Serif 4', Georgia, serif; color: #444; }
+          @top-right { content: "Pandey (2026) — Does Deribit Lead?"; font: italic 8pt 'Source Serif 4', Georgia, serif; color: #777; } }
+  @page :first { @bottom-center { content: none; } @top-right { content: none; } }
+  html { font-family: 'Source Serif 4', Georgia, serif; font-size: 10.6pt; line-height: 1.45; color: #111; }
+  body { margin: 0; }
+  p { margin: 0 0 0.62em; text-align: justify; hyphens: auto; orphans: 3; widows: 3; }
+  h1, h2, h3 { font-weight: 700; break-after: avoid; page-break-after: avoid; }
+  h1 { font-size: 13.5pt; margin: 1.5em 0 0.55em; }
+  h2 { font-size: 11.4pt; margin: 1.15em 0 0.4em; }
+  h3 { font-size: 10.6pt; font-style: italic; font-weight: 600; margin: 0.9em 0 0.3em; }
+  .newpage { break-before: page; page-break-before: always; }
+  .title { text-align: center; margin-top: 0.1in; }
+  .title h1 { font-size: 19pt; line-height: 1.22; margin: 0 0 0.35em; }
+  .title .sub { font-size: 11.5pt; font-style: italic; color: #333; margin-bottom: 0.9em; }
+  .title .auth { font-size: 12pt; font-weight: 600; }
+  .title .aff { font-size: 10pt; color: #333; margin-top: 0.15em; }
+  .title .date { font-size: 10pt; margin-top: 0.9em; color: #333; }
+  .abstract { margin: 1.2em 0.25in 0; font-size: 9.6pt; line-height: 1.4; }
+  .abstract h2 { text-align: center; font-size: 11pt; margin-bottom: 0.4em; }
+  .kw { margin: 0.7em 0.25in 0; font-size: 9.2pt; }
+  .note { font-size: 8.2pt; color: #333; margin: 1.0em 0.25in 0; border-top: 0.6pt solid #999; padding-top: 0.6em; }
+  .toc { font-size: 10pt; }
+  .toc div { display: flex; gap: 0.6em; margin: 0.12em 0; }
+  .toc .l2 { padding-left: 1.6em; font-size: 9.5pt; color: #222; }
+  .eq { display: flex; align-items: center; margin: 0.55em 0 0.75em; break-inside: avoid; }
+  .eq .m { flex: 1; text-align: center; font-style: italic; font-size: 10.6pt; }
+  .eq .m .r { font-style: normal; }
+  .eq .no { width: 3em; text-align: right; font-style: normal; }
+  figure { margin: 0.9em 0 1.1em; break-inside: avoid; page-break-inside: avoid; }
+  figure img { width: 100%; display: block; }
+  figcaption { font-size: 8.8pt; line-height: 1.35; margin-top: 0.4em; text-align: justify; }
+  .tbl { margin: 0.9em 0 1.1em; }
+  .tcap { font-size: 8.8pt; line-height: 1.35; margin-bottom: 0.35em; text-align: justify; }
+  table { border-collapse: collapse; width: 100%; font-size: 7.9pt; line-height: 1.25; font-variant-numeric: tabular-nums;
+          border-top: 1.1pt solid #111; border-bottom: 1.1pt solid #111; }
+  thead th { border-bottom: 0.6pt solid #111; text-align: left; font-weight: 600; padding: 3px 4px; vertical-align: bottom; }
+  td { padding: 2px 4px; vertical-align: top; }
+  td.n, th.n { text-align: right; white-space: nowrap; }
+  tbody tr:nth-child(even) td { background: #f6f6f6; }
+  table.small { font-size: 6.9pt; }
+  tr { break-inside: avoid; }
+  .spec td:first-child { font-weight: 600; white-space: nowrap; }
+  ul, ol { margin: 0.2em 0 0.7em 1.3em; padding: 0; }
+  li { margin: 0.18em 0; text-align: justify; }
+  code, .mono { font-family: 'JetBrains Mono', monospace; font-size: 8.4pt; }
+  .box { border: 0.8pt solid #333; padding: 0.6em 0.9em; margin: 0.9em 0; background: #fafafa; break-inside: avoid; }
+  .box p:last-child { margin-bottom: 0; }
+  .refs p { padding-left: 1.6em; text-indent: -1.6em; text-align: left; font-size: 9.4pt; margin-bottom: 0.4em; }
+  .listing { margin: 0.6em 0 1.2em; }
+  .lhead { font: 600 8.6pt 'JetBrains Mono', monospace; border-bottom: 0.6pt solid #111; padding-bottom: 2px; margin-bottom: 3px;
+           break-after: avoid; }
+  .listing pre { font-variant-ligatures: none; font: 6.55pt/1.28 'JetBrains Mono', monospace; white-space: pre-wrap; word-break: break-all; margin: 0; }
+  .ln { color: #999; user-select: none; }
+  a { color: #1d4ed8; text-decoration: none; }
+  .fn { font-size: 8.6pt; color: #333; }
+</style></head>
+<body>
+
+<!-- ============================== TITLE PAGE ============================== -->
+<div class="title">
+  <h1>Does Deribit Lead? Cross-Exchange Price Discovery and the Limits of Retail Latency Arbitrage in Bitcoin and Ether Options</h1>
+  <div class="sub">Evidence from synchronized order-book recordings and latency-aware live paper trading</div>
+  <div class="auth">Ayush Pandey</div>
+  <div class="aff">Independent Researcher</div>
+  <div class="aff">github.com/ayushk2s · linkedin.com/in/ayushk2s</div>
+  <div class="date">Working paper · November 2026 · Version 1.0</div>
+</div>
+
+<div class="abstract">
+  <h2>Abstract</h2>
+  <p>Deribit hosts the majority of open interest in bitcoin and ether options, and the option listings on Binance and Bybit are widely assumed to re-quote off it. If that re-quoting happens with a delay, a trader who watches Deribit could pick off stale quotes on the secondary exchanges. This paper tests the hypothesis end to end with public market data and a pre-specified sequence of four pass/fail gates: connectivity and market structure, the existence of a lead-lag relation, the feasibility of acting on it from a retail connection, and live paper trading net of realistic costs. A four-hour synchronized recording of 2.16 million quote and mark updates shows that the perpetual future, not Deribit, leads price discovery in short-dated at-the-money options; Binance and Bybit option quotes respond to the perpetual within 50–100 ms. Deribit's own quotes carry statistically significant incremental information (t = 3.7–6.7; circular-shift null p &lt; 0.005), but its economic value is $0.33–1.05 per BTC contract against roughly $54 of retail fees and spread. Two live paper-trading sessions on 56 options with latency-aware immediate-or-cancel fills produce 236,146 simulated trades, mean net losses of $20.76–$46.41 per trade across variants and four profitable trades; a crossed-market strategy observes 197,866 cross-exchange price crosses and executes none after costs. Four follow-up designs — full-chain cross scanning, settlement-window mispricing, maker-side quoting and Polymarket digital options priced off the Deribit smile — also yield no tradeable edge at retail scale. The paper documents the measurement pitfalls that generate false positives in this setting, most importantly the USD/USDT settlement mismatch, and releases all code.</p>
+</div>
+<div class="kw"><b>Keywords:</b> price discovery; lead-lag; latency arbitrage; cryptocurrency options; market microstructure; Deribit; transaction costs; paper trading; negative results.<br>
+<b>JEL classification:</b> G13, G14, G15, C58.</div>
+<div class="note">Research and education only; not investment advice. No orders were placed on any exchange: every trade reported is simulated against public order-book data. All data were collected by the author from public endpoints between 23 October and 2 November 2026. Code, result files and a dated research log are available at <a href="https://github.com/ayushk2s/CRYPTO-OPTIONS-LATENCY-ARB">github.com/ayushk2s/CRYPTO-OPTIONS-LATENCY-ARB</a>. Errors are the author's own.</div>
+
+<!-- ============================== CONTENTS ============================== -->
+<div class="newpage"></div>
+<h1 style="margin-top:0">Contents</h1>
+<div class="toc">
+  <div>1&nbsp; Introduction</div>
+  <div>2&nbsp; Related literature</div>
+  <div>3&nbsp; Institutional setting</div>
+  <div class="l2">3.1 Contract specifications · 3.2 Inverse and linear payoffs · 3.3 The USD/USDT strike gap · 3.4 Fee schedules and premium caps · 3.5 Public data access</div>
+  <div>4&nbsp; Research design: four pre-specified gates</div>
+  <div>5&nbsp; Data and measurement infrastructure</div>
+  <div class="l2">5.1 Recorder · 5.2 Clock synchronisation · 5.3 Network outages · 5.4 Sample description · 5.5 Feed delays</div>
+  <div>6&nbsp; Gate 0: connectivity and market structure</div>
+  <div>7&nbsp; Gate 1: does a lead-lag relation exist?</div>
+  <div class="l2">7.1 Methods · 7.2 Who moves first · 7.3 Event study · 7.4 Incremental information · 7.5 Economic magnitude</div>
+  <div>8&nbsp; Gate 2: can a retail connection act in time?</div>
+  <div>9&nbsp; Gate 3: live paper-trading design</div>
+  <div class="l2">9.1 Engine and timing · 9.2 Strategies · 9.3 Cost model · 9.4 Inference</div>
+  <div>10&nbsp; Gate 3: results</div>
+  <div class="l2">10.1 Latency-follow (S1) · 10.2 Cost anatomy · 10.3 Signal versus random direction · 10.4 Why the second run was worse · 10.5 Crossed-market arbitrage (S2)</div>
+  <div>11&nbsp; Follow-up designs</div>
+  <div class="l2">11.1 Full-chain cross scan · 11.2 Settlement-window mispricing · 11.3 Maker-side quoting · 11.4 Polymarket digitals versus the Deribit smile</div>
+  <div>12&nbsp; Discussion</div>
+  <div>13&nbsp; Robustness, threats to validity and limitations</div>
+  <div>14&nbsp; Conclusion</div>
+  <div>References</div>
+  <div>Appendix A&nbsp; Reproducibility</div>
+  <div>Appendix B&nbsp; Data dictionary</div>
+  <div>Appendix C&nbsp; Supplementary tables</div>
+  <div>Appendix D&nbsp; Source code listings</div>
+</div>
+
+<!-- ============================== 1 INTRODUCTION ============================== -->
+<div class="newpage"></div>
+<h1 style="margin-top:0">1&nbsp; Introduction</h1>
+<p>Listed options on bitcoin (BTC) and ether (ETH) trade on several centralised exchanges, but one of them, Deribit, has historically held most of the open interest and the deepest long-dated chains. When Binance and Bybit introduced their own option listings, a natural assumption among practitioners was that these secondary books would be market-made off Deribit: their liquidity providers watch Deribit's quotes and implied volatilities and re-quote accordingly. If that assumption holds, it suggests a familiar trade. A participant who observes a change in Deribit's quotes before the secondary exchanges have adjusted could buy or sell the stale secondary quote and unwind once it catches up. This is latency arbitrage in its simplest cross-venue form.</p>
+<p>Three conditions must hold simultaneously for such a trade to be profitable. First, a lag must actually exist: Deribit must move first, and the followers must respond with a measurable delay. Second, the trader must be able to act inside that delay, which depends on where and how fast market data arrives and how quickly orders reach the lagging exchange. Third, the price change captured must exceed the cost of trading it — the bid-ask spread, taker fees, slippage on the size traded, and for cross-exchange positions the frictions of settlement in different currencies. Any one condition failing is sufficient to eliminate the trade.</p>
+<p>This paper tests the three conditions directly, in order, using only public market data and infrastructure available to an individual. The design was written down before any trading code: four gates, each with an explicit pass condition and a rule to stop at the first failure (Section 4). Gate 0 checks connectivity and the basic premise about market structure. Gate 1 measures the lead-lag relation on a synchronized multi-exchange recording, timed on exchange timestamps and controlling for the underlying perpetual future. Gate 2 measures the round-trip latency of the research machine. Gate 3 runs a live paper-trading engine that simulates immediate-or-cancel orders against the order book as it stood when the order would have arrived, with fees, spread and depth-based slippage, alongside random-direction and zero-latency benchmarks.</p>
+<p>The answer is unambiguous. The premise fails first: in short-dated at-the-money options the "secondary" books are not thin. Their quoted spreads are an order of magnitude tighter than Deribit's (a median of $5 on Bybit versus $41 on Deribit for BTC over four hours), partly because Deribit quotes options in coin with a tick of 0.0001–0.0005 BTC. The lead-lag hypothesis fails next, in an instructive way. The perpetual future leads every option venue, and Binance and Bybit option quotes respond to it within 50–100 ms on the exchange clock. Deribit's quotes do carry statistically significant incremental information about subsequent moves on Binance and Bybit after controlling for the perpetual (t-statistics of 3.7–6.7, and none of 200 circular-shift placebos reproduces the coefficient), but the value of that information is $0.33–1.05 per BTC contract over the following one to five seconds. A round trip on either exchange costs about $54 per BTC contract at retail fee levels. The lag is real; it is worth roughly two per cent of what it costs to trade.</p>
+<p>Gate 2 fails on latency. Deribit's option feed reaches the research machine about half a second after Binance's and Bybit's, and adding a REST round trip of 138–255 ms puts the earliest possible reaction 0.7–0.9 s after the Deribit move. By then Binance and Bybit have made 65–85% of the move they will make. Gate 3 nevertheless quantifies the outcome precisely. Across two live sessions on different days the latency-follow strategy generated 236,146 simulated trades with mean net results between −$20.76 and −$46.41 per trade depending on exchange and holding period, and four profitable trades in total. The strategy loses $4–8 per trade before any fees, because every round trip crosses the spread, and the direction implied by Deribit beats a coin flip by at most a few cents per trade. A crossed-market strategy that buys one exchange's ask and sells another's bid observed 197,866 cross-exchange price crosses after converting for the USD/USDT basis; every one was smaller than the cost of executing it, and it traded zero times.</p>
+<p>The paper makes five contributions. (i) It provides a measured, rather than assumed, description of the cross-exchange structure of short-dated BTC and ETH options in late 2026: chain sizes, spreads, depth and message intensity on three exchanges. (ii) It shows that the relevant leader for option quotes is the perpetual future and quantifies Deribit's residual information in both statistical and dollar terms. (iii) It describes a paper-trading engine whose fills respect message arrival times, so that results cannot be inflated by lookahead, and reports results with cluster-robust inference and placebo benchmarks. (iv) It catalogues measurement pitfalls that produce false positives in this setting — chiefly the USD/USDT strike gap, which manufactures $20–35 "crosses" between Deribit and Bybit that do not exist — together with clock drift, batched feeds, stale snapshot timestamps and fee caps. (v) It releases the full pipeline so that the results can be reproduced and extended.</p>
+<p>The negative result is the point. Published research is biased towards positive findings, and practitioners routinely encounter strategies whose apparent profitability is an artefact of the test rather than the market (Bailey et al., 2014; Harvey, Liu and Zhu, 2016). A clearly documented "no" — with the reasons quantified — is useful to anyone considering the same trade, and the four-gate design is a cheap template for killing such ideas before capital is at risk.</p>
+<p>The rest of the paper is organised as follows. Section 2 reviews related work. Section 3 describes the contracts and the cost environment. Section 4 sets out the research design. Section 5 describes the data and the measurement infrastructure. Sections 6–10 report the four gates. Section 11 reports four follow-up designs. Section 12 discusses the findings, Section 13 the limitations, and Section 14 concludes. The appendices document reproducibility, the data schema, supplementary tables and the complete source code.</p>
+
+<!-- ============================== 2 LITERATURE ============================== -->
+<h1>2&nbsp; Related literature</h1>
+<p><b>Price discovery across markets.</b> When the same asset, or closely linked assets, trade in several places, a standard question is which market impounds new information first. Hasbrouck (1995) introduced information shares based on the variance decomposition of a common efficient price, and Gonzalo and Granger (1995) proposed a permanent-transitory decomposition; both are designed for cointegrated price series at a common sampling frequency. Earlier work on index futures and the cash index (Stoll and Whaley, 1990) documented that futures returns lead cash returns by minutes, a pattern attributed to lower transaction costs and faster information processing in the derivative. The setting here differs in two respects that motivate the simpler methods used below. The instruments are options rather than the underlying, so the dominant common driver is the underlying perpetual future rather than the option prices themselves; and the question is not which market contributes most to a long-run efficient price but whether one option venue's quote changes predict another's over the next few seconds after conditioning on the underlying. Cross-correlation of high-frequency changes, event studies and predictive regressions with an explicit underlying control answer that question directly.</p>
+<p><b>Options and the underlying.</b> Whether option markets lead stock markets has been studied extensively. Easley, O'Hara and Srinivas (1998) find that signed option volume carries information about future stock prices, and Chakravarty, Gulen and Mayhew (2004) estimate that the option market contributes a meaningful but minority share of price discovery for the underlying. In this paper the direction is the reverse: the question is whether option quotes lead other option quotes, with the underlying as a control. The evidence below — that option quotes on all three exchanges respond to the perpetual within 50–100 ms — is consistent with option market makers who hedge in, and quote off, the perpetual.</p>
+<p><b>Cryptocurrency market microstructure.</b> Brandvold et al. (2015) estimate information shares across bitcoin spot exchanges and find that leadership shifts over time. Makarov and Schoar (2020) document large and persistent cross-exchange price deviations in bitcoin spot markets, concentrated across national borders and linked to capital controls, and show that within-region deviations are small. Alexander et al. (2020) show that BitMEX derivatives led spot exchanges in price discovery. The present paper extends the cross-exchange question to options, where contract design (inverse versus linear, coin versus stablecoin settlement) creates apparent price differences that are not arbitrage opportunities. Hou et al. (2020) discuss option pricing for cryptocurrencies, including the heavy-tailed and jump-prone dynamics that make short-dated implied volatility move quickly.</p>
+<p><b>Latency arbitrage.</b> Budish, Cramton and Shim (2015) model the high-frequency trading arms race in continuous limit order books: whenever a public signal moves the value of a security, liquidity providers' stale quotes can be sniped by whoever reacts fastest, and competition for speed dissipates the rents to the fastest participants. Their framework predicts exactly what Gate 2 finds: a retail participant on a home connection is not the fastest reactor to any public signal, and the rents from the race accrue to co-located liquidity providers who requote first. Shleifer and Vishny (1997) emphasise that real-world arbitrage requires capital and bears risk; the cross-exchange "carry" positions found in Section 11.1 illustrate this.</p>
+<p><b>Non-synchronous data and inference.</b> High-frequency lead-lag estimates are sensitive to non-synchronous sampling (Hayashi and Yoshida, 2005) and to the clock used. This paper samples on a common 50 ms grid using exchange timestamps and reports results on both the exchange clock and the local arrival clock, which is what a trader actually experiences. Standard errors use the Newey and West (1987) correction, and confidence intervals for trading results use a cluster bootstrap (Cameron, Gelbach and Miller, 2008) because overlapping trades within the same minute are not independent.</p>
+<p><b>Backtest overfitting and negative results.</b> Bailey et al. (2014) and Harvey, Liu and Zhu (2016) argue that much reported out-performance reflects multiple testing and selective reporting. The four-gate design used here is a lightweight form of pre-registration: the hypotheses, pass conditions and stopping rule were fixed before data collection, and every gate's result is reported whether favourable or not.</p>
+
+<!-- ============================== 3 INSTITUTIONAL ============================== -->
+<h1>3&nbsp; Institutional setting</h1>
+<h2>3.1 Contract specifications</h2>
+<p>All three exchanges list European-style BTC and ETH options with daily, weekly, monthly and quarterly expiries at 08:00 UTC. Their contract designs differ in ways that matter for any cross-exchange comparison. Table 1 summarises the specifications relevant to this study; tick sizes are taken from the exchanges' instrument metadata at the time of the study and fee parameters from the engine configuration described in Section 9.3.</p>
+<div class="tbl"><div class="tcap"><b>Table 1.</b> Contract specifications used in this study (BTC and ETH options, October–November 2026). Tick sizes from exchange instrument metadata; fees are retail taker levels. The Binance premium cap is an assumption (not verified against a published schedule).</div>
+<table class="spec"><thead><tr><th></th><th>Deribit</th><th>Bybit</th><th>Binance</th></tr></thead><tbody>
+<tr><td>Payoff type</td><td>Inverse (settled in coin)</td><td>Linear (settled in USDT)</td><td>Linear (settled in USDT)</td></tr>
+<tr><td>Premium currency</td><td>BTC / ETH</td><td>USDT</td><td>USDT</td></tr>
+<tr><td>Settlement index</td><td>USD index (BTC/USD, ETH/USD)</td><td>USDT index</td><td>USDT index</td></tr>
+<tr><td>Contract size</td><td>1 coin</td><td>1 coin</td><td>1 coin</td></tr>
+<tr><td>Price tick, BTC</td><td>0.0001 BTC; 0.0005 BTC above 0.005 BTC</td><td>5 USDT</td><td>5 USDT</td></tr>
+<tr><td>Price tick, ETH</td><td>0.0001 ETH; 0.0005 ETH above 0.005 ETH</td><td>0.1 USDT</td><td>0.2 USDT</td></tr>
+<tr><td>Expiry time</td><td>08:00 UTC</td><td>08:00 UTC</td><td>08:00 UTC</td></tr>
+<tr><td>Taker fee</td><td>0.03% of underlying</td><td>0.03% of underlying</td><td>0.03% of underlying</td></tr>
+<tr><td>Fee cap (share of premium)</td><td>12.5%</td><td>7%</td><td>10% (assumed)</td></tr>
+<tr><td>Exercise / delivery fee</td><td colspan="3">0.015% of underlying, applied to the long leg of S2 pairs (conservatively assumed in the money)</td></tr>
+</tbody></table></div>
+<p>At a BTC price of $81,500, Deribit's minimum tick of 0.0001 BTC is worth $8.15 and its tick above 0.005 BTC ($408) is worth $40.75. For short-dated at-the-money options worth a few hundred dollars, Deribit's quotes are therefore restricted to a coarse grid, whereas Binance and Bybit quote in $5 steps. Section 6 shows that this is reflected in observed spreads.</p>
+
+<h2>3.2 Inverse and linear payoffs</h2>
+<p>Let <i>S<sub>T</sub></i> denote the USD settlement price at expiry and <i>K</i> the strike. A Deribit call pays, per contract, an amount of coin equal to</p>
+<div class="eq"><div class="m">Π<sup>Deribit</sup><sub>call</sub> = max(<i>S<sub>T</sub></i> − <i>K</i>, 0) / <i>S<sub>T</sub></i> &nbsp;<span class="r">[coin]</span>,</div><div class="no">(1)</div></div>
+<p>whose USD value at expiry is max(<i>S<sub>T</sub></i> − <i>K</i>, 0). The premium is quoted in coin; its USD value at time <i>t</i> is the coin price multiplied by the underlying price used by Deribit for that expiry. Throughout the paper, Deribit premiums are converted to USD at the index (or the underlying price reported on the ticker) at the time of the quote. The inverse design does not alter the USD payoff at expiry but makes the holder's collateral and P&amp;L coin-denominated during the life of the option; this is irrelevant for the seconds-long holding periods of the latency strategy but matters for the long-dated carry positions discussed in Section 11.1, where the Deribit leg is effectively priced off Deribit's coin-margined futures curve.</p>
+
+<h2>3.3 The USD/USDT strike gap</h2>
+<p>Binance and Bybit options settle against a USDT-denominated index. Let <i>p</i> denote the price of one USDT in USD, so that the USDT index is <i>S</i>/<i>p</i>. A USDT-settled call with strike <i>K</i> (in USDT) pays max(<i>S<sub>T</sub></i>/<i>p</i> − <i>K</i>, 0) USDT, whose USD value is</p>
+<div class="eq"><div class="m"><i>p</i> · max(<i>S<sub>T</sub></i>/<i>p</i> − <i>K</i>, 0) = max(<i>S<sub>T</sub></i> − <i>p</i>·<i>K</i>, 0) &nbsp;<span class="r">[USD]</span>.</div><div class="no">(2)</div></div>
+<p>A USDT strike <i>K</i> is therefore economically a USD strike <i>pK</i>. During the study <i>p</i> was 0.9985–0.9988 (estimated live as the ratio of Deribit's USD index to Bybit's USDT index, and consistent with other public quotes), so a nominal $81,500 USDT strike behaves like a USD strike about $100 lower. A Bybit call with "the same" strike as a Deribit call is in fact deeper in the money by roughly $100 × Δ, about $50 for an at-the-money option. Comparing the two quotes naïvely produces a persistent apparent price difference — in our data $20–35 per BTC contract — that looks like a cross-exchange arbitrage but is simply the value of the strike difference. Every cross-exchange comparison in this paper converts USDT prices with <i>p</i> and accounts for the strike gap. For the arbitrage strategy in Section 9.2, where a position may be held to expiry, the engine books the worst-case payoff of the strike gap under a ±5 bp drift in <i>p</i> before expiry:</p>
+<div class="eq"><div class="m">gap<sub>worst</sub> = min<sub>δ<sub>A</sub>, δ<sub>B</sub> ∈ {−5bp, 0, +5bp}</sub> [ ±(<i>K</i><i>p<sub>B</sub></i>(1+δ<sub>B</sub>) − <i>K</i><i>p<sub>A</sub></i>(1+δ<sub>A</sub>)) ],</div><div class="no">(3)</div></div>
+<p>where the sign is positive for calls and negative for puts, <i>p</i><sub>Deribit</sub> = 1, and δ<sub>A</sub> = δ<sub>B</sub> when both legs are USDT-settled.</p>
+
+<h2>3.4 Fee schedules and premium caps</h2>
+<p>All three exchanges charge option taker fees as a percentage of the underlying, capped at a percentage of the option premium. For a contract with premium <i>P</i> (USD), underlying <i>S</i> and quantity <i>q</i> contracts on exchange <i>v</i>, the fee per side is</p>
+<div class="eq"><div class="m">fee<sub><i>v</i></sub>(<i>S</i>, <i>P</i>, <i>q</i>) = <i>q</i> · min(τ<i>S</i>, κ<sub><i>v</i></sub><i>P</i>), &nbsp;&nbsp;τ = 0.0003,</div><div class="no">(4)</div></div>
+<p>with κ<sub>Deribit</sub> = 0.125, κ<sub>Bybit</sub> = 0.07 and κ<sub>Binance</sub> = 0.10. For an at-the-money BTC option the first term binds: at <i>S</i> = $81,500 the fee is $24.45 per contract per side, or $48.90 for a round trip. For cheap out-of-the-money options the cap binds and the fee falls in proportion to the premium; on Bybit the cap binds whenever <i>P</i> &lt; τ<i>S</i>/κ ≈ $349. Section 10.4 shows that this non-linearity explains most of the difference between the two paper-trading sessions.</p>
+
+<h2>3.5 Public data access</h2>
+<p>All data were obtained from unauthenticated public endpoints. Deribit provides REST (<span class="mono">/api/v2/public/…</span>) and a JSON-RPC websocket whose public <span class="mono">ticker.&lt;instrument&gt;.100ms</span> channel delivers the best bid and offer, mark price, implied volatilities and the underlying price at most every 100 ms; un-batched "raw" channels require authentication and were not used. Bybit provides REST (<span class="mono">/v5/market/…</span>) and a public option websocket with ticker and 25-level order-book channels; the order book is maintained locally from snapshot and delta messages. Binance's option REST API (<span class="mono">eapi.binance.com</span>) worked throughout, but its historical option websocket host was retired; only two option streams on the futures websocket host delivered data (Section 6). All timestamps reported by exchanges are in milliseconds since the Unix epoch.</p>
+
+<!-- ============================== 4 DESIGN ============================== -->
+<h1>4&nbsp; Research design: four pre-specified gates</h1>
+<p>The design was fixed before data collection and recorded in a strategy card in the repository. Each gate has one question, a measurement, and a pass condition. The stopping rule was to halt at the first failed gate; Gate 3 was nevertheless run after Gates 1 and 2 had failed, in order to convert a qualitative "no" into a measured per-trade figure. Table 2 sets out the plan.</p>
+<div class="tbl"><div class="tcap"><b>Table 2.</b> The four-gate research design, as specified before data collection.</div>
+<table><thead><tr><th>Gate</th><th>Question</th><th>Measurement</th><th>Pass condition</th><th>Outcome</th></tr></thead><tbody>
+<tr><td>0</td><td>Are all three exchanges reachable, and are their option chains liquid?</td><td>REST and websocket probes; chain census; at-the-money spreads and depth</td><td>All reachable with full chains</td><td>Pass, but the premise that Binance/Bybit are thin followers fails</td></tr>
+<tr><td>1</td><td>Do Binance and Bybit lag Deribit?</td><td>Synchronized 4 h recording; cross-correlation, event study, predictive regression with perpetual control; circular-shift placebo; dollar magnitude</td><td>A lag that is statistically significant and economically larger than costs</td><td>Fail: significant but worth ~2% of costs</td></tr>
+<tr><td>2</td><td>Can this machine act inside the lag?</td><td>Warm REST round trips; feed arrival delays</td><td>Reaction time shorter than the lag</td><td>Fail: 0.7–0.9 s to react</td></tr>
+<tr><td>3</td><td>Does any strategy survive real costs?</td><td>Live paper trading with latency-aware fills, fees, spread, slippage; random-direction and zero-latency benchmarks; crossed-market strategy</td><td>Positive mean net P&amp;L with a confidence interval excluding zero</td><td>Fail: 236,146 trades, 4 winners; 0 arbitrage trades</td></tr>
+</tbody></table></div>
+<p>The gates are ordered by cost. Gate 0 takes minutes and can falsify the premise without any statistical work. Gate 1 needs an afternoon of recording. Gate 2 is a measurement of the researcher's own infrastructure. Gate 3 requires an engine and hours of live data. The ordering ensures that expensive work is done only if cheaper tests leave the hypothesis standing.</p>
+
+<!-- ============================== 5 DATA ============================== -->
+<h1>5&nbsp; Data and measurement infrastructure</h1>
+<h2>5.1 Recorder</h2>
+<p>The Gate 1 recorder (<span class="mono">scripts/02_record.py</span>) subscribes to twelve options on each exchange — BTC and ETH, nearest expiry (24 October 2026, 08:00 UTC), three strikes around the money (BTC 81,000/81,500/82,000; ETH 2,300/2,400/2,500), calls and puts — together with the Binance and Deribit BTC and ETH perpetual futures and the Deribit price indices. Each message is parsed into a flat record carrying the venue, the venue symbol, a normalised key of the form <span class="mono">BTC-20261024-81500-C</span>, the local receive time in nanoseconds, the exchange event timestamp in milliseconds, best bid and ask in USD with sizes, and where provided the mark price, mark implied volatility and underlying price (Appendix B). Deribit premiums are converted to USD at the underlying price on the same message; Binance and Bybit prices are in USDT and are converted with <i>p</i> where cross-exchange comparisons require it. The recording ran for 4.00 hours, from 12:57 to 16:57 UTC on 23 October 2026, and produced 2,156,121 quote and mark records.</p>
+<p>Websocket connections reconnect automatically with exponential back-off, and every connection and disconnection is logged as its own record. Deribit requires an application-level heartbeat, which the client answers; Bybit requires application-level pings, which are sent every 20 seconds because protocol-level pings timed out under load during testing.</p>
+
+<h2>5.2 Clock synchronisation</h2>
+<p>The local Windows clock was not synchronised to the exchanges at the precision required. Every 30 seconds the recorder queried each exchange's server-time endpoint and estimated the offset as the exchange time minus the midpoint of the local request and response times. Figure {{F:f_clock}} shows the result. The median offset was 433–473 ms across exchanges, the three exchanges agreed with each other to within a few tens of milliseconds, and the local clock drifted by several hundred milliseconds during the afternoon (it had been 730–780 ms behind earlier in the day). Individual estimates are noisy because a slow response inflates the midpoint error, which is why the figure shows a rolling median. All lead-lag analysis on the "exchange clock" uses exchange timestamps directly; analysis on the "local clock" maps local receive times onto the exchange clock with the median offset of 453 ms.</p>
+<!--F:f_clock|Local clock offset (exchange minus local, left) and REST round-trip time (right) for each exchange, sampled every 30 seconds during the Gate 1 recording on 23 October 2026. Thin lines are raw estimates; thick lines are 9-sample rolling medians. Spikes correspond to slow REST responses, which inflate the midpoint error of individual offset estimates.-->
+
+<h2>5.3 Network outages</h2>
+<p>During the recording, the research machine's internet service provider intermittently resolved every <span class="mono">*.binance.com</span> host name to a non-routable sink address, while public DNS resolvers returned Binance's real addresses. This made all Binance feeds — options and the perpetual future — disappear for long periods. The research design deliberately did not bypass the block; instead Binance data are used only while the system resolver reached Binance, and outage windows are detected and masked. An outage is defined as a gap of more than 60 seconds between consecutive Binance perpetual-future price changes; because the perpetual changes price several times per second in normal conditions, a silence of a minute is unambiguous. Table {{T:t_outages}} lists the ten outages detected, totalling 112 minutes, dominated by two long gaps of 50.4 and 44.6 minutes. The regression analysis in Section 7.4 applies a stricter sample filter, dropping any one-second sample at which the Binance perpetual is more than five seconds stale. Figure {{F:f_intensity}} shows message intensity per minute with outages shaded.</p>
+<!--T:t_outages|Binance outages during the Gate 1 recording (gaps of more than 60 s between Binance perpetual-future price changes). All times UTC, 23 October 2026.-->
+<!--F:f_intensity|Quote updates per minute by source during the 4-hour Gate 1 recording (log scale). Shaded intervals are the Binance outages of Table {{T:t_outages}}; Binance option and perpetual series drop to zero inside them while Deribit and Bybit are unaffected.-->
+
+<h2>5.4 Sample description</h2>
+<p>Table {{T:t_rec_summary}} breaks the recording down by source and record type. Bybit's 25-level order-book channel dominates the message count (1.17 million book updates, 81 per second across twelve options), followed by Deribit's batched ticker (206,194 records, 14.3 per second) and Binance's book-ticker stream (202,566 records, 14.1 per second, net of outages). Table {{T:t_conn}} counts connection events: the Binance sockets recorded 1,953 disconnections and 110 successful connections, reflecting repeated reconnection attempts during the DNS outages, whereas Bybit and Deribit disconnected 45 and 51 times respectively over four hours. Per-instrument record counts are reported in Appendix Table {{T:t_per_instrument}}.</p>
+<!--T:t_rec_summary|Records in the Gate 1 recording by source and kind. "q" records are best-bid-and-offer updates (Bybit: derived from the locally maintained 25-level book); "m" records are mark-price / implied-volatility updates. Records per second are computed over the full 4.00 h.-->
+<!--T:t_conn|Websocket connection and disconnection events by socket during the Gate 1 recording. Binance counts are inflated by reconnection attempts during DNS outages.-->
+
+<h2>5.5 Feed delays</h2>
+<p>The apparent one-way delay of a feed is the local arrival time, mapped onto the exchange clock with the median offset, minus the exchange's own event timestamp. Its absolute level inherits any error in the offset estimate, but differences between feeds measured at the same time are robust to that error. Table {{T:t_feed_delay}} and Figure {{F:f_feed_delay}} report the distributions. The median Deribit option update arrives 649 ms after its own timestamp, against 120 ms for Binance and 160 ms for Bybit: Deribit's option feed reaches this machine about 490–530 ms later than the other two. Part of the difference reflects the 100 ms batching of Deribit's public ticker channel and part the network path. The upper tails are long for two reasons unrelated to the network: Bybit order-book snapshots carry the matching-engine timestamp of the last book change, which can be many seconds old when the snapshot is sent, and Deribit tickers for quiet instruments can carry stale timestamps. These records affect only the tails (the share of records above two seconds is reported in the table); medians and the lead-lag analysis, which uses changes in quotes, are not affected.</p>
+<!--T:t_feed_delay|Apparent one-way feed delay (ms): local arrival mapped to the exchange clock with the median offset of 453 ms, minus the exchange timestamp. Absolute levels depend on the offset estimate; the column "p50 minus Bybit p50" is robust to it.-->
+<!--F:f_feed_delay|Distribution of apparent one-way delay for option quote updates, by exchange (range −800 to 2,200 ms shown). Binance and Bybit cluster near 100–200 ms; Deribit's distribution is shifted right by roughly half a second and is much wider.-->
+
+<!-- ============================== 6 GATE 0 ============================== -->
+<h1>6&nbsp; Gate 0: connectivity and market structure</h1>
+<p><b>Reachability.</b> All REST endpoints on the three exchanges returned HTTP 200 with cold latencies of roughly 200–550 ms (Appendix Table {{T:t_rest}}). Deribit's public ticker and Bybit's ticker and order-book channels delivered immediately. Binance required investigation. Its historical options websocket host returned HTTP 404. On the futures websocket host, only two option streams delivered any data: a whole-chain mark-price stream at a one-second cadence (<span class="mono">/market/ws/&lt;underlying&gt;@optionMarkPrice</span>) and per-symbol best-bid-and-offer updates on the public path with lower-case symbol names (<span class="mono">/public/ws/&lt;symbol&gt;@bookTicker</span>). Upper-case symbol names, depth streams, option ticker streams and trade streams all accepted connections and delivered nothing (Table {{T:t_binance_streams}}). This kind of undocumented behaviour is worth recording because a researcher who subscribed to the wrong stream would conclude, wrongly, that Binance's options are inactive.</p>
+<!--T:t_binance_streams|Binance option websocket stream discovery (23 October 2026). Each candidate stream was held open and the messages received were counted. Only the lower-case bookTicker stream on the public path and the whole-chain optionMarkPrice stream delivered data.-->
+<p><b>Chain census.</b> Table {{T:t_census}} reports the option chains at 12:52 UTC. Deribit listed 930 BTC and 784 ETH options across 12 expiries; Bybit 686 and 568 across 11; Binance 638 and 528 across 11. None of the chains is "near-empty". Twenty-four-hour volume in contracts (one coin each) was 18,159 BTC options on Deribit against 6,970 on Bybit and 6,201 on Binance: Deribit trades about 2.6 times as many BTC options as either competitor. In ETH options the ordering reverses: Bybit traded 157,982 contracts, Binance 125,198 and Deribit 120,116.</p>
+<!--T:t_census|Option chain census at 12:52 UTC on 23 October 2026. "Two-sided books" counts instruments with both a bid and an ask. Volume is the exchange-reported 24-hour volume in contracts of one coin.-->
+<p><b>Spreads and depth.</b> The premise check is decisive. Table {{T:t_atm_spreads}} and Figure {{F:f_atm_spreads}} show near-expiry at-the-money spreads at the census time. BTC options were quoted $5 wide on Binance and Bybit — about 1% of the option price — against $33–82 on Deribit, or 8–15% of the price. ETH options were quoted $0.10–0.20 wide on Bybit, $0.20–0.60 on Binance and about $2.40 on Deribit. Over the full four-hour recording (Table {{T:t_rec_spreads}}, Figure {{F:f_rec_spreads}}) the median BTC spread was $5.00 on Bybit, $10.00 on Binance and $40.83 on Deribit, and the median ETH spread $0.30, $0.40 and $2.40 respectively. Displayed size at the touch was 8–19 BTC on Binance, 4–9 BTC on Bybit and 1–51 BTC on Deribit (Appendix Table {{T:t_depth}}).</p>
+<!--T:t_atm_spreads|Near-expiry at-the-money option quotes on the three exchanges at the census time (23 October 2026, 12:52 UTC). USD prices; Deribit converted from coin at the underlying price.-->
+<!--F:f_atm_spreads|Bid-ask spread as a percentage of the mid price for the near-expiry at-the-money options in Table {{T:t_atm_spreads}}. Each point is one instrument (expiries 24–26 October; calls and puts).-->
+<!--T:t_rec_spreads|Quoted spreads over the full 4-hour Gate 1 recording (12 options per exchange), computed over every best-bid-and-offer update.-->
+<!--F:f_rec_spreads|Distribution of quoted spreads as a percentage of mid over every quote update in the 4-hour recording (boxes: interquartile range; whiskers: 1.5 IQR; outliers omitted; values capped at 40%).-->
+<p>These facts change the framing of the hypothesis. In short-dated at-the-money options, Binance and Bybit are not thin venues that passively shadow Deribit; they have tighter markets and, in ETH, more volume. Deribit's coin-denominated tick is a mechanical reason for its wide quotes: an option worth 0.005 BTC can be quoted only in 0.0001 BTC steps ($8.15), and above 0.005 BTC only in 0.0005 BTC steps ($40.75). Gate 0 is recorded as a pass because the exchanges are reachable and liquid, but the motivating premise has already failed.</p>
+<p><b>Settlement currency and clocks.</b> Two further facts established at Gate 0 shape everything that follows. First, the USD/USDT strike gap of Section 3.3: before converting, Deribit and Bybit quotes appeared crossed by $23–34 per BTC contract most of the time; after converting, they never crossed in either paper-trading session (Section 10.5). Second, the local clock offset of Section 5.2, which is why exchange timestamps are used as the common clock.</p>
+
+<!-- ============================== 7 GATE 1 ============================== -->
+<h1>7&nbsp; Gate 1: does a lead-lag relation exist?</h1>
+<h2>7.1 Methods</h2>
+<p><b>Sampling.</b> For each option and exchange, the mid price <i>m</i> = (bid + ask)/2 is taken from best-bid-and-offer records. Mid prices rather than last trades are used because trades in individual option strikes are sparse and noisy; mark prices are used as a secondary check. Each series is sampled on a 50 ms grid by taking the last observation in each bin and carrying it forward, and changes Δ<i>m</i> are taken bin to bin. The underlying control is the mid of the Binance perpetual future for the same coin. Two clocks are used: the exchange clock (exchange timestamps) and the local clock (local arrival times mapped onto the exchange clock with the median offset). The first measures where information appears; the second measures what this machine can observe.</p>
+<p><b>Cross-correlation.</b> For a candidate leader <i>a</i> and follower <i>b</i>, the lagged correlation of standardised changes is</p>
+<div class="eq"><div class="m">ρ<sub><i>ab</i></sub>(<i>L</i>) = corr(Δ<i>a</i><sub><i>t</i></sub>, Δ<i>b</i><sub><i>t</i>+<i>L</i></sub>), &nbsp;&nbsp; <i>L</i> ∈ {−10 s, …, +10 s} in 50 ms steps,</div><div class="no">(5)</div></div>
+<p>computed per option and averaged across options of the same coin. For the perpetual as leader, put correlations are sign-flipped. A positive peak at <i>L</i> &gt; 0 indicates that <i>a</i> leads <i>b</i>. The asymmetry of the whole profile is summarised by a lead-lag ratio,</p>
+<div class="eq"><div class="m">LLR<sub><i>ab</i></sub> = Σ<sub><i>L</i>&gt;0</sub> ρ<sub><i>ab</i></sub>(<i>L</i>)<sup>2</sup> / Σ<sub><i>L</i>&lt;0</sub> ρ<sub><i>ab</i></sub>(<i>L</i>)<sup>2</sup>,</div><div class="no">(6)</div></div>
+<p>which exceeds one when correlation mass sits at positive lags. Cross-correlations use the clean window before the first Binance outage, 12:58:02–13:43:29 UTC (45.5 minutes), so that the outage does not mechanically depress correlations involving Binance.</p>
+<p><b>Event study.</b> A leader "move" is a change in its mid of at least $2.50 for BTC options or $0.10 for ETH options (about one follower tick in mid terms), de-clustered so that events are at least two seconds apart. For each event <i>i</i> at time <i>t<sub>i</sub></i> with sign <i>s<sub>i</sub></i>, the follower's signed cumulative move from <i>t<sub>i</sub></i> − 5 s to <i>t<sub>i</sub></i> + <i>h</i> is aggregated as a ratio of sums,</p>
+<div class="eq"><div class="m"><i>R</i>(<i>h</i>) = Σ<sub><i>i</i></sub> <i>s<sub>i</sub></i> [<i>F</i>(<i>t<sub>i</sub></i>+<i>h</i>) − <i>F</i>(<i>t<sub>i</sub></i>−5s)] / Σ<sub><i>i</i></sub> |<i>F</i>(<i>t<sub>i</sub></i>+10s) − <i>F</i>(<i>t<sub>i</sub></i>−5s)|,</div><div class="no">(7)</div></div>
+<p>so that <i>R</i>(<i>h</i>) rises from zero towards <i>R</i>(10 s), which is below one because some follower moves are in the opposite direction. The share of the eventual move already realised at horizon <i>h</i> is <i>R</i>(<i>h</i>)/<i>R</i>(10 s).</p>
+<p><b>Incremental information.</b> The key question is not whether Deribit and the followers co-move — they share the underlying — but whether Deribit's quote changes predict the followers' next moves beyond what the perpetual and the follower's own recent move already predict. At each one-second sample time <i>t</i>, per option and follower <i>f</i>, define on the local clock</p>
+<div class="eq"><div class="m"><i>y<sub>t</sub></i> = <i>m<sup>f</sup></i>(<i>t</i>+<i>d</i>+<i>h</i>) − <i>m<sup>f</sup></i>(<i>t</i>+<i>d</i>) = α + β<sub>D</sub>Δ<i>m</i><sup>Deribit</sup><sub><i>t</i></sub> + β<sub>P</sub><i>c</i>·Δ<i>S</i><sup>perp</sup><sub><i>t</i></sub> + β<sub>O</sub>Δ<i>m<sup>f</sup></i><sub><i>t</i></sub> + ε<sub><i>t</i></sub>,</div><div class="no">(8)</div></div>
+<p>where all changes on the right are over the preceding second, <i>c</i> = +1 for calls and −1 for puts, the delay <i>d</i> ∈ {0, 150, 250} ms represents reaction time and the horizon <i>h</i> ∈ {1, 5} s. Variables are standardised per series and pooled across options; samples at which the Binance perpetual is more than five seconds stale are dropped. Standard errors are heteroskedasticity- and autocorrelation-consistent (Newey–West, five lags). Because pooled high-frequency regressions can produce large t-statistics from subtle dependence, the significance of β<sub>D</sub> is also assessed with a circular-shift placebo: Deribit's series is shifted in time by a random offset of 60–600 seconds, which preserves its own autocorrelation but destroys any genuine timing relation, and the regression is re-estimated 200 times.</p>
+<p><b>Economic magnitude.</b> Finally, the dollar value of Deribit's information is measured directly. A "pure" Deribit move is a one-second Deribit mid change of at least $4 (BTC) or $0.60 (ETH) — half a Deribit tick, i.e. one side of the book moving by one tick — during which the perpetual moved by no more than 0.5 bp. The follower's mid change over the next 1 or 5 seconds (after a 150 ms reaction delay), signed by the direction of the Deribit move, is averaged across events with a bootstrap confidence interval.</p>
+
+<h2>7.2 Who moves first?</h2>
+<p>Figures {{F:f_xcorr_exch}} and {{F:f_xcorr_local}} and Table {{T:t_xcorr}} report the cross-correlation profiles. On the exchange clock the perpetual future leads every option venue. For BTC the correlation between perpetual changes and subsequent option-mid changes peaks at +50 ms for Bybit (peak correlation 0.296, LLR 15.3), +100 ms for Binance (0.081, LLR 12.9) and +100 ms for Deribit (0.139, LLR 16.8). ETH shows the same pattern with peaks at +50 ms (Bybit), 0 ms (Binance) and +100 ms (Deribit). Because Deribit's public ticker is batched at 100 ms, its +100 ms peak is an upper bound on its reaction time; the data cannot establish that Deribit reacts more slowly than the other two on the exchange clock, only that it does not react earlier.</p>
+<p>Between option exchanges the picture is the opposite of the hypothesis. Deribit-to-follower correlations are small (peak 0.03–0.07) and peak at zero or negative lags, with lead-lag ratios below 1.3: correlation mass sits slightly more on the side where the "follower" moves first. On the local clock, which includes Deribit's half-second feed delay, the Deribit-to-follower peaks move to −350 to −500 ms: by the time a Deribit change is observed here, the corresponding Binance or Bybit change has typically already been observed.</p>
+<!--F:f_xcorr_exch|Mean cross-correlation of 50 ms mid changes on the exchange clock, clean pre-outage window (45.5 min). Top: perpetual future leading each exchange's options (puts sign-flipped). Bottom: pairs of option exchanges. A peak to the right of zero means the first-named series leads.-->
+<!--F:f_xcorr_local|As Figure {{F:f_xcorr_exch}}, on the local-arrival clock — what this machine observes. Deribit's feed delay shifts the perpetual→Deribit peak to +450–500 ms and the Deribit→follower peaks to negative lags.-->
+<!--T:t_xcorr|Cross-correlation summary by clock, coin and pair (clean window 12:58:02–13:43:29 UTC). LLR is the ratio of squared correlation mass at positive to negative lags (equation 6); values above one indicate that the leader leads.-->
+
+<h2>7.3 Event study</h2>
+<p>Figure {{F:f_event_study}} and Table {{T:t_events}} report the event study. On the exchange clock, at the moment of a Deribit move Binance and Bybit have already realised 0.28–0.30 of the normalised move, against a final level of about 0.61 after ten seconds — roughly half of what they will do. On the local clock the corresponding figures are 0.40–0.48 against 0.57–0.61: when a Deribit move arrives at this machine, Binance has already made 85% and Bybit 65% of the net move it will make over the window. The reverse comparison (a Binance or Bybit move as the event, Deribit as the follower) shows Deribit having realised 30–44% of its eventual move at the event time on the exchange clock — again a sizeable share already done at the moment of the "leading" move, consistent with all three responding to a common driver rather than to each other.</p>
+<!--F:f_event_study|Event study: signed cumulative follower move, normalised as in equation (7), around leader mid moves. Solid lines: Deribit leads Binance or Bybit. Dashed: Binance or Bybit leads Deribit. Left: exchange clock. Right: local-arrival clock. The x-axis shows horizons in seconds on a non-linear scale.-->
+<!--T:t_events|Event study by clock and pair: share of the normalised signed follower move realised at selected horizons (columns in ms relative to the leader move), and the share of the +10 s level already realised at the moment of the leader move.-->
+
+<h2>7.4 Incremental information</h2>
+<p>Table {{T:t_regression}} reports equation (8) estimated on 70,854 (Binance) and 70,962 (Bybit) one-second samples over 3.98 hours. On its own, Deribit's last-second change predicts the followers' next moves strongly (t = 6.4–10.3), but most of that is shared information about the underlying. With the perpetual and the follower's own lag controlled, Deribit's coefficient falls but remains significant in every specification: t = 3.7–5.2 for Binance and 4.1–6.7 for Bybit. The circular-shift placebo confirms it (Figure {{F:f_null}}). For the headline specification (<i>d</i> = 150 ms, <i>h</i> = 5 s) the observed standardised coefficient is 0.0317 for Binance and 0.0489 for Bybit, against placebo distributions centred on zero with standard deviations of 0.0066 and 0.0089; none of the 200 shifted series produced a coefficient as large in absolute value (p &lt; 0.005), corresponding to z-scores of 4.8 and 5.5. An earlier 20-minute version of the regression, with a quarter of the sample, gave t ≈ 1; the effect is real but small enough that it needs hours of data to detect.</p>
+<!--T:t_regression|Predictive regression (equation 8): follower mid change over (t+d, t+d+h] on the last-second changes of the Deribit mid, the perpetual (signed for puts) and the follower's own mid. Standardised variables, pooled over 12 options; Newey–West (5 lags) t-statistics. "Alone" columns omit the perpetual and own-lag controls.-->
+<!--F:f_null|Circular-shift placebo for the controlled Deribit coefficient (d = 150 ms, h = 5 s). Grey: normal density with the mean and standard deviation of 200 coefficients estimated after shifting Deribit's series by random 60–600 s offsets. Vertical line: the observed coefficient.-->
+
+<h2>7.5 Economic magnitude</h2>
+<p>Statistical significance answers the wrong question for a trader. Table {{T:t_magnitude}} and Figure {{F:f_value_vs_cost}} answer the right one. After a pure Deribit move in a BTC option, the follower's mid drifts in the same direction by $0.37 (Binance) and $0.33 (Bybit) over the next second, and by $1.05 and $0.96 over the next five seconds, with bootstrap confidence intervals that exclude zero (2,356 events). For ETH the drifts are $0.02–0.19 per contract (446 events), with the Binance one-second interval including zero. The cost of capturing these drifts with taker orders is one spread crossing plus two taker fees: about $5 + 2 × $24.51 = $54 per BTC contract, and at least $1.44 in fees alone per ETH contract. The most favourable ratio of expected drift to cost is 1.9%.</p>
+<!--T:t_magnitude|Follower drift after a "pure" Deribit move (perpetual quiet), signed by the Deribit move, with 2,000-draw bootstrap 95% confidence intervals; median follower spread at the event; round-trip taker fees (two sides at 0.03% of the underlying); and drift as a share of fees plus spread.-->
+<!--F:f_value_vs_cost|What Deribit's lead is worth against what it costs to trade, per BTC contract. Green: mean follower drift after a pure Deribit move. Red: one spread crossing and round-trip taker fees.-->
+<div class="box"><p><b>Gate 1 verdict.</b> A lead from Deribit to Binance and Bybit exists in a statistical sense: Deribit's quotes contain information about the followers' next few seconds that the perpetual does not. But the perpetual, not Deribit, leads the option market, and the residual Deribit information is worth about two per cent of the cost of trading it. Gate 1 fails on economics.</p></div>
+
+<!-- ============================== 8 GATE 2 ============================== -->
+<h1>8&nbsp; Gate 2: can a retail connection act in time?</h1>
+<p>Gate 2 measures how quickly the research machine could act on a Deribit move. Warm REST round trips were measured with 200 requests to each exchange's lightweight time or ping endpoint (<span class="mono">scripts/04_latency.py</span>); no orders were sent. Table {{T:t_latency}} reports the distribution: median round trips of 138 ms to Bybit, 211–213 ms to Binance and 255 ms to Deribit, with 95th percentiles of 236–354 ms. An order is assumed to reach the exchange after half a round trip, so the one-way order latency is about 69 ms to Bybit and 105 ms to Binance.</p>
+<!--T:t_latency|Warm REST round-trip times from the research machine (200 requests per endpoint, ms). Order latency is modelled as half the median round trip.-->
+<p>The earliest possible reaction to a Deribit move is the sum of Deribit's feed delay, the decision time (negligible here) and the one-way order latency. With a median Deribit feed delay of roughly 650 ms on the exchange clock (Section 5.5) and a one-way order latency of 70–105 ms, the order arrives roughly 0.7–0.9 seconds after the Deribit move occurred. Section 7.3 showed that by the time the Deribit move is merely observed here, Binance and Bybit have already made 65–85% of their move; by the time an order lands, the remaining drift is a fraction of a dollar. Liquidity providers on Binance and Bybit who quote off the perpetual from co-located infrastructure respond in tens of milliseconds. Gate 2 fails.</p>
+
+<!-- ============================== 9 GATE 3 DESIGN ============================== -->
+<h1>9&nbsp; Gate 3: live paper-trading design</h1>
+<p>Gates 1 and 2 had failed, so under the pre-specified rule the research would stop. Gate 3 was run anyway, for two reasons: to replace the inference "the edge is too small to trade" with a direct measurement under realistic execution, and to test a second, latency-insensitive strategy — crossed-market arbitrage — that the lead-lag analysis does not address.</p>
+
+<h2>9.1 Engine and timing</h2>
+<p>The engine (<span class="mono">src/paper/engine.py</span>, reproduced in Appendix D) consumes the same public websocket feeds as the recorder and maintains, for every exchange and option, a 15-second history of book states indexed by exchange timestamp. Nothing is sent to any exchange. Orders are simulated as immediate-or-cancel (IOC) limit orders against the book of the target exchange <i>as it stood on the exchange clock when the order would have arrived</i>:</p>
+<div class="eq"><div class="m"><i>t</i><sub>arrive</sub> = <i>t</i><sub>decide</sub> + RTT<sub><i>v</i></sub>/2,</div><div class="no">(9)</div></div>
+<p>where <i>t</i><sub>decide</sub> is the local decision time mapped to the exchange clock with a continuously updated offset (re-estimated every 60 seconds and smoothed exponentially) and RTT<sub><i>v</i></sub> is the measured median round trip to exchange <i>v</i> (138 ms Bybit, 211 ms Binance, 255 ms Deribit). The fill is not evaluated until local data up to <i>t</i><sub>arrive</sub> plus the 95th-percentile feed delay of the slowest relevant exchange has had time to arrive. This ensures that the engine never uses information that would not have been available, and that the book against which the fill is evaluated is the one the order would actually have met.</p>
+
+<h2>9.2 Strategies</h2>
+<p><b>S1 — latency-follow.</b> On every change in the Deribit mid of an option, the engine checks each follower exchange. If the follower's mid has not moved in the direction of the Deribit move since the previous Deribit update ("stale") and the follower's spread is no wider than three ticks, the engine submits an IOC order on the follower at the stale price it last observed: a buy at the ask after an up-move, a sell at the bid after a down-move. If the book has moved through that price by the time the order arrives, the order does not fill. The position is closed at market after a holding period of 1, 5 or 30 seconds (plus half a round trip for the exit order). Size is one BTC contract or ten ETH contracts per signal, and each variant holds at most one open position per option. Each holding period is run in four variants: real latency or zero latency (the order is evaluated against the book at the Deribit event's own exchange timestamp, an unattainable oracle), and signal direction or random direction (a coin flip with identical timing, which isolates the value of Deribit's directional information from the mechanics of trading).</p>
+<p><b>S2 — crossed-market arbitrage.</b> Whenever, for the same option, exchange <i>B</i>'s bid exceeds exchange <i>A</i>'s ask after currency conversion and the worst-case strike gap of equation (3),</p>
+<div class="eq"><div class="m">bid<sub><i>B</i></sub>·<i>p<sub>B</sub></i> − ask<sub><i>A</i></sub>·<i>p<sub>A</sub></i> + gap<sub>worst</sub> &gt; fee<sub><i>A</i></sub> + fee<sub><i>B</i></sub> + ε<i>S</i> + σ<i>S</i> + ½(tick<sub><i>A</i></sub> + tick<sub><i>B</i></sub>),</div><div class="no">(10)</div></div>
+<p>with exercise fee ε = 0.015% and a settlement-index haircut σ = 2 bp, the engine submits IOC orders on both legs, sized to the smaller displayed quantity (capped at 5 BTC or 50 ETH contracts), and holds the pair to expiry, where the payoffs cancel up to the strike gap. If only one leg fills, the excess is unwound at market on that exchange and the loss is charged. A one-second cool-down per option and pair prevents the same cross from being counted repeatedly.</p>
+
+<h2>9.3 Cost model</h2>
+<p>Every simulated fill pays the following, in USD.</p>
+<ul>
+<li><b>Spread.</b> Not assumed: buys fill at the live ask and sells at the live bid of the book at arrival time, so the spread is inside the gross P&amp;L.</li>
+<li><b>Taker fees.</b> Equation (4) on entry and exit, with the premium-cap regime determined by the actual fill price.</li>
+<li><b>Depth.</b> Orders larger than the touch walk the book: Bybit's real 25-level book (top five levels used); for Binance and Deribit, where only the touch is available, each additional touch-size of quantity costs one additional tick.</li>
+<li><b>Slippage haircut.</b> Half a tick on every fill, entry and exit, in addition to walking the book.</li>
+<li><b>S2 extras.</b> Exercise fee on the long leg (assumed in the money), the 2 bp settlement-index haircut, and the worst-case strike gap.</li>
+</ul>
+<p>The universe is 56 options: BTC and ETH, the two nearest expiries, the seven strikes closest to spot, calls and puts (Binance lists a subset: 28 of the 56 in session 1 and 34 in session 2). Session 1 ran for 3.00 hours from 15:09 to 18:09 UTC on 23 October 2026 (overlapping the last 1.8 hours of the Gate 1 recording), with BTC at $81,500 and ETH at $2,400. Session 2 began at 18:02 UTC on 2 November 2026, with BTC at $77,047 and ETH at $2,256; it was planned for eleven hours and stopped after 18 minutes once it was clear that the result was not going to change. Binance was reachable for 78% of the minutes of session 1 and all of session 2.</p>
+
+<h2>9.4 Inference</h2>
+<p>Trades from the same variant overlap in time and respond to the same market moves, so they are not independent. Confidence intervals for mean net P&amp;L per trade therefore use a cluster bootstrap in which whole one-minute blocks of trades are resampled (2,000 draws). The value of Deribit's directional information is tested by comparing mean gross P&amp;L per trade between the signal and random-direction variants with a one-sided permutation test.</p>
+
+<!-- ============================== 10 GATE 3 RESULTS ============================== -->
+<h1>10&nbsp; Gate 3: results</h1>
+<h2>10.1 Latency-follow (S1)</h2>
+<p>Tables {{T:t_variants_run1}} and {{T:t_variants_run2}} report every S1 variant in both sessions. With real latency and Deribit's direction, the strategy lost $20.76 per trade on Bybit with a one-second hold in session 1 (92,348 trades; 95% CI −$21.19 to −$20.34) and $34.94 on Binance (41,443 trades; −$35.59 to −$34.31). Longer holds were marginally worse. In session 2 the corresponding figures were −$32.08 (Bybit, 10,886 trades) and −$44.43 (Binance, 6,759 trades). Across the six real-latency signal variants and both sessions the strategy produced 236,146 simulated trades, of which four were profitable — all in session 1, Bybit, 30-second hold, with a best single trade of +$10.99. The zero-latency oracle did not help: in session 1 it lost $22.56 per trade on Bybit and $35.37 on Binance with a one-second hold, slightly worse than with real latency, because the oracle trades more often, including when the follower's book is moving.</p>
+<!--T:t_variants_run1|Session 1 (23 October 2026, 3.00 h): all S1 variants. Real latency uses measured round trips; zero latency evaluates the order at the Deribit event's exchange timestamp. "Signal" follows Deribit's direction; "null" uses a random direction with identical timing. Confidence intervals are one-minute cluster bootstraps. Totals are simulated USD for 1 BTC or 10 ETH contracts per signal.-->
+<!--T:t_variants_run2|Session 2 (2 November 2026, 0.30 h): all S1 variants, as in Table {{T:t_variants_run1}}.-->
+<p>Figure {{F:f_cum_run1}} shows the cumulative simulated net P&amp;L of session 1. The curves are straight lines: the losses accrue at a constant rate per trade, interrupted only when Binance is unreachable. The totals are large — about $1.9 million of simulated losses for the Bybit one-second variant over three hours — only because the strategy trades on every signal without any capital constraint; the per-trade figures are the meaningful quantity. Figure {{F:f_trade_rate}} shows the trade rate across the six real-latency variants: roughly 1,160 per minute in session 1 and 1,530 per minute in session 2.</p>
+<!--F:f_cum_run1|Session 1: cumulative simulated net P&L of the six real-latency, signal-direction S1 variants (top) and the number of Binance options with a live feed (bottom). Losses accrue linearly; Binance variants pause during DNS outages.-->
+<!--F:f_trade_rate|Simulated S1 trades per minute across the six real-latency signal variants. Dips in session 1 coincide with Binance outages.-->
+
+<h2>10.2 Cost anatomy</h2>
+<p>Table {{T:t_per_coin}} decomposes the result by coin and Figure {{F:f_cost_decomp}} by component. The strategy loses money before any fee is paid. On Bybit in session 1 the mean gross result was −$6.11 per BTC contract and −$1.19 per ten ETH contracts; on Binance −$6.15 and −$2.74. Each round trip crosses the spread once (buying at the ask and later selling at the bid, or vice versa), and the price drift that Deribit predicts is far smaller than the spread. Taker fees then add $20.37–26.41 per BTC trade in session 1 and $34.81–37.99 in session 2, and the half-tick slippage haircut adds about $4.80. Figure {{F:f_gross_dist}} shows the distribution of gross results for BTC one-second trades: it is concentrated on a few negative spread multiples, and the signal and random-direction distributions are visually indistinguishable.</p>
+<!--T:t_per_coin|S1 per-trade decomposition by session, exchange, holding period and coin (real latency, signal direction). "Fees if uncapped" is two sides at 0.03% of the underlying; the difference from "Fees/trade" is the saving from premium caps on cheap options.-->
+<!--F:f_cost_decomp|Mean P&L per trade by component for the six real-latency signal variants in each session: gross result (spread and price move), slippage haircut and taker fees. Labels give the net result.-->
+<!--F:f_gross_dist|Distribution of gross P&L per BTC trade before fees, one-second hold, session 1. Filled: Deribit's direction. Outline: random direction with identical timing. The two are nearly identical; both are negative because each round trip crosses the spread.-->
+<p>Appendix Table {{T:t_moneyness}} breaks the results down by strike relative to spot. Out-of-the-money options pay lower fees because of the premium cap, but they also have spreads that are larger relative to their price; no moneyness bucket in either session has a positive mean.</p>
+
+<h2>10.3 Signal versus random direction</h2>
+<p>Tables {{T:t_signal_null_run1}} and {{T:t_signal_null_run2}} compare mean gross P&amp;L per trade between Deribit's direction and a random direction with identical timing. In session 1 the signal improves the Bybit one-second result by $0.041 per trade, which is statistically significant (one-sided permutation p = 0.002) and is the trading counterpart of the incremental information found in Section 7.4. Every other variant shows a difference between −$0.33 and +$0.06 with p between 0.24 and 0.99. In session 2 no variant is significant (p ≥ 0.37 for real latency). Deribit's information is real and worth a few cents per trade — about 0.2% of the fee.</p>
+<!--T:t_signal_null_run1|Session 1: mean gross P&L per trade with Deribit's direction versus a random direction with identical timing, and one-sided permutation p-values for the difference.-->
+<!--T:t_signal_null_run2|Session 2: as Table {{T:t_signal_null_run1}}.-->
+
+<h2>10.4 Why the second session was worse</h2>
+<p>Session 2 lost $14.5–15.6 more per BTC trade than session 1 in every exchange and holding period. The gross result was similar (Bybit one-second: −$7.34 against −$6.11), so the strategy did not behave differently. The difference is fees. The average BTC option traded in session 2 cost $496–545 on Bybit, against $172–190 in session 1: implied volatilities were higher after BTC had fallen from $81,500 to $77,000. At $172 the 7% premium cap often binds (7% × $172 = $12 per side), whereas at $500 it never does and the full 0.03% of the underlying (about $23 per side) applies. Figure {{F:f_fee_cap}} shows the fee charged per side against the premium for every BTC trade, together with the theoretical schedule. The comparison is a useful robustness check: across two days with different price levels and volatility the strategy's gross economics were the same, and only the fee regime differed.</p>
+<!--F:f_fee_cap|Fee per contract per side against option premium for BTC trades (one-second hold) in session 1 (coloured) and session 2 (black), with the schedule min(0.03% × S, cap × premium) at S = $79,000. Session 1 traded more options in the capped region; session 2 almost entirely in the uncapped region.-->
+
+<h2>10.5 Crossed-market arbitrage (S2)</h2>
+<p>Tables {{T:t_s2_counts_run1}} and {{T:t_s2_counts_run2}} count S2 events. After converting for USDT and the worst-case strike gap, Deribit never crossed with Bybit in either session, and crossed with Binance on nine quote updates in session 1, all smaller than costs. Binance and Bybit crossed each other frequently — 171,124 quote updates in session 1 and 26,742 in session 2 — but every cross was smaller than the cost hurdle of equation (10), and the strategy traded zero times.</p>
+<!--T:t_s2_counts_run1|Session 1: S2 crossed-market events by direction. "Crossed after USDT basis" counts quote updates at which the converted bid on the sell exchange exceeded the converted ask on the buy exchange (including the worst-case strike gap); "Killed by costs" counts those for which the cross was smaller than fees, exercise, settlement haircut and slippage.-->
+<!--T:t_s2_counts_run2|Session 2: as Table {{T:t_s2_counts_run1}}.-->
+<p>Table {{T:t_s2}} and Figure {{F:f_s2_crosses}} show the size of the crosses. The engine records the best gross cross in every ten-second window. For BTC, the largest cross between Binance and Bybit was $39.93 in session 1 and $19.97 in session 2, against a hurdle — fees, exercise and settlement haircut before slippage — of about $77 and $73. Median crosses were $0–5, i.e. books that touch or overlap by one tick. ETH tells the same story: a maximum of $1.10 against a hurdle of $2.28. Crosses between Deribit and the USDT exchanges were negative in essentially every window once the strike gap is accounted for. The crosses that do occur are one- or two-tick transients between two books quoted off the same perpetual, and they are roughly half the size needed to pay for trading them.</p>
+<!--T:t_s2|Best gross cross per ten-second window by session, coin and direction (USD per contract, after USDT conversion and worst-case strike gap; negative values mean the books never crossed).-->
+<!--F:f_s2_crosses|Best gross cross per ten-second window for three exchange pairs, by session and coin, against the cost hurdle (fees, exercise fee and settlement haircut; slippage excluded). No cross approaches the hurdle.-->
+<p>Engine counters for both sessions — Deribit moves seen, signals generated, signals rejected because the follower had already moved or its book was wide, orders that did not fill because the book moved, and exits forced by missing data — are reported in Appendix Table {{T:t_counters}}.</p>
+<div class="box"><p><b>Gate 3 verdict.</b> Across two sessions on different days, the latency-follow strategy lost $20.76–$46.41 per trade depending on exchange and holding period, with four profitable trades out of 236,146, and Deribit's direction was worth a few cents per trade. The crossed-market strategy observed 197,866 crosses and executed none after costs. There is no edge.</p></div>
+
+<!-- ============================== 11 FOLLOW-UPS ============================== -->
+<h1>11&nbsp; Follow-up designs</h1>
+<p>Four further designs were considered to check whether the negative result is specific to the strategies tested. Each targets a different way the cross-exchange structure might be monetised.</p>
+<h2>11.1 Full-chain cross scan</h2>
+<p>Fees are capped at a share of premium, so cheap far-from-the-money options pay much less in absolute fees than at-the-money options. If crosses occur in the wings, they might clear the hurdle. The scan (<span class="mono">scripts/07_wing_scan.py</span>) pulled every BTC and ETH option on all three exchanges by REST every 20 seconds for ten minutes — a median of 4,138 instruments per snapshot (Table {{T:t_wing_snap}}) — and computed, for every instrument and ordered exchange pair, the edge after premium-capped fees, a delta-weighted exercise fee, a delta-weighted settlement haircut and the USDT strike gap. Candidates with a positive edge were re-checked against order books fetched simultaneously from both exchanges.</p>
+<!--T:t_wing_snap|Full-chain cross scan: per-snapshot counts over 30 snapshots (20 s interval, 23 October 2026, 17:17–17:27 UTC).-->
+<!--F:f_wing|Full-chain cross scan: gross crosses per snapshot (grey), and crosses that remain positive after costs for expiries beyond 30 days (blue) and within 30 days (red).-->
+<p>About 220 instruments were crossed gross in each snapshot and about 130 remained positive after costs (Figure {{F:f_wing}}). All of them were deep in-the-money options with four to eleven months to expiry, all in one direction: buy on Deribit, sell on Bybit, with edges of $900–2,200 per contract. These are not arbitrage opportunities. A deep in-the-money option is mostly intrinsic value, and the two exchanges discount that value differently: Deribit's inverse options are priced off its own coin-margined futures curve, Bybit's USDT options off USDT funding. The "edge" is the difference between two interest rates, locked up for most of a year. For the most frequent best candidate, a 160,000 put expiring in September 2027 (336 days), the edge is 3.1–3.3% a year on the premium paid; including initial margin on the short leg reduces it to roughly 1–3% a year. That is a money-market-like return carrying two exchanges' counterparty risk for eleven months.</p>
+<p>Within 30 days of expiry only two distinct instruments ever showed a net-positive cross in ten minutes (Table {{T:t_wing_cands}}): a 102,000 BTC call expiring 30 October, bought on Binance at its $5 minimum and sold on Deribit at 0.0001 BTC ($8.17, Deribit's minimum tick), worth $3.17–3.21 in total for the displayed size; and a 79,000 put on Bybit versus Binance worth $1.64. Both are minimum-tick artefacts on nearly worthless options, together worth $4.85.</p>
+<h2>11.2 Settlement-window mispricing</h2>
+<p>Deribit's daily options settle on a time-weighted average of its index between 07:30 and 08:00 UTC. As the averaging window progresses, part of the settlement price is already fixed, and an expiring option's fair value should converge mechanically; quotes that fail to track this convergence, or that differ across exchanges with different settlement methodologies, might be mispriced. Deribit's delivery-price endpoint provides the historical settlement values, but the expiring dailies barely trade in their final hour: on 20–23 October 2026 there were 10–29 BTC option trades in the final hour of each expiring daily, and the last trade occurred 10–32 minutes before expiry. Testing the idea requires live three-exchange quote recording during 07:00–08:00 UTC over many weeks, yielding one observation per morning. It was not pursued.</p>
+<h2>11.3 Maker-side quoting</h2>
+<p>A maker strategy avoids paying the spread and earns it instead. At retail fee levels the maker fee is about 0.02% of the underlying, roughly $16 per BTC contract per side at $81,500 — more than three times the $5 touch spread on Binance and Bybit. Quoting is therefore viable only inside an exchange market-maker programme with rebates and requires inventory risk management; it is a market-making business rather than an arbitrage and cannot be evaluated with public data alone.</p>
+<h2>11.4 Polymarket digitals versus the Deribit smile</h2>
+<p>Polymarket lists daily binary markets of the form "Bitcoin above $<i>K</i> on &lt;date&gt;?" for around ten strikes, each paying $1 if a single Binance BTC/USDT one-minute candle closes above <i>K</i> at 12:00 US Eastern time. These are digital options, and their fair probability can be inferred from Deribit's volatility smile. The script (<span class="mono">scripts/08_polymarket_vs_deribit.py</span>) computes it as follows. For the two Deribit expiries bracketing the Polymarket resolution time, the mark implied volatility is interpolated in log-moneyness; total variance is interpolated linearly in time at fixed moneyness; the forward is interpolated; the USDT strike is converted to USD (equation 2); and the digital price includes the smile-slope correction implied by Breeden and Litzenberger (1978):</p>
+<div class="eq"><div class="m">P(<i>S<sub>T</sub></i> &gt; <i>K</i>) = <i>N</i>(<i>d</i><sub>2</sub>) − <i>F</i> φ(<i>d</i><sub>1</sub>) √<i>T</i> · ∂σ/∂<i>K</i>.</div><div class="no">(11)</div></div>
+<p>Polymarket best bids, asks and sizes are read from its order-book endpoint, not from indicative mid prices. Five snapshots at 30-second intervals (17:19–17:21 UTC, 27 October 2026) covered six daily events — 30 event-snapshots and 170 strike-snapshot observations with mid prices between 2 and 98 cents. The sample is small; it is reported as a feasibility check rather than a definitive test. Table {{T:t_pm}} and Figure {{F:f_pm}} report the results. The average signed deviation of the Polymarket mid from the Deribit-implied probability was between −0.08 and −0.39 cents per event, i.e. no systematic bias. The average absolute deviation was 0.45–2.71 cents per event, and the maximum 4.39 cents, concentrated at the one or two strikes nearest spot, where a digital's value is most sensitive to volatility. Deviations of this size are within model error: Polymarket resolves on a single one-minute candle at 16:00 UTC, whereas Deribit settles on a 30-minute average at 08:00 UTC; the two differ by eight hours of intraday volatility seasonality and by the USDT basis. There is no exact hedge, so any trade is relative value with large residual risk at the at-the-money strikes. Touch depth at those strikes was 17–1,416 shares, implying capacity of tens of dollars per day. Riskless intra-Polymarket monotonicity arbitrages (a higher strike's YES bid above a lower strike's YES ask) occurred zero times.</p>
+<!--T:t_pm|Polymarket "Bitcoin above $K" daily markets versus Deribit-implied probability, by event (27 October 2026; 5 snapshots per event; strikes with mid between 2 and 98 cents). Deviations in cents per $1 share; "best buy edge" is the largest fair-minus-ask and "best sell edge" the largest bid-minus-fair over the event's snapshots.-->
+<!--F:f_pm|Left: Polymarket mid against the Deribit-implied probability, all strike-snapshots (colours: events). Right: mid minus fair, in cents, against moneyness. Deviations are largest near the money and show no systematic sign.-->
+
+<!-- ============================== 12 DISCUSSION ============================== -->
+<h1>12&nbsp; Discussion</h1>
+<p><b>Why there is no edge.</b> Three independent mechanisms each eliminate the trade on their own.</p>
+<ol>
+<li><b>The leader is the perpetual.</b> Option liquidity providers on all three exchanges quote off the perpetual future and respond to it within 50–100 ms. Deribit's quotes are one more follower, slower to publish because of coarse ticks and a batched public feed. What Deribit adds beyond the perpetual is real but worth about a dollar per BTC contract.</li>
+<li><b>A retail connection is last in the race.</b> Deribit's public feed arrives here about half a second after Binance's and Bybit's, and the order still has to travel. Even a zero-latency oracle that trades at Deribit's own timestamp does not make money, because the followers move at the same time.</li>
+<li><b>Fees dominate.</b> At retail levels, taker fees of 0.03% of the underlying are $23–25 per BTC contract per side, ten to fifty times any lag or cross observed. Even with no fees at all, the latency strategy loses $4–8 per trade because it crosses a spread that is larger than the drift it captures.</li>
+</ol>
+<p><b>Who earns the lag.</b> The Budish, Cramton and Shim (2015) framework suggests where the small residual value of Deribit's information goes: to the fastest participants, here the co-located liquidity providers on Binance and Bybit who update quotes on Deribit's information as well as the perpetual's. For them the relevant cost is not a retail taker fee but maker rebates and inventory risk, and the information is an input to quoting rather than a stand-alone trade.</p>
+<p><b>What would have to change.</b> The conclusion is specific to the participant modelled: retail fees, a home connection, taker orders and public data. Lower fee tiers narrow the gap but cannot close it while the spread alone exceeds the drift. Co-location would address the latency but not the economics. Maker participation changes the problem entirely. Different instruments might behave differently — illiquid long-dated strikes or event-driven sessions — but the full-chain scan found no tradeable crosses away from the money either, and long-dated crosses turned out to be carry.</p>
+<p><b>The value of the gate design.</b> Each gate was cheaper than the next, and the first three gates already contained the answer. Gate 0 falsified the premise in minutes. Gate 1 found the statistical lead that a less careful study might have reported as an opportunity, and the dollar-magnitude step showed it was not. The live engine in Gate 3 was by far the most expensive component and confirmed what the earlier gates implied. In a research programme with many candidate ideas, ordering tests by cost and writing down pass conditions in advance saves most of the effort.</p>
+<p><b>Pitfalls that produce false positives.</b> Several features of this setting would generate apparent profits in a careless study, and all of them were encountered:</p>
+<ul>
+<li><b>USD versus USDT.</b> Comparing Deribit and Bybit quotes without converting for the settlement currency produced $20–35 of apparent cross-exchange edge per BTC contract, persistently, in every snapshot.</li>
+<li><b>Clock drift.</b> The local clock was 330–780 ms off and drifting. Timing on local receive times without correction would have attributed Deribit's feed delay, or the clock error, to the market.</li>
+<li><b>Batched feeds.</b> Deribit's public ticker is batched at 100 ms, which bounds the timing resolution of any Deribit comparison.</li>
+<li><b>Stale snapshot timestamps.</b> Order-book snapshots that carry the matching-engine time of the last change, not the send time, create apparent multi-second delays.</li>
+<li><b>Silent streams.</b> Binance option streams with the wrong path or symbol case accept connections and deliver nothing.</li>
+<li><b>Network-level outages.</b> ISP-level DNS interference removed one exchange for nearly two hours. Without masking, a lead-lag analysis would treat the outage as a period in which Binance "did not respond".</li>
+<li><b>Fee caps.</b> Premium caps make fees non-linear in the option price, so results on cheap options do not generalise to expensive ones.</li>
+<li><b>Carry disguised as arbitrage.</b> Long-dated deep in-the-money crosses are the term structure of two funding rates, not mispricing.</li>
+<li><b>Overstated totals.</b> A strategy that trades on every signal without a capital constraint accumulates headline totals in the millions of simulated dollars; per-trade figures are the meaningful quantity.</li>
+</ul>
+
+<!-- ============================== 13 LIMITATIONS ============================== -->
+<h1>13&nbsp; Robustness, threats to validity and limitations</h1>
+<p><b>Sample length.</b> The lead-lag analysis rests on one four-hour recording and the trading results on two sessions of 3 hours and 18 minutes. The second session, on a different day with different price levels and volatility, replicated the first in every respect except the fee regime, and the per-trade confidence intervals are narrow. Nonetheless, market structure in crypto options changes quickly and the results describe late 2026.</p>
+<p><b>Underlying control.</b> The Binance perpetual is used as the underlying for all three exchanges. Deribit's own perpetual or index might be a better control for Deribit-specific quotes; since the perpetual leads all exchanges and the Deribit and Binance perpetuals track each other closely, this is unlikely to change the conclusions.</p>
+<p><b>Clock and timestamps.</b> Absolute delays depend on the estimated clock offset, which is noisy. Relative comparisons on the same clock and all exchange-clock results are robust to this. Deribit's 100 ms batching bounds the resolution of Deribit timing; the analysis does not claim that Deribit reacts later than the others, only that it does not react earlier.</p>
+<p><b>Fill model.</b> Binance and Deribit depth beyond the touch is approximated (one tick per touch-size), and the half-tick haircut is a convention. Neither matters for the conclusions: the latency strategy loses money before fees and slippage, and the crossed-market strategy never reaches the stage where depth matters.</p>
+<p><b>Fees.</b> Retail taker fees are used throughout. The Binance premium cap of 10% is an assumption. Lower fee tiers would reduce the losses but not reverse them, because the gross result is negative.</p>
+<p><b>Outage masking.</b> Binance was unreachable for 112 minutes of the recording and 22% of session 1. The masking rules (60-second gaps for outage identification; five-second staleness for regression samples) are conservative, and Bybit, which was unaffected, gives the same conclusions as Binance throughout.</p>
+<p><b>Statistical inference.</b> Regression t-statistics use Newey–West errors with five lags; the circular-shift placebo, which does not rely on asymptotic theory, gives the same answer. Trading confidence intervals use a one-minute cluster bootstrap. The placebo distribution in Figure {{F:f_null}} is shown as a normal approximation with the mean and standard deviation of the 200 draws; the reported p-value is the empirical share of draws as extreme as the observed coefficient.</p>
+<p><b>Selection of instruments.</b> The study focuses on near-expiry options close to the money, where liquidity is greatest and the hypothesis is most plausible. The full-chain scan addresses the rest of the chain for the crossed-market strategy, but not for latency-follow.</p>
+
+<!-- ============================== 14 CONCLUSION ============================== -->
+<h1>14&nbsp; Conclusion</h1>
+<p>This paper asked whether Binance and Bybit BTC and ETH options lag Deribit enough to trade, and answered it with public data, a pre-specified four-gate design and a latency-aware paper-trading engine. They do not. The premise that Binance and Bybit are thin followers is false for short-dated at-the-money options: their spreads are several times tighter than Deribit's. The perpetual future, not Deribit, leads option quotes on all three exchanges. Deribit's quotes do contain statistically significant information about the other exchanges' next moves, but it is worth about a dollar per BTC contract against about $54 to trade it, arrives here half a second late, and is captured by faster participants. Two live sessions with 236,146 simulated trades produced four winners, and a crossed-market strategy that saw 197,866 price crosses traded zero times. Four follow-up designs found carry, minimum-tick artefacts, model-error-sized deviations and fee schedules, not arbitrage.</p>
+<p>The broader lessons are methodological. Order the tests by cost and write down what would count as success before looking at data. Convert currencies and strikes before comparing contracts across exchanges. Use exchange clocks and measure your own latency. Report the dollar value of a statistical effect next to its t-statistic. And treat a clear negative result as a deliverable: the cheapest trade is the one that is ruled out before capital is at risk.</p>
+
+<!-- ============================== REFERENCES ============================== -->
+<div class="newpage"></div>
+<h1 style="margin-top:0">References</h1>
+<div class="refs">
+<p>Alexander, C., Choi, J., Park, H., and Sohn, S. (2020). BitMEX bitcoin derivatives: Price discovery, informational efficiency, and hedging effectiveness. <i>Journal of Futures Markets</i>, 40(1), 23–43.</p>
+<p>Bailey, D. H., Borwein, J. M., López de Prado, M., and Zhu, Q. J. (2014). Pseudo-mathematics and financial charlatanism: The effects of backtest overfitting on out-of-sample performance. <i>Notices of the American Mathematical Society</i>, 61(5), 458–471.</p>
+<p>Brandvold, M., Molnár, P., Vagstad, K., and Valstad, O. C. A. (2015). Price discovery on Bitcoin exchanges. <i>Journal of International Financial Markets, Institutions and Money</i>, 36, 18–35.</p>
+<p>Breeden, D. T., and Litzenberger, R. H. (1978). Prices of state-contingent claims implicit in option prices. <i>Journal of Business</i>, 51(4), 621–651.</p>
+<p>Budish, E., Cramton, P., and Shim, J. (2015). The high-frequency trading arms race: Frequent batch auctions as a market design response. <i>Quarterly Journal of Economics</i>, 130(4), 1547–1621.</p>
+<p>Cameron, A. C., Gelbach, J. B., and Miller, D. L. (2008). Bootstrap-based improvements for inference with clustered errors. <i>Review of Economics and Statistics</i>, 90(3), 414–427.</p>
+<p>Chakravarty, S., Gulen, H., and Mayhew, S. (2004). Informed trading in stock and option markets. <i>Journal of Finance</i>, 59(3), 1235–1257.</p>
+<p>Easley, D., O'Hara, M., and Srinivas, P. S. (1998). Option volume and stock prices: Evidence on where informed traders trade. <i>Journal of Finance</i>, 53(2), 431–465.</p>
+<p>Gonzalo, J., and Granger, C. (1995). Estimation of common long-memory components in cointegrated systems. <i>Journal of Business &amp; Economic Statistics</i>, 13(1), 27–35.</p>
+<p>Harvey, C. R., Liu, Y., and Zhu, H. (2016). … and the cross-section of expected returns. <i>Review of Financial Studies</i>, 29(1), 5–68.</p>
+<p>Hasbrouck, J. (1995). One security, many markets: Determining the contributions to price discovery. <i>Journal of Finance</i>, 50(4), 1175–1199.</p>
+<p>Hayashi, T., and Yoshida, N. (2005). On covariance estimation of non-synchronously observed diffusion processes. <i>Bernoulli</i>, 11(2), 359–379.</p>
+<p>Hou, A. J., Wang, W., Chen, C. Y. H., and Härdle, W. K. (2020). Pricing cryptocurrency options. <i>Journal of Financial Econometrics</i>, 18(2), 250–279.</p>
+<p>Makarov, I., and Schoar, A. (2020). Trading and arbitrage in cryptocurrency markets. <i>Journal of Financial Economics</i>, 135(2), 293–319.</p>
+<p>Newey, W. K., and West, K. D. (1987). A simple, positive semi-definite, heteroskedasticity and autocorrelation consistent covariance matrix. <i>Econometrica</i>, 55(3), 703–708.</p>
+<p>Shleifer, A., and Vishny, R. W. (1997). The limits of arbitrage. <i>Journal of Finance</i>, 52(1), 35–55.</p>
+<p>Stoll, H. R., and Whaley, R. E. (1990). The dynamics of stock index and stock index futures returns. <i>Journal of Financial and Quantitative Analysis</i>, 25(4), 441–468.</p>
+</div>
+
+<!-- ============================== APPENDIX A ============================== -->
+<div class="newpage"></div>
+<h1 style="margin-top:0">Appendix A&nbsp; Reproducibility</h1>
+<p>All code is in the public repository <a href="https://github.com/ayushk2s/CRYPTO-OPTIONS-LATENCY-ARB">github.com/ayushk2s/CRYPTO-OPTIONS-LATENCY-ARB</a>. The research pipeline consists of numbered scripts that are run in order; the paper's figures and tables are generated from their outputs by <span class="mono">paper/analysis.py</span> and assembled by <span class="mono">paper/build.py</span>. The environment used was Python 3.14 on Windows 11 with websockets 17.0, requests 2.34, NumPy 2.5, pandas 3.0, statsmodels 0.15, SciPy 1.18, Matplotlib 3.11 and rich (for the optional dashboard). No API keys are required.</p>
+<div class="tbl"><div class="tcap"><b>Table A1.</b> Pipeline scripts, their role and their outputs.</div>
+<table><thead><tr><th>Script</th><th>Gate</th><th>Purpose</th><th>Outputs</th></tr></thead><tbody>
+<tr><td class="mono">00_connectivity.py</td><td>0</td><td>REST and websocket reachability on all three exchanges</td><td>results/gate0_connectivity.json</td></tr>
+<tr><td class="mono">00b_binance_ws_probe.py</td><td>0</td><td>Which Binance websocket hosts and paths deliver</td><td>results/gate0_binance_ws_probe.json</td></tr>
+<tr><td class="mono">00c_binance_opt_streams.py</td><td>0</td><td>Which Binance option stream names deliver</td><td>results/gate0_binance_opt_streams.json</td></tr>
+<tr><td class="mono">01_chain_snapshot.py</td><td>0</td><td>Chain census, at-the-money spreads and depth</td><td>results/gate0_chain_census.json, gate0_atm_spreads.csv</td></tr>
+<tr><td class="mono">02_record.py &lt;hours&gt;</td><td>1</td><td>Synchronized three-exchange recorder</td><td>data_cache/rec_*/ticks.jsonl, clock.jsonl, meta.json</td></tr>
+<tr><td class="mono">03_leadlag.py</td><td>1</td><td>Cross-correlation and event study</td><td>results/gate1_xcorr.csv, gate1_events.csv, gate1_summary.json</td></tr>
+<tr><td class="mono">03b_incremental.py</td><td>1</td><td>Predictive regression, circular-shift placebo, dollar magnitude</td><td>results/gate1_incremental.csv, .json</td></tr>
+<tr><td class="mono">04_latency.py</td><td>2</td><td>Warm REST round trips</td><td>results/gate2_latency.json</td></tr>
+<tr><td class="mono">05_paper_trade.py &lt;hours&gt; [--dash]</td><td>3</td><td>Live paper-trading engine with optional terminal dashboard</td><td>results/paper/&lt;run&gt;/, data_cache/paper/&lt;run&gt;/</td></tr>
+<tr><td class="mono">06_paper_report.py [run]</td><td>3</td><td>Variant statistics, cluster bootstrap, permutation tests</td><td>results/paper/&lt;run&gt;/report.json, report.md</td></tr>
+<tr><td class="mono">07_wing_scan.py &lt;minutes&gt;</td><td>11.1</td><td>Full-chain crossed-market scan</td><td>results/wing_scan/&lt;run&gt;/</td></tr>
+<tr><td class="mono">08_polymarket_vs_deribit.py &lt;minutes&gt;</td><td>11.4</td><td>Polymarket digitals versus the Deribit smile</td><td>results/pm_vs_deribit/&lt;run&gt;/</td></tr>
+<tr><td class="mono">paper/analysis.py</td><td>—</td><td>All figures, tables and statistics in this paper</td><td>paper/build/</td></tr>
+</tbody></table></div>
+<p>Raw recordings and per-trade logs (about 1 GB) are not committed to the repository because of their size; the scripts regenerate equivalent data from live public feeds. Exact replication of the reported figures requires the original raw files, which are available from the author. Market data are by nature not reproducible at a later date; what is reproducible is the methodology, applied to a new recording.</p>
+<h2>A.1 Dated research log</h2>
+<div class="tbl"><div class="tcap"><b>Table A2.</b> Chronology of data collection (all times UTC).</div>
+<table><thead><tr><th>Date</th><th>Time</th><th>Activity</th></tr></thead><tbody>
+<tr><td>23 Oct 2026</td><td>12:50–12:52</td><td>Gate 0: connectivity probes, Binance stream discovery, chain census</td></tr>
+<tr><td>23 Oct 2026</td><td>12:57–16:57</td><td>Gate 1: synchronized four-hour recording (12 options × 3 exchanges + perpetuals)</td></tr>
+<tr><td>23 Oct 2026</td><td>13:05</td><td>Gate 2: latency measurement (200 requests per endpoint)</td></tr>
+<tr><td>23 Oct 2026</td><td>15:09–18:09</td><td>Gate 3: paper-trading session 1 (56 options, 3.00 h)</td></tr>
+<tr><td>23 Oct 2026</td><td>17:15–17:28</td><td>Follow-up 1: full-chain cross scan (trial run and 10-minute run)</td></tr>
+<tr><td>27 Oct 2026</td><td>17:19–17:21</td><td>Follow-up 4: Polymarket versus Deribit, 5 snapshots × 6 events</td></tr>
+<tr><td>2 Nov 2026</td><td>18:02–18:20</td><td>Gate 3: paper-trading session 2 (56 options, stopped after 18 minutes)</td></tr>
+</tbody></table></div>
+
+<!-- ============================== APPENDIX B ============================== -->
+<h1>Appendix B&nbsp; Data dictionary</h1>
+<div class="tbl"><div class="tcap"><b>Table B1.</b> Fields of the normalised market-data record (<span class="mono">ticks.jsonl</span>, one JSON object per line), emitted by <span class="mono">src/clients/feeds.py</span>.</div>
+<table><thead><tr><th>Field</th><th>Type</th><th>Description</th></tr></thead><tbody>
+<tr><td class="mono">kind</td><td>string</td><td>"q" best bid/offer update; "m" mark / implied-volatility update; "conn" / "disconnect" socket events</td></tr>
+<tr><td class="mono">v</td><td>string</td><td>Source: deribit, binance, bybit, binance_perp, deribit_perp, deribit_index</td></tr>
+<tr><td class="mono">sym</td><td>string</td><td>Exchange symbol, e.g. BTC-24OCT26-81500-C, BTC-261024-81500-C, BTC-24OCT26-81500-C-USDT</td></tr>
+<tr><td class="mono">key</td><td>string</td><td>Normalised key COIN-YYYYMMDD-STRIKE-C/P shared across exchanges; COIN-PERP or COIN-IDX for underlyings</td></tr>
+<tr><td class="mono">tr</td><td>int</td><td>Local receive time, nanoseconds since epoch</td></tr>
+<tr><td class="mono">te</td><td>int</td><td>Exchange event timestamp, milliseconds since epoch (Bybit book: matching-engine time "cts")</td></tr>
+<tr><td class="mono">bid, ask</td><td>float</td><td>Best bid and ask in USD (Deribit converted from coin at the underlying price) or USDT (Binance, Bybit)</td></tr>
+<tr><td class="mono">bsz, asz</td><td>float</td><td>Sizes at best bid and ask, contracts of one coin</td></tr>
+<tr><td class="mono">bid_c, ask_c</td><td>float</td><td>Deribit only: best bid and ask in coin</td></tr>
+<tr><td class="mono">bl, al</td><td>list</td><td>Bybit only: top five book levels [price, size] on each side</td></tr>
+<tr><td class="mono">mark</td><td>float</td><td>Exchange mark price (USD / USDT)</td></tr>
+<tr><td class="mono">iv, biv, aiv</td><td>float</td><td>Mark, bid and ask implied volatility (decimal)</td></tr>
+<tr><td class="mono">S, idx</td><td>float</td><td>Underlying price used by the exchange for the option; exchange index</td></tr>
+<tr><td class="mono">u</td><td>int</td><td>Binance book update id</td></tr>
+</tbody></table></div>
+<div class="tbl"><div class="tcap"><b>Table B2.</b> Fields of the simulated trade record (<span class="mono">trades.jsonl</span>), emitted by <span class="mono">src/paper/engine.py</span>.</div>
+<table><thead><tr><th>Field</th><th>Description</th></tr></thead><tbody>
+<tr><td class="mono">strat, var</td><td>Strategy (S1, S2) and variant, e.g. S1|bybit|h1000|real|signal</td></tr>
+<tr><td class="mono">key, venue, side, qty</td><td>Option, exchange traded, buy/sell, contracts</td></tr>
+<tr><td class="mono">px_in, px_out</td><td>Average fill prices on entry and exit (exchange quote currency)</td></tr>
+<tr><td class="mono">t_in, t_out</td><td>Exchange-clock arrival times of entry and exit orders (ms)</td></tr>
+<tr><td class="mono">gross</td><td>(px_out − px_in) × side × qty × p, in USD — includes the spread crossed</td></tr>
+<tr><td class="mono">fees, slip</td><td>Taker fees on both sides (equation 4); half-tick haircut on both fills</td></tr>
+<tr><td class="mono">net</td><td>gross − fees − slip</td></tr>
+<tr><td class="mono">S, coin, t_local</td><td>Underlying index at entry; coin; local booking time (ms)</td></tr>
+<tr><td class="mono">S2 fields</td><td>buy, sell, qty_buy, qty_sell, gross_sig, cost_sig, gap, settle, leg_loss, filled</td></tr>
+</tbody></table></div>
+
+<!-- ============================== APPENDIX C ============================== -->
+<div class="newpage"></div>
+<h1 style="margin-top:0">Appendix C&nbsp; Supplementary tables</h1>
+<!--T:t_rest|Gate 0 REST probes: HTTP status, cold latency and response size for each endpoint used.-->
+<!--T:t_binance_probe|Gate 0 Binance websocket probe: hosts and paths tested, including futures control streams, and the number of messages received.-->
+<!--T:t_depth|Displayed depth at the census time for the near-expiry at-the-money options with order books: touch sizes and total size in the top five levels (contracts of one coin).-->
+<!--T:t_per_instrument|Gate 1 recording: best-bid-and-offer updates per option and exchange over 4.00 hours.-->
+<!--T:t_moneyness|S1 results by strike relative to spot (one-second hold, real latency, signal direction), by session, exchange and coin.-->
+<!--T:t_counters|Engine counters for both sessions: Deribit moves seen, S1 signals, signals rejected because the follower was not stale or its book was wider than three ticks, quote updates processed, and orders that did not fill, lacked data or were force-closed (real-latency signal variants).-->
+<!--T:t_wing_cands|Full-chain cross scan: all candidates confirmed against simultaneously fetched order books (10-minute run). Expiries within 30 days only; deep in-the-money long-dated crosses are excluded from confirmation as carry.-->
+
+<!-- ============================== APPENDIX D ============================== -->
+<div class="newpage"></div>
+<h1 style="margin-top:0">Appendix D&nbsp; Source code listings</h1>
+<p>The complete source of the data clients, the paper-trading engine, the dashboard and every pipeline script is reproduced below, exactly as used to produce the results in this paper. Line numbers are for reference.</p>
+<h2>D.1 Market-data clients</h2>
+<!--CODE:src/clients/feeds.py-->
+<h2>D.2 Paper-trading engine</h2>
+<!--CODE:src/paper/engine.py-->
+<h2>D.3 Live terminal dashboard</h2>
+<!--CODE:src/paper/dash.py-->
+<h2>D.4 Gate 0 scripts</h2>
+<!--CODE:scripts/00_connectivity.py-->
+<!--CODE:scripts/00b_binance_ws_probe.py-->
+<!--CODE:scripts/00c_binance_opt_streams.py-->
+<!--CODE:scripts/01_chain_snapshot.py-->
+<h2>D.5 Gate 1 scripts</h2>
+<!--CODE:scripts/02_record.py-->
+<!--CODE:scripts/03_leadlag.py-->
+<!--CODE:scripts/03b_incremental.py-->
+<h2>D.6 Gate 2 script</h2>
+<!--CODE:scripts/04_latency.py-->
+<h2>D.7 Gate 3 scripts</h2>
+<!--CODE:scripts/05_paper_trade.py-->
+<!--CODE:scripts/06_paper_report.py-->
+<h2>D.8 Follow-up scripts</h2>
+<!--CODE:scripts/07_wing_scan.py-->
+<!--CODE:scripts/08_polymarket_vs_deribit.py-->
+<h2>D.9 Paper analysis and build</h2>
+<!--CODE:paper/analysis.py-->
+<!--CODE:paper/build.py-->
+
+</body></html>

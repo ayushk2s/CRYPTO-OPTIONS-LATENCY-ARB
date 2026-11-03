@@ -138,8 +138,8 @@ clock that drifted 330–780 ms behind the exchanges.
 
 **Data:** 4 hours of synchronized recording — 12 ATM options (BTC/ETH, nearest expiry, 3 strikes, calls and puts)
 on all three exchanges, plus the BTC/ETH perpetuals as a control. Timed on **exchange timestamps**, using each
-exchange's best bid/ask **mid** (not last trade, which is sparse and noisy on option books). Binance had ~52 min of
-ISP-level DNS outages; those windows are masked.
+exchange's best bid/ask **mid** (not last trade, which is sparse and noisy on option books). Binance had 112 min of
+ISP-level DNS outages (two long gaps of 50 and 45 min plus short drops); those windows are masked.
 
 ### Who moves first? The perp.
 
@@ -287,8 +287,8 @@ Crosses are 1–2-tick transients at about half the cost of trading them.
 ~4,100 options per 20 s snapshot across all three exchanges, with premium-capped fees, delta-weighted exercise fees
 and the USDT strike gap. ~140 net-positive crosses per snapshot — **all** 4–11-month deep in-the-money options, one
 direction (buy Deribit, sell Bybit). That is interest-rate carry between Deribit's inverse options and Bybit's
-USDT discounting: **1.9–3.1 % a year** on locked capital, below T-bills, with a year of two-exchange counterparty
-risk. Under 30 days to expiry: 2 crosses in 10 minutes, both minimum-tick artifacts worth $4.85 in total.
+USDT discounting: **3.1–3.3 % a year** on the premium paid, roughly **1–3 %** once margin on the short leg is included —
+a money-market-like return with a year of two-exchange counterparty risk. Under 30 days to expiry: 2 crosses in 10 minutes, both minimum-tick artifacts worth $4.85 in total.
 
 **2. Expiry settlement mispricing.** Deribit dailies settle on a 07:30–08:00 UTC index TWAP, but the expiring
 daily barely trades in its final hour. Testing it needs weeks of live recording in that window — not backtestable
@@ -299,8 +299,8 @@ viable inside an exchange market-maker programme with rebates.
 
 **4. Polymarket "Bitcoin above $K" vs Deribit-implied probability** — `08_polymarket_vs_deribit.py`.
 Fair probability from Deribit's smile (variance interpolated between bracketing expiries, USDT strike conversion,
-smile-slope digital correction). Polymarket mids sat **0–0.5¢** from fair on average, max 2–4.4¢ only at the strikes
-nearest spot — within model error (Polymarket resolves on one Binance 1-minute close at 12:00 ET; Deribit settles on
+smile-slope digital correction). Polymarket mids showed no systematic bias (average signed deviation −0.1 to −0.4¢ per event); the average absolute
+deviation was 0.5–2.7¢ per event, max 4.4¢, concentrated at the strikes nearest spot — within model error (Polymarket resolves on one Binance 1-minute close at 12:00 ET; Deribit settles on
 an 08:00 UTC TWAP). Intra-Polymarket monotonicity arbitrage: 0. Capacity ~$10–50/day.
 
 ---

@@ -187,3 +187,12 @@ setup, BTC $77.1k / ETH $2,256, Binance live 100 %. Added `--dash` live terminal
   fee cap no longer bound: fees $34.9 vs $20.4 per BTC trade. Gross before costs similar (−$7.4 vs −$6.1).
 - S2: Binance↔Bybit crossed on 26,742 updates, all killed by costs (max BTC $19.97 vs ≈ $73 + slippage hurdle). 0 trades.
 - Both runs combined: 236,146 S1 paper trades, 4 net-positive; 197,866 S2 crosses, 0 trades.
+
+### Corrections found while writing the working paper (2026-11-03)
+Recomputed from raw files by `paper/analysis.py`; the paper uses the corrected figures.
+- Binance outage during the Gate 1 recording: **112 min in total** (two long gaps of 50.4 and 44.6 min plus eight
+  1.3–3.7 min drops), not "~52 min".
+- Follow-up 4 (Polymarket): "mean |mid − fair| 0.0–0.5¢" above was the mean *signed* deviation (−0.08 to −0.39¢ per
+  event). Mean *absolute* deviation was 0.45–2.71¢ per event (max 4.39¢). Sample: 5 snapshots × 6 events (17:19–17:21 UTC).
+- Follow-up 1 (wing scan) carry: best candidate 3.1–3.3 %/yr on premium paid; ~1–3 %/yr including 15 % margin on the
+  short leg. "Below T-bills" was not checked against a rate quote; described as money-market-like.

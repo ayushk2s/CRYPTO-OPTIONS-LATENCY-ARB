@@ -1,0 +1,1513 @@
+{
+ "census": {
+  "binance.BTC": {
+   "n": 638,
+   "vol": 6201.4,
+   "exp": 11
+  },
+  "binance.ETH": {
+   "n": 528,
+   "vol": 125197.6,
+   "exp": 11
+  },
+  "bybit.BTC": {
+   "n": 686,
+   "vol": 6969.5,
+   "exp": 11
+  },
+  "bybit.ETH": {
+   "n": 568,
+   "vol": 157982.3,
+   "exp": 11
+  },
+  "deribit.BTC": {
+   "n": 930,
+   "vol": 18159.4,
+   "exp": 12
+  },
+  "deribit.ETH": {
+   "n": 784,
+   "vol": 120116.0,
+   "exp": 12
+  }
+ },
+ "latency": {
+  "binance_eapi_ping": {
+   "n": 200,
+   "min": 194.0,
+   "p5": 200.0,
+   "p50": 210.7,
+   "p95": 235.8,
+   "max": 285.5
+  },
+  "binance_eapi_time": {
+   "n": 200,
+   "min": 195.0,
+   "p5": 201.2,
+   "p50": 212.6,
+   "p95": 244.9,
+   "max": 393.9
+  },
+  "bybit_v5_time": {
+   "n": 200,
+   "min": 116.9,
+   "p5": 124.2,
+   "p50": 137.9,
+   "p95": 307.3,
+   "max": 614.0
+  },
+  "deribit_time": {
+   "n": 200,
+   "min": 224.2,
+   "p5": 232.4,
+   "p50": 254.7,
+   "p95": 353.5,
+   "max": 991.1
+  }
+ },
+ "event_done_at_arrival": {
+  "binance": 0.8461538461538461,
+  "bybit": 0.6492659053833606
+ },
+ "regression": {
+  "t_min": 3.7,
+  "t_max": 6.7,
+  "n": 70962,
+  "hours": 3.9792402492947048,
+  "null": {
+   "binance": {
+    "target": "y_150_5000",
+    "obs_b_der": 0.0317,
+    "null_mean": 0.00031759494559035817,
+    "null_sd": 0.006601884312736566,
+    "p_two_sided": 0.0
+   },
+   "bybit": {
+    "target": "y_150_5000",
+    "obs_b_der": 0.0489,
+    "null_mean": -0.0003025364616737082,
+    "null_sd": 0.00892301770801661,
+    "p_two_sided": 0.0
+   }
+  }
+ },
+ "wing": {
+  "snapshots": 30,
+  "instruments_med": 4138.0,
+  "gross_cross_med": 222.0,
+  "net_pos_long_med": 131.5,
+  "net_pos_short_total": 31,
+  "confirmed_total": 31
+ },
+ "wing_carry": {
+  "min": 3.0746955325501184,
+  "max": 3.3431533031524387,
+  "median": 3.282455023893066,
+  "dte_med": 335.60921315549194
+ },
+ "pm": {
+  "snapshots": 30,
+  "events": 6,
+  "mean_abs_dev_c": 0.978662058930127,
+  "max_abs_dev_c": 4.388417859348637,
+  "mono_arbs": 0,
+  "obs": 170
+ },
+ "rec": {
+  "hours": 4.000554166666666,
+  "start": "2026-10-23 12:57:01.992000+00:00",
+  "end": "2026-10-23 16:57:03.987000+00:00",
+  "n_records": 2156121,
+  "clock_offset_ms": 453.111572265625,
+  "outages": [
+   [
+    "2026-10-23 13:43:29.152000+00:00",
+    50.37335
+   ],
+   [
+    "2026-10-23 14:51:35.757000+00:00",
+    44.5882
+   ],
+   [
+    "2026-10-23 16:03:49.145000+00:00",
+    3.7258
+   ],
+   [
+    "2026-10-23 16:07:39.076000+00:00",
+    1.4847333333333332
+   ],
+   [
+    "2026-10-23 16:16:06.037000+00:00",
+    1.6571333333333333
+   ],
+   [
+    "2026-10-23 16:18:40.435000+00:00",
+    1.4193666666666667
+   ],
+   [
+    "2026-10-23 16:20:05.597000+00:00",
+    2.7754666666666665
+   ],
+   [
+    "2026-10-23 16:23:03.479000+00:00",
+    2.0633666666666666
+   ],
+   [
+    "2026-10-23 16:25:54.073000+00:00",
+    2.5206
+   ],
+   [
+    "2026-10-23 16:28:58.544000+00:00",
+    1.2715666666666667
+   ]
+  ],
+  "outage_min": 111.87958333333333,
+  "n_conn_events": 2949
+ },
+ "clock": {
+  "deribit": {
+   "p5": 299.1725219726562,
+   "p95": 864.3395751953124,
+   "median": 432.8204345703125
+  },
+  "binance": {
+   "p5": 360.2182983398437,
+   "p95": 856.1990234374999,
+   "median": 473.119873046875
+  },
+  "bybit": {
+   "p5": 341.7265625,
+   "p95": 846.165234375,
+   "median": 453.48291015625
+  }
+ },
+ "feed_delay": {
+  "Deribit": {
+   "p50": 649.0291748046875,
+   "p75": 1054.07275390625,
+   "gt2s": 0.10626400380224449
+  },
+  "Binance": {
+   "p50": 120.0430908203125,
+   "p75": 195.787109375,
+   "gt2s": 0.03296361563180263
+  },
+  "Bybit": {
+   "p50": 160.099365234375,
+   "p75": 191.858154296875,
+   "gt2s": 0.1160377136834615
+  },
+  "Binance perp": {
+   "p50": 120.306396484375,
+   "p75": 201.87255859375,
+   "gt2s": 0.016795487779402547
+  },
+  "Deribit perp": {
+   "p50": 265.335205078125,
+   "p75": 349.634765625,
+   "gt2s": 0.08941578812726367
+  },
+  "Deribit index": {
+   "p50": 235.63037109375,
+   "p75": 263.06976318359375,
+   "gt2s": 0.07735118567510889
+  }
+ },
+ "deribit_minus_bybit_ms": 488.9298095703125,
+ "deribit_minus_binance_ms": 528.986083984375,
+ "rec_spreads": [
+  {
+   "Exchange": "Binance",
+   "Coin": "BTC",
+   "Quotes": 121392,
+   "Median spread (USD)": 10.0,
+   "p10": 5.0,
+   "p90": 225.0,
+   "Median spread (% of mid)": 2.73972602739726,
+   "Median mid (USD)": 390.0
+  },
+  {
+   "Exchange": "Binance",
+   "Coin": "ETH",
+   "Quotes": 81127,
+   "Median spread (USD)": 0.3999999999999986,
+   "p10": 0.1999999999999993,
+   "p90": 1.3999999999999986,
+   "Median spread (% of mid)": 4.70588235294116,
+   "Median mid (USD)": 13.8
+  },
+  {
+   "Exchange": "Bybit",
+   "Coin": "BTC",
+   "Quotes": 741357,
+   "Median spread (USD)": 5.0,
+   "p10": 5.0,
+   "p90": 30.0,
+   "Median spread (% of mid)": 1.9801980198019802,
+   "Median mid (USD)": 387.5
+  },
+  {
+   "Exchange": "Bybit",
+   "Coin": "ETH",
+   "Quotes": 430584,
+   "Median spread (USD)": 0.3000000000000007,
+   "p10": 0.09999999999999964,
+   "p90": 2.3999999999999915,
+   "Median spread (% of mid)": 2.40963855421688,
+   "Median mid (USD)": 15.850000000000001
+  },
+  {
+   "Exchange": "Deribit",
+   "Coin": "BTC",
+   "Quotes": 110654,
+   "Median spread (USD)": 40.83138250000002,
+   "p10": 24.475914000000046,
+   "p90": 122.424027,
+   "Median spread (% of mid)": 14.285714285714288,
+   "Median mid (USD)": 387.80821625
+  },
+  {
+   "Exchange": "Deribit",
+   "Coin": "ETH",
+   "Quotes": 91994,
+   "Median spread (USD)": 2.4002599999999994,
+   "p10": 0.4798,
+   "p90": 13.238445000000013,
+   "Median spread (% of mid)": 15.384615384615389,
+   "Median mid (USD)": 15.0286875
+  }
+ ],
+ "clean_window_min": 45.452666666666666,
+ "xcorr_recomputed": [
+  {
+   "Clock": "exch",
+   "Coin": "BTC",
+   "Leader \u2192 follower": "Binance \u2192 Bybit",
+   "Peak lag (ms)": 0,
+   "Peak corr": 0.0583515449162084,
+   "Corr at 0": 0.0583515449162084,
+   "LLR (leader leads)": 0.6221274396618293
+  },
+  {
+   "Clock": "exch",
+   "Coin": "BTC",
+   "Leader \u2192 follower": "Deribit \u2192 Binance",
+   "Peak lag (ms)": 100,
+   "Peak corr": 0.03165245439169769,
+   "Corr at 0": 0.02452182364047646,
+   "LLR (leader leads)": 1.2597775560849573
+  },
+  {
+   "Clock": "exch",
+   "Coin": "BTC",
+   "Leader \u2192 follower": "Deribit \u2192 Bybit",
+   "Peak lag (ms)": -50,
+   "Peak corr": 0.0741508340420699,
+   "Corr at 0": 0.058269939117772895,
+   "LLR (leader leads)": 0.3624778214096138
+  },
+  {
+   "Clock": "exch",
+   "Coin": "BTC",
+   "Leader \u2192 follower": "Perpetual \u2192 Binance",
+   "Peak lag (ms)": 100,
+   "Peak corr": 0.08132644483926631,
+   "Corr at 0": 0.059044448039079066,
+   "LLR (leader leads)": 12.919143183169838
+  },
+  {
+   "Clock": "exch",
+   "Coin": "BTC",
+   "Leader \u2192 follower": "Perpetual \u2192 Bybit",
+   "Peak lag (ms)": 50,
+   "Peak corr": 0.2961365424190841,
+   "Corr at 0": 0.0972636602226145,
+   "LLR (leader leads)": 15.258577325064
+  },
+  {
+   "Clock": "exch",
+   "Coin": "BTC",
+   "Leader \u2192 follower": "Perpetual \u2192 Deribit",
+   "Peak lag (ms)": 100,
+   "Peak corr": 0.13867753225919385,
+   "Corr at 0": 0.03353117149380304,
+   "LLR (leader leads)": 16.76708261655949
+  },
+  {
+   "Clock": "exch",
+   "Coin": "ETH",
+   "Leader \u2192 follower": "Binance \u2192 Bybit",
+   "Peak lag (ms)": 0,
+   "Peak corr": 0.02344644824439882,
+   "Corr at 0": 0.02344644824439882,
+   "LLR (leader leads)": 0.4607044148142116
+  },
+  {
+   "Clock": "exch",
+   "Coin": "ETH",
+   "Leader \u2192 follower": "Deribit \u2192 Binance",
+   "Peak lag (ms)": -1050,
+   "Peak corr": 0.01341263772660837,
+   "Corr at 0": 0.0068211902921976745,
+   "LLR (leader leads)": 0.6008880792910964
+  },
+  {
+   "Clock": "exch",
+   "Coin": "ETH",
+   "Leader \u2192 follower": "Deribit \u2192 Bybit",
+   "Peak lag (ms)": -100,
+   "Peak corr": 0.029112195442499555,
+   "Corr at 0": 0.019305695136157396,
+   "LLR (leader leads)": 0.5450683208221689
+  },
+  {
+   "Clock": "exch",
+   "Coin": "ETH",
+   "Leader \u2192 follower": "Perpetual \u2192 Binance",
+   "Peak lag (ms)": 0,
+   "Peak corr": 0.04033401703485349,
+   "Corr at 0": 0.04033401703485349,
+   "LLR (leader leads)": 3.1614394468270244
+  },
+  {
+   "Clock": "exch",
+   "Coin": "ETH",
+   "Leader \u2192 follower": "Perpetual \u2192 Bybit",
+   "Peak lag (ms)": 50,
+   "Peak corr": 0.1777174448257827,
+   "Corr at 0": 0.0735600975095176,
+   "LLR (leader leads)": 12.06909043765865
+  },
+  {
+   "Clock": "exch",
+   "Coin": "ETH",
+   "Leader \u2192 follower": "Perpetual \u2192 Deribit",
+   "Peak lag (ms)": 100,
+   "Peak corr": 0.07320814648184067,
+   "Corr at 0": 0.016928253353341707,
+   "LLR (leader leads)": 10.350125404038103
+  },
+  {
+   "Clock": "local",
+   "Coin": "BTC",
+   "Leader \u2192 follower": "Binance \u2192 Bybit",
+   "Peak lag (ms)": 0,
+   "Peak corr": 0.077975917369919,
+   "Corr at 0": 0.077975917369919,
+   "LLR (leader leads)": 0.43118635287957735
+  },
+  {
+   "Clock": "local",
+   "Coin": "BTC",
+   "Leader \u2192 follower": "Deribit \u2192 Binance",
+   "Peak lag (ms)": -350,
+   "Peak corr": 0.020691988323408364,
+   "Corr at 0": 0.0140829354489821,
+   "LLR (leader leads)": 0.3730570087025395
+  },
+  {
+   "Clock": "local",
+   "Coin": "BTC",
+   "Leader \u2192 follower": "Deribit \u2192 Bybit",
+   "Peak lag (ms)": -450,
+   "Peak corr": 0.029490905443780895,
+   "Corr at 0": 0.013719360819634175,
+   "LLR (leader leads)": 0.18622699621219277
+  },
+  {
+   "Clock": "local",
+   "Coin": "BTC",
+   "Leader \u2192 follower": "Perpetual \u2192 Binance",
+   "Peak lag (ms)": 50,
+   "Peak corr": 0.10094042228746951,
+   "Corr at 0": 0.07218573189983518,
+   "LLR (leader leads)": 6.786142820766933
+  },
+  {
+   "Clock": "local",
+   "Coin": "BTC",
+   "Leader \u2192 follower": "Perpetual \u2192 Bybit",
+   "Peak lag (ms)": 50,
+   "Peak corr": 0.2422112390133353,
+   "Corr at 0": 0.1887461758126585,
+   "LLR (leader leads)": 4.259830222910921
+  },
+  {
+   "Clock": "local",
+   "Coin": "BTC",
+   "Leader \u2192 follower": "Perpetual \u2192 Deribit",
+   "Peak lag (ms)": 500,
+   "Peak corr": 0.05271835885367173,
+   "Corr at 0": 0.008700737663059049,
+   "LLR (leader leads)": 17.063362777289175
+  },
+  {
+   "Clock": "local",
+   "Coin": "ETH",
+   "Leader \u2192 follower": "Binance \u2192 Bybit",
+   "Peak lag (ms)": 0,
+   "Peak corr": 0.0236605034586293,
+   "Corr at 0": 0.0236605034586293,
+   "LLR (leader leads)": 0.35511757023157203
+  },
+  {
+   "Clock": "local",
+   "Coin": "ETH",
+   "Leader \u2192 follower": "Deribit \u2192 Binance",
+   "Peak lag (ms)": 6800,
+   "Peak corr": 0.010402467911876441,
+   "Corr at 0": 0.0023315525061879745,
+   "LLR (leader leads)": 0.7437583302208967
+  },
+  {
+   "Clock": "local",
+   "Coin": "ETH",
+   "Leader \u2192 follower": "Deribit \u2192 Bybit",
+   "Peak lag (ms)": -500,
+   "Peak corr": 0.02036986839415952,
+   "Corr at 0": 0.006504031059806597,
+   "LLR (leader leads)": 0.30765973359485294
+  },
+  {
+   "Clock": "local",
+   "Coin": "ETH",
+   "Leader \u2192 follower": "Perpetual \u2192 Binance",
+   "Peak lag (ms)": 0,
+   "Peak corr": 0.03807994627658149,
+   "Corr at 0": 0.03807994627658149,
+   "LLR (leader leads)": 1.9016307417779963
+  },
+  {
+   "Clock": "local",
+   "Coin": "ETH",
+   "Leader \u2192 follower": "Perpetual \u2192 Bybit",
+   "Peak lag (ms)": 0,
+   "Peak corr": 0.13602761387808357,
+   "Corr at 0": 0.13602761387808357,
+   "LLR (leader leads)": 3.0476655028256996
+  },
+  {
+   "Clock": "local",
+   "Coin": "ETH",
+   "Leader \u2192 follower": "Perpetual \u2192 Deribit",
+   "Peak lag (ms)": 450,
+   "Peak corr": 0.03393227578935345,
+   "Corr at 0": 0.005637239898163845,
+   "LLR (leader leads)": 8.638469769835586
+  }
+ ],
+ "runs": {
+  "run1": {
+   "hours": 3.0,
+   "binance_cov": 0.7821229050279329,
+   "p": 0.998775330357111,
+   "spot": {
+    "BTC": 81499.99,
+    "ETH": 2400.12
+   },
+   "expiries": {
+    "BTC": [
+     "2026-10-24 08:00:00",
+     "2026-10-25 08:00:00"
+    ],
+    "ETH": [
+     "2026-10-24 08:00:00",
+     "2026-10-25 08:00:00"
+    ]
+   },
+   "strikes": {
+    "BTC": [
+     80000.0,
+     80500.0,
+     81000.0,
+     81500.0,
+     82000.0,
+     82500.0,
+     83000.0
+    ],
+    "ETH": [
+     2340.0,
+     2360.0,
+     2380.0,
+     2400.0,
+     2420.0,
+     2440.0,
+     2460.0
+    ]
+   }
+  },
+  "run2": {
+   "hours": 0.3,
+   "binance_cov": 1.0,
+   "p": 0.9985474786430713,
+   "spot": {
+    "BTC": 77047.16,
+    "ETH": 2255.97
+   },
+   "expiries": {
+    "BTC": [
+     "2026-11-03 08:00:00",
+     "2026-11-04 08:00:00"
+    ],
+    "ETH": [
+     "2026-11-03 08:00:00",
+     "2026-11-04 08:00:00"
+    ]
+   },
+   "strikes": {
+    "BTC": [
+     75500.0,
+     76000.0,
+     76500.0,
+     77000.0,
+     77500.0,
+     78000.0,
+     78500.0
+    ],
+    "ETH": [
+     2200.0,
+     2220.0,
+     2240.0,
+     2260.0,
+     2280.0,
+     2300.0,
+     2320.0
+    ]
+   }
+  }
+ },
+ "signal_null_run1": [
+  {
+   "Exchange": "Binance",
+   "Hold": "1 s",
+   "Latency": "real",
+   "Signal gross/trade": -5.6807285292988094,
+   "Random gross/trade": -5.700413178932901,
+   "Difference": 0.019684649634091222,
+   "Permutation p (one-sided)": 0.236
+  },
+  {
+   "Exchange": "Binance",
+   "Hold": "1 s",
+   "Latency": "zero",
+   "Signal gross/trade": -5.993953715869786,
+   "Random gross/trade": -5.970375076036514,
+   "Difference": -0.02357863983327224,
+   "Permutation p (one-sided)": 0.801
+  },
+  {
+   "Exchange": "Binance",
+   "Hold": "30 s",
+   "Latency": "real",
+   "Signal gross/trade": -6.304784079656195,
+   "Random gross/trade": -6.1790956583167915,
+   "Difference": -0.1256884213394036,
+   "Permutation p (one-sided)": 0.761
+  },
+  {
+   "Exchange": "Binance",
+   "Hold": "30 s",
+   "Latency": "zero",
+   "Signal gross/trade": -6.886549004674002,
+   "Random gross/trade": -6.55277324017652,
+   "Difference": -0.33377576449748236,
+   "Permutation p (one-sided)": 0.942
+  },
+  {
+   "Exchange": "Binance",
+   "Hold": "5 s",
+   "Latency": "real",
+   "Signal gross/trade": -5.868933022089317,
+   "Random gross/trade": -5.833371224620482,
+   "Difference": -0.035561797468835366,
+   "Permutation p (one-sided)": 0.763
+  },
+  {
+   "Exchange": "Binance",
+   "Hold": "5 s",
+   "Latency": "zero",
+   "Signal gross/trade": -6.185204050462353,
+   "Random gross/trade": -6.1349768191018335,
+   "Difference": -0.05022723136051965,
+   "Permutation p (one-sided)": 0.822
+  },
+  {
+   "Exchange": "Bybit",
+   "Hold": "1 s",
+   "Latency": "real",
+   "Signal gross/trade": -3.814586063753211,
+   "Random gross/trade": -3.8560205456955443,
+   "Difference": 0.041434481942333345,
+   "Permutation p (one-sided)": 0.002
+  },
+  {
+   "Exchange": "Bybit",
+   "Hold": "1 s",
+   "Latency": "zero",
+   "Signal gross/trade": -4.351738358019663,
+   "Random gross/trade": -4.317345937408079,
+   "Difference": -0.03439242061158421,
+   "Permutation p (one-sided)": 0.98
+  },
+  {
+   "Exchange": "Bybit",
+   "Hold": "30 s",
+   "Latency": "real",
+   "Signal gross/trade": -4.166913045753894,
+   "Random gross/trade": -4.2307072494005284,
+   "Difference": 0.06379420364663435,
+   "Permutation p (one-sided)": 0.281
+  },
+  {
+   "Exchange": "Bybit",
+   "Hold": "30 s",
+   "Latency": "zero",
+   "Signal gross/trade": -4.9887871984199466,
+   "Random gross/trade": -4.740312839179906,
+   "Difference": -0.24847435924004024,
+   "Permutation p (one-sided)": 0.988
+  },
+  {
+   "Exchange": "Bybit",
+   "Hold": "5 s",
+   "Latency": "real",
+   "Signal gross/trade": -3.9207946918709604,
+   "Random gross/trade": -3.9422279469347457,
+   "Difference": 0.02143325506378524,
+   "Permutation p (one-sided)": 0.235
+  },
+  {
+   "Exchange": "Bybit",
+   "Hold": "5 s",
+   "Latency": "zero",
+   "Signal gross/trade": -4.436959789119179,
+   "Random gross/trade": -4.375686871999437,
+   "Difference": -0.0612729171197417,
+   "Permutation p (one-sided)": 0.986
+  }
+ ],
+ "s2_counts_run1": [
+  {
+   "Buy \u2192 sell": "Deribit \u2192 Bybit",
+   "Crossed after USDT basis": 0,
+   "Killed by costs": 0,
+   "Signals": 0,
+   "No-fill": 0
+  },
+  {
+   "Buy \u2192 sell": "Bybit \u2192 Deribit",
+   "Crossed after USDT basis": 0,
+   "Killed by costs": 0,
+   "Signals": 0,
+   "No-fill": 0
+  },
+  {
+   "Buy \u2192 sell": "Deribit \u2192 Binance",
+   "Crossed after USDT basis": 9,
+   "Killed by costs": 9,
+   "Signals": 0,
+   "No-fill": 0
+  },
+  {
+   "Buy \u2192 sell": "Binance \u2192 Deribit",
+   "Crossed after USDT basis": 0,
+   "Killed by costs": 0,
+   "Signals": 0,
+   "No-fill": 0
+  },
+  {
+   "Buy \u2192 sell": "Binance \u2192 Bybit",
+   "Crossed after USDT basis": 79001,
+   "Killed by costs": 79001,
+   "Signals": 0,
+   "No-fill": 0
+  },
+  {
+   "Buy \u2192 sell": "Bybit \u2192 Binance",
+   "Crossed after USDT basis": 92123,
+   "Killed by costs": 92123,
+   "Signals": 0,
+   "No-fill": 0
+  }
+ ],
+ "signal_null_run2": [
+  {
+   "Exchange": "Binance",
+   "Hold": "1 s",
+   "Latency": "real",
+   "Signal gross/trade": -8.237705986062902,
+   "Random gross/trade": -8.204769523864593,
+   "Difference": -0.03293646219830926,
+   "Permutation p (one-sided)": 0.522
+  },
+  {
+   "Exchange": "Binance",
+   "Hold": "1 s",
+   "Latency": "zero",
+   "Signal gross/trade": -11.833541065087292,
+   "Random gross/trade": -11.704678832152174,
+   "Difference": -0.12886223293511812,
+   "Permutation p (one-sided)": 0.618
+  },
+  {
+   "Exchange": "Binance",
+   "Hold": "30 s",
+   "Latency": "real",
+   "Signal gross/trade": -9.48136879454969,
+   "Random gross/trade": -9.368741626469966,
+   "Difference": -0.11262716807972417,
+   "Permutation p (one-sided)": 0.56
+  },
+  {
+   "Exchange": "Binance",
+   "Hold": "30 s",
+   "Latency": "zero",
+   "Signal gross/trade": -13.668552949253938,
+   "Random gross/trade": -12.226980492041656,
+   "Difference": -1.4415724572122812,
+   "Permutation p (one-sided)": 0.821
+  },
+  {
+   "Exchange": "Binance",
+   "Hold": "5 s",
+   "Latency": "real",
+   "Signal gross/trade": -8.61053450431548,
+   "Random gross/trade": -8.451910540569129,
+   "Difference": -0.15862396374635068,
+   "Permutation p (one-sided)": 0.63
+  },
+  {
+   "Exchange": "Binance",
+   "Hold": "5 s",
+   "Latency": "zero",
+   "Signal gross/trade": -11.692516330344331,
+   "Random gross/trade": -12.241230135103672,
+   "Difference": 0.5487138047593412,
+   "Permutation p (one-sided)": 0.211
+  },
+  {
+   "Exchange": "Bybit",
+   "Hold": "1 s",
+   "Latency": "real",
+   "Signal gross/trade": -4.8446343493474,
+   "Random gross/trade": -4.813968472118193,
+   "Difference": -0.03066587722920744,
+   "Permutation p (one-sided)": 0.673
+  },
+  {
+   "Exchange": "Bybit",
+   "Hold": "1 s",
+   "Latency": "zero",
+   "Signal gross/trade": -5.560359462323475,
+   "Random gross/trade": -5.433052740929931,
+   "Difference": -0.12730672139354393,
+   "Permutation p (one-sided)": 0.989
+  },
+  {
+   "Exchange": "Bybit",
+   "Hold": "30 s",
+   "Latency": "real",
+   "Signal gross/trade": -5.133857274814785,
+   "Random gross/trade": -4.767359331432904,
+   "Difference": -0.3664979433818809,
+   "Permutation p (one-sided)": 0.818
+  },
+  {
+   "Exchange": "Bybit",
+   "Hold": "30 s",
+   "Latency": "zero",
+   "Signal gross/trade": -5.761563511657817,
+   "Random gross/trade": -6.088832640464174,
+   "Difference": 0.32726912880635695,
+   "Permutation p (one-sided)": 0.26
+  },
+  {
+   "Exchange": "Bybit",
+   "Hold": "5 s",
+   "Latency": "real",
+   "Signal gross/trade": -4.959552692070644,
+   "Random gross/trade": -4.998307406381735,
+   "Difference": 0.03875471431109112,
+   "Permutation p (one-sided)": 0.374
+  },
+  {
+   "Exchange": "Bybit",
+   "Hold": "5 s",
+   "Latency": "zero",
+   "Signal gross/trade": -5.76243758395264,
+   "Random gross/trade": -5.636308510557105,
+   "Difference": -0.12612907339553558,
+   "Permutation p (one-sided)": 0.877
+  }
+ ],
+ "s2_counts_run2": [
+  {
+   "Buy \u2192 sell": "Deribit \u2192 Bybit",
+   "Crossed after USDT basis": 0,
+   "Killed by costs": 0,
+   "Signals": 0,
+   "No-fill": 0
+  },
+  {
+   "Buy \u2192 sell": "Bybit \u2192 Deribit",
+   "Crossed after USDT basis": 0,
+   "Killed by costs": 0,
+   "Signals": 0,
+   "No-fill": 0
+  },
+  {
+   "Buy \u2192 sell": "Deribit \u2192 Binance",
+   "Crossed after USDT basis": 0,
+   "Killed by costs": 0,
+   "Signals": 0,
+   "No-fill": 0
+  },
+  {
+   "Buy \u2192 sell": "Binance \u2192 Deribit",
+   "Crossed after USDT basis": 0,
+   "Killed by costs": 0,
+   "Signals": 0,
+   "No-fill": 0
+  },
+  {
+   "Buy \u2192 sell": "Binance \u2192 Bybit",
+   "Crossed after USDT basis": 13741,
+   "Killed by costs": 13741,
+   "Signals": 0,
+   "No-fill": 0
+  },
+  {
+   "Buy \u2192 sell": "Bybit \u2192 Binance",
+   "Crossed after USDT basis": 13001,
+   "Killed by costs": 13001,
+   "Signals": 0,
+   "No-fill": 0
+  }
+ ],
+ "per_coin": [
+  {
+   "Run": "1",
+   "Exchange": "Binance",
+   "Hold": "1 s",
+   "Coin": "BTC",
+   "Trades": 35741,
+   "Avg qty": 0.9908592372905067,
+   "Avg premium (USD)": 167.64470076382867,
+   "Gross/trade": -6.149096896738945,
+   "Fees/trade": 26.407767137776975,
+   "Fees if uncapped": 48.48975582871772,
+   "Slip/trade": 4.948416910994161,
+   "Net/trade": -37.50528094551008,
+   "Wins": 0
+  },
+  {
+   "Run": "1",
+   "Exchange": "Binance",
+   "Hold": "1 s",
+   "Coin": "ETH",
+   "Trades": 5702,
+   "Avg qty": 9.873728516310067,
+   "Avg premium (USD)": 11.617096527534198,
+   "Gross/trade": -2.744924632301633,
+   "Fees/trade": 14.15816552098218,
+   "Fees if uncapped": 14.243042601192563,
+   "Slip/trade": 1.9723986897215964,
+   "Net/trade": -18.875488843005407,
+   "Wins": 0
+  },
+  {
+   "Run": "1",
+   "Exchange": "Binance",
+   "Hold": "5 s",
+   "Coin": "BTC",
+   "Trades": 15901,
+   "Avg qty": 0.9904282749512608,
+   "Avg premium (USD)": 171.20899943399786,
+   "Gross/trade": -6.344671476852744,
+   "Fees/trade": 26.671849816766812,
+   "Fees if uncapped": 48.46825596186403,
+   "Slip/trade": 4.946258308378877,
+   "Net/trade": -37.96277960199844,
+   "Wins": 0
+  },
+  {
+   "Run": "1",
+   "Exchange": "Binance",
+   "Hold": "5 s",
+   "Coin": "ETH",
+   "Trades": 2696,
+   "Avg qty": 9.87166172106825,
+   "Avg premium (USD)": 11.933719881305638,
+   "Gross/trade": -3.06302902758144,
+   "Fees/trade": 14.157562804288853,
+   "Fees if uncapped": 14.23930830267062,
+   "Slip/trade": 1.9719842206755076,
+   "Net/trade": -19.1925760525458,
+   "Wins": 0
+  },
+  {
+   "Run": "1",
+   "Exchange": "Binance",
+   "Hold": "30 s",
+   "Coin": "BTC",
+   "Trades": 3715,
+   "Avg qty": 0.9909017496635262,
+   "Avg premium (USD)": 180.2764737550471,
+   "Gross/trade": -6.848258027308723,
+   "Fees/trade": 27.307402720647932,
+   "Fees if uncapped": 48.49044315036339,
+   "Slip/trade": 4.948607700101999,
+   "Net/trade": -39.104268448058654,
+   "Wins": 0
+  },
+  {
+   "Run": "1",
+   "Exchange": "Binance",
+   "Hold": "30 s",
+   "Coin": "ETH",
+   "Trades": 708,
+   "Avg qty": 9.889830508474576,
+   "Avg premium (USD)": 12.672309604519773,
+   "Gross/trade": -3.453081091620688,
+   "Fees/trade": 14.197375483770935,
+   "Fees if uncapped": 14.26415165254237,
+   "Slip/trade": 1.9756068435082568,
+   "Net/trade": -19.626063418899882,
+   "Wins": 0
+  },
+  {
+   "Run": "1",
+   "Exchange": "Bybit",
+   "Hold": "1 s",
+   "Coin": "BTC",
+   "Trades": 49200,
+   "Avg qty": 0.9602215447154472,
+   "Avg premium (USD)": 172.17306002801578,
+   "Gross/trade": -6.1134236028397995,
+   "Fees/trade": 20.371728460519112,
+   "Fees if uncapped": 46.97982871659756,
+   "Slip/trade": 4.79537595334934,
+   "Net/trade": -31.280528016708246,
+   "Wins": 0
+  },
+  {
+   "Run": "1",
+   "Exchange": "Bybit",
+   "Hold": "1 s",
+   "Coin": "ETH",
+   "Trades": 43148,
+   "Avg qty": 9.323607119681098,
+   "Avg premium (USD)": 5.954898850289662,
+   "Gross/trade": -1.1933102937740645,
+   "Fees/trade": 6.647577285154394,
+   "Fees if uncapped": 13.447357429194048,
+   "Slip/trade": 0.9312480599155685,
+   "Net/trade": -8.772135638844027,
+   "Wins": 0
+  },
+  {
+   "Run": "1",
+   "Exchange": "Bybit",
+   "Hold": "5 s",
+   "Coin": "BTC",
+   "Trades": 22028,
+   "Avg qty": 0.9581487198111496,
+   "Avg premium (USD)": 176.98807230600858,
+   "Gross/trade": -6.322601950501876,
+   "Fees/trade": 20.6160000492667,
+   "Fees if uncapped": 46.878163516533505,
+   "Slip/trade": 4.785018924759216,
+   "Net/trade": -31.72362092452779,
+   "Wins": 0
+  },
+  {
+   "Run": "1",
+   "Exchange": "Bybit",
+   "Hold": "5 s",
+   "Coin": "ETH",
+   "Trades": 19869,
+   "Avg qty": 9.299662791282904,
+   "Avg premium (USD)": 6.221133309219171,
+   "Gross/trade": -1.2580028909186318,
+   "Fees/trade": 6.780208646264244,
+   "Fees if uncapped": 13.412624333628504,
+   "Slip/trade": 0.9288555099679847,
+   "Net/trade": -8.967067047150861,
+   "Wins": 0
+  },
+  {
+   "Run": "1",
+   "Exchange": "Bybit",
+   "Hold": "30 s",
+   "Coin": "BTC",
+   "Trades": 5205,
+   "Avg qty": 0.9492411143131605,
+   "Avg premium (USD)": 189.87399615754083,
+   "Gross/trade": -6.753973073943239,
+   "Fees/trade": 20.984160775359292,
+   "Fees if uncapped": 46.44183087146973,
+   "Slip/trade": 4.740505358222116,
+   "Net/trade": -32.47863920752465,
+   "Wins": 4
+  },
+  {
+   "Run": "1",
+   "Exchange": "Bybit",
+   "Hold": "30 s",
+   "Coin": "ETH",
+   "Trades": 4775,
+   "Avg qty": 9.14806282722513,
+   "Avg premium (USD)": 6.725361568785594,
+   "Gross/trade": -1.3468821668584905,
+   "Fees/trade": 6.8639331424288805,
+   "Fees if uncapped": 13.193479791594722,
+   "Slip/trade": 0.91370904495365,
+   "Net/trade": -9.124524354241021,
+   "Wins": 0
+  },
+  {
+   "Run": "2",
+   "Exchange": "Binance",
+   "Hold": "1 s",
+   "Coin": "BTC",
+   "Trades": 5394,
+   "Avg qty": 0.9822209862810531,
+   "Avg premium (USD)": 459.51281053021876,
+   "Gross/trade": -9.779736522890135,
+   "Fees/trade": 37.37639185879959,
+   "Fees if uncapped": 45.47309150978865,
+   "Slip/trade": 4.903915014093489,
+   "Net/trade": -52.06004339578322,
+   "Wins": 0
+  },
+  {
+   "Run": "2",
+   "Exchange": "Binance",
+   "Hold": "1 s",
+   "Coin": "ETH",
+   "Trades": 1365,
+   "Avg qty": 9.941391941391942,
+   "Avg premium (USD)": 10.321318681318681,
+   "Gross/trade": -2.1441435570181464,
+   "Fees/trade": 10.145202829299729,
+   "Fees if uncapped": 13.478098153846155,
+   "Slip/trade": 1.985365886765779,
+   "Net/trade": -14.274712273083656,
+   "Wins": 0
+  },
+  {
+   "Run": "2",
+   "Exchange": "Binance",
+   "Hold": "5 s",
+   "Coin": "BTC",
+   "Trades": 2413,
+   "Avg qty": 0.9802320762536263,
+   "Avg premium (USD)": 469.66639038541234,
+   "Gross/trade": -10.23028438908424,
+   "Fees/trade": 37.57014409672292,
+   "Fees if uncapped": 45.38106977604642,
+   "Slip/trade": 4.893985113625378,
+   "Net/trade": -52.69441359943254,
+   "Wins": 0
+  },
+  {
+   "Run": "2",
+   "Exchange": "Binance",
+   "Hold": "5 s",
+   "Coin": "ETH",
+   "Trades": 604,
+   "Avg qty": 9.960264900662251,
+   "Avg premium (USD)": 10.387417218543046,
+   "Gross/trade": -2.1395800805621374,
+   "Fees/trade": 10.18636465073972,
+   "Fees if uncapped": 13.503770463576158,
+   "Slip/trade": 1.9891337161443068,
+   "Net/trade": -14.315078447446163,
+   "Wins": 0
+  },
+  {
+   "Run": "2",
+   "Exchange": "Binance",
+   "Hold": "30 s",
+   "Coin": "BTC",
+   "Trades": 553,
+   "Avg qty": 0.9783001808318263,
+   "Avg premium (USD)": 487.2875226039783,
+   "Gross/trade": -11.20014045141542,
+   "Fees/trade": 37.98879895992808,
+   "Fees if uncapped": 45.29160990922242,
+   "Slip/trade": 4.884336507591057,
+   "Net/trade": -54.07327591893456,
+   "Wins": 0
+  },
+  {
+   "Run": "2",
+   "Exchange": "Binance",
+   "Hold": "30 s",
+   "Coin": "ETH",
+   "Trades": 133,
+   "Avg qty": 10.0,
+   "Avg premium (USD)": 10.682706766917294,
+   "Gross/trade": -2.334897168634285,
+   "Fees/trade": 10.234440257907648,
+   "Fees if uncapped": 13.558163007518795,
+   "Slip/trade": 1.9970572971776448,
+   "Net/trade": -14.566394723719577,
+   "Wins": 0
+  },
+  {
+   "Run": "2",
+   "Exchange": "Bybit",
+   "Hold": "1 s",
+   "Coin": "BTC",
+   "Trades": 6244,
+   "Avg qty": 0.9417520819987186,
+   "Avg premium (USD)": 495.83633888532995,
+   "Gross/trade": -7.33689579944097,
+   "Fees/trade": 34.807473911217876,
+   "Fees if uncapped": 43.59963244718129,
+   "Slip/trade": 4.701868152820001,
+   "Net/trade": -46.846237863478855,
+   "Wins": 0
+  },
+  {
+   "Run": "2",
+   "Exchange": "Bybit",
+   "Hold": "1 s",
+   "Coin": "ETH",
+   "Trades": 4642,
+   "Avg qty": 9.252692804825505,
+   "Avg premium (USD)": 14.07411227200919,
+   "Gross/trade": -1.4922688830862527,
+   "Fees/trade": 9.793145339387898,
+   "Fees if uncapped": 12.543623596725547,
+   "Slip/trade": 0.9239144183290758,
+   "Net/trade": -12.209328640803227,
+   "Wins": 0
+  },
+  {
+   "Run": "2",
+   "Exchange": "Bybit",
+   "Hold": "5 s",
+   "Coin": "BTC",
+   "Trades": 2799,
+   "Avg qty": 0.9406931046802429,
+   "Avg premium (USD)": 511.65899866198714,
+   "Gross/trade": -7.579996787380493,
+   "Fees/trade": 35.13155217034948,
+   "Fees if uncapped": 43.55057353333333,
+   "Slip/trade": 4.696583791537604,
+   "Net/trade": -47.40813274926758,
+   "Wins": 0
+  },
+  {
+   "Run": "2",
+   "Exchange": "Bybit",
+   "Hold": "5 s",
+   "Coin": "ETH",
+   "Trades": 2166,
+   "Avg qty": 9.171283471837489,
+   "Avg premium (USD)": 14.567248461064942,
+   "Gross/trade": -1.573300142314288,
+   "Fees/trade": 9.830301767733264,
+   "Fees if uncapped": 12.433299944598337,
+   "Slip/trade": 0.9157860577857042,
+   "Net/trade": -12.319387967833258,
+   "Wins": 0
+  },
+  {
+   "Run": "2",
+   "Exchange": "Bybit",
+   "Hold": "30 s",
+   "Coin": "BTC",
+   "Trades": 640,
+   "Avg qty": 0.9310937499999999,
+   "Avg premium (USD)": 544.9934375,
+   "Gross/trade": -7.712268033249442,
+   "Fees/trade": 35.132256119613814,
+   "Fees if uncapped": 43.106170586249995,
+   "Slip/trade": 4.648661862250664,
+   "Net/trade": -47.49318601511392,
+   "Wins": 0
+  },
+  {
+   "Run": "2",
+   "Exchange": "Bybit",
+   "Hold": "30 s",
+   "Coin": "ETH",
+   "Trades": 505,
+   "Avg qty": 9.178217821782178,
+   "Avg premium (USD)": 15.245035643564357,
+   "Gross/trade": -1.8661683928381898,
+   "Fees/trade": 9.979600952751131,
+   "Fees if uncapped": 12.443191556435643,
+   "Slip/trade": 0.916477705866763,
+   "Net/trade": -12.762247051456084,
+   "Wins": 0
+  }
+ ],
+ "total_trades": {
+  "run1": 208688,
+  "run2": 27458
+ },
+ "total_wins": {
+  "run1": 4,
+  "run2": 0
+ },
+ "max_net": {
+  "run1": 10.993795191583914,
+  "run2": -0.5247385273695139
+ },
+ "trade_rate": {
+  "run1": 1159.7575068113902,
+  "run2": 1530.1762535572886
+ },
+ "s2_hurdle_ex_slip": {
+  "run1_BTC": 77.46167949999999,
+  "run1_ETH": 2.2840089999999997,
+  "run2_BTC": 73.30978525,
+  "run2_ETH": 2.1472707499999997
+ },
+ "s2_rows": [
+  {
+   "Run": "1",
+   "Coin": "BTC",
+   "Buy \u2192 sell": "Binance \u2192 Bybit",
+   "10 s windows": 822,
+   "Median best cross": 0.0,
+   "p99": 23.912539526730075,
+   "Max": 39.92834731355339,
+   "% windows crossed": 0.3284671532846715
+  },
+  {
+   "Run": "1",
+   "Coin": "BTC",
+   "Buy \u2192 sell": "Binance \u2192 Deribit",
+   "10 s windows": 827,
+   "Median best cross": -11.808650289335379,
+   "p99": -5.528344323036674,
+   "Max": -5.514482523179272,
+   "% windows crossed": 0.0
+  },
+  {
+   "Run": "1",
+   "Coin": "BTC",
+   "Buy \u2192 sell": "Bybit \u2192 Binance",
+   "10 s windows": 822,
+   "Median best cross": 4.99426619337919,
+   "p99": 19.976855559079166,
+   "Max": 29.981447862128164,
+   "% windows crossed": 0.8333333333333334
+  },
+  {
+   "Run": "1",
+   "Coin": "BTC",
+   "Buy \u2192 sell": "Bybit \u2192 Deribit",
+   "10 s windows": 997,
+   "Median best cross": -10.454392185194504,
+   "p99": -0.5268678491281834,
+   "Max": -0.505528421124946,
+   "% windows crossed": 0.0
+  },
+  {
+   "Run": "1",
+   "Coin": "BTC",
+   "Buy \u2192 sell": "Deribit \u2192 Binance",
+   "10 s windows": 827,
+   "Median best cross": -8.956140984200694,
+   "p99": -2.7038566365469343,
+   "Max": 0.9289354633565801,
+   "% windows crossed": 0.0024183796856106408
+  },
+  {
+   "Run": "1",
+   "Coin": "BTC",
+   "Buy \u2192 sell": "Deribit \u2192 Bybit",
+   "10 s windows": 997,
+   "Median best cross": -13.956870330312626,
+   "p99": -5.8386116219146285,
+   "Max": -4.452335015834794,
+   "% windows crossed": 0.0
+  },
+  {
+   "Run": "1",
+   "Coin": "ETH",
+   "Buy \u2192 sell": "Binance \u2192 Bybit",
+   "10 s windows": 813,
+   "Median best cross": 0.199765291115054,
+   "p99": 0.686986417587633,
+   "Max": 1.097884987973774,
+   "% windows crossed": 0.8831488314883149
+  },
+  {
+   "Run": "1",
+   "Coin": "ETH",
+   "Buy \u2192 sell": "Binance \u2192 Deribit",
+   "10 s windows": 825,
+   "Median best cross": -2.9370913326489863,
+   "p99": -1.992893387101331,
+   "Max": -1.911413249522883,
+   "% windows crossed": 0.0
+  },
+  {
+   "Run": "1",
+   "Coin": "ETH",
+   "Buy \u2192 sell": "Bybit \u2192 Binance",
+   "10 s windows": 813,
+   "Median best cross": -0.099882496709218,
+   "p99": 0.49922430239094484,
+   "Max": 0.6995657717428011,
+   "% windows crossed": 0.14760147601476015
+  },
+  {
+   "Run": "1",
+   "Coin": "ETH",
+   "Buy \u2192 sell": "Bybit \u2192 Deribit",
+   "10 s windows": 993,
+   "Median best cross": -0.436874984101467,
+   "p99": -0.27315497751582113,
+   "Max": -0.21762967070226702,
+   "% windows crossed": 0.0
+  },
+  {
+   "Run": "1",
+   "Coin": "ETH",
+   "Buy \u2192 sell": "Deribit \u2192 Binance",
+   "10 s windows": 825,
+   "Median best cross": -1.817423443842296,
+   "p99": -1.1464115276626496,
+   "Max": -0.943941358395552,
+   "% windows crossed": 0.0
+  },
+  {
+   "Run": "1",
+   "Coin": "ETH",
+   "Buy \u2192 sell": "Deribit \u2192 Bybit",
+   "10 s windows": 993,
+   "Median best cross": -0.42522821381969206,
+   "p99": -0.22945532188439344,
+   "Max": -0.031099714809391003,
+   "% windows crossed": 0.0
+  },
+  {
+   "Run": "2",
+   "Coin": "BTC",
+   "Buy \u2192 sell": "Binance \u2192 Bybit",
+   "10 s windows": 108,
+   "Median best cross": 4.992812988494478,
+   "p99": 14.977914234518629,
+   "Max": 19.97006953232497,
+   "% windows crossed": 0.7685185185185185
+  },
+  {
+   "Run": "2",
+   "Coin": "BTC",
+   "Buy \u2192 sell": "Binance \u2192 Deribit",
+   "10 s windows": 108,
+   "Median best cross": -14.097654331587979,
+   "p99": -11.308241751598946,
+   "Max": -11.30026464886334,
+   "% windows crossed": 0.0
+  },
+  {
+   "Run": "2",
+   "Coin": "BTC",
+   "Buy \u2192 sell": "Bybit \u2192 Binance",
+   "10 s windows": 108,
+   "Median best cross": 4.992805736560399,
+   "p99": 9.985652329188989,
+   "Max": 9.985663480294193,
+   "% windows crossed": 0.8518518518518519
+  },
+  {
+   "Run": "2",
+   "Coin": "BTC",
+   "Buy \u2192 sell": "Bybit \u2192 Deribit",
+   "10 s windows": 108,
+   "Median best cross": -16.8241898497417,
+   "p99": -11.323391795701916,
+   "Max": -11.321180601212404,
+   "% windows crossed": 0.0
+  },
+  {
+   "Run": "2",
+   "Coin": "BTC",
+   "Buy \u2192 sell": "Deribit \u2192 Binance",
+   "10 s windows": 108,
+   "Median best cross": -12.482014570819679,
+   "p99": -5.148943357509339,
+   "Max": -4.978496015277585,
+   "% windows crossed": 0.0
+  },
+  {
+   "Run": "2",
+   "Coin": "BTC",
+   "Buy \u2192 sell": "Deribit \u2192 Bybit",
+   "10 s windows": 108,
+   "Median best cross": -14.959200682643427,
+   "p99": -3.0849032569616943,
+   "Max": -2.638171864633264,
+   "% windows crossed": 0.0
+  },
+  {
+   "Run": "2",
+   "Coin": "ETH",
+   "Buy \u2192 sell": "Binance \u2192 Bybit",
+   "10 s windows": 108,
+   "Median best cross": 0.0998551068112235,
+   "p99": 0.2995854334226987,
+   "Max": 0.399420825711214,
+   "% windows crossed": 0.6666666666666666
+  },
+  {
+   "Run": "2",
+   "Coin": "ETH",
+   "Buy \u2192 sell": "Binance \u2192 Deribit",
+   "10 s windows": 108,
+   "Median best cross": -1.016986630563578,
+   "p99": -0.7371710289272678,
+   "Max": -0.5924938000679071,
+   "% windows crossed": 0.0
+  },
+  {
+   "Run": "2",
+   "Coin": "ETH",
+   "Buy \u2192 sell": "Bybit \u2192 Binance",
+   "10 s windows": 108,
+   "Median best cross": 0.099856027565152,
+   "p99": 0.2995786449910724,
+   "Max": 0.29959411997746604,
+   "% windows crossed": 0.7037037037037037
+  },
+  {
+   "Run": "2",
+   "Coin": "ETH",
+   "Buy \u2192 sell": "Bybit \u2192 Deribit",
+   "10 s windows": 108,
+   "Median best cross": -0.420341726447919,
+   "p99": -0.29340947601792744,
+   "Max": -0.29326931756440705,
+   "% windows crossed": 0.0
+  },
+  {
+   "Run": "2",
+   "Coin": "ETH",
+   "Buy \u2192 sell": "Deribit \u2192 Binance",
+   "10 s windows": 108,
+   "Median best cross": -0.44612100310199954,
+   "p99": -0.0702940221210112,
+   "Max": -0.025041322531990002,
+   "% windows crossed": 0.0
+  },
+  {
+   "Run": "2",
+   "Coin": "ETH",
+   "Buy \u2192 sell": "Deribit \u2192 Bybit",
+   "10 s windows": 108,
+   "Median best cross": -0.5480691962047641,
+   "p99": -0.39468617865537164,
+   "Max": -0.368147490824764,
+   "% windows crossed": 0.0
+  }
+ ]
+}
